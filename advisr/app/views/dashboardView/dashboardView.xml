@@ -1,0 +1,21 @@
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating"
+	xmlns:sd="nativescript-pro-ui/sidedrawer"
+	xmlns:sidedrawer="shared/sd" >
+
+	  <ActionBar class="action-bar">
+		    <ActionBar.titleView>
+		      <Label text="Dashboard" horizontalAlignment="center" class="action-bar-title" />
+		    </ActionBar.titleView>
+	    	<NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" />
+		</ActionBar>
+
+		<sd:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+		  <sd:RadSideDrawer.drawerContent>
+		    <sidedrawer:sd/>
+		 </sd:RadSideDrawer.drawerContent>
+
+		 <sd:RadSideDrawer.mainContent horizontalAlignment="center">
+			<Label text="This is your dashboard" />
+		 </sd:RadSideDrawer.mainContent>
+		</sd:RadSideDrawer>
+</Page>

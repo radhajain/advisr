@@ -10,7 +10,8 @@ of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme. 
 The imported CSS rules must precede all other types of rules.
 */
-@import 'nativescript-theme-core/css/core.light.css';
+@import "nativescript-theme-core/css/core.light.css";
+@import url('~/platform.css');
 
 /*
 The following CSS rule changes the font size of all UI
@@ -18,4 +19,13 @@ components that have the btn class name.
 */
 .btn {
     font-size: 18;
+}
+
+.action-bar {
+	background-color: #2EC4B6;
+	color: white;
+}
+
+.action-bar-title {
+  font-size: 40%;
 }
