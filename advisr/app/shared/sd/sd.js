@@ -6,6 +6,7 @@ exports.onLoaded = function(args) {
 };
 
 exports.clickCalendar = function() {
+	//Navigates to different pages
 	frameModule.topmost().navigate("views/calendarView/calendarView");
 }
 

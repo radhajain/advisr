@@ -1,0 +1,8 @@
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="landingPage">
+	<StackLayout class="center">
+		<Label text="advisr" class="title"/>
+		<Label text="Personalized Plans for your future" class="subtitle"/>
+		<Button text="Get started using SUNETID" tap="goToInterestsView" class="signinButton"/>
+	</StackLayout>
+	 
+</Page>

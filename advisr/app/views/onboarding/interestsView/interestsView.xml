@@ -1,0 +1,42 @@
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="interestsPage" xmlns:Slides="nativescript-slides">
+	<StackLayout class="center">
+		<Label text="advisr" class="title"/>
+		<StackLayout>
+			<Slides:SlideContainer id="slides-container" height="60%" width="40%" pageIndicators="true">
+				<Slides:Slide class="slide" swipe="changeSlide">
+					<StackLayout>
+						<Label text="Welcome to advisr, Jane!"/>
+						<Label text="Which of the following best describes you?"/>
+						<StackLayout orientation="horizontal">
+							<Button text="Declared" tap="changeSlide"/>
+							<Button text="Deciding" tap="changeSlide"/>
+							<Button text="Exploring" tap="changeSlide"/>
+						</StackLayout>
+					</StackLayout>
+				</Slides:Slide>
+				<Slides:Slide class="slide" swipe="changeSlide">
+					<StackLayout>
+						<Label text="Welcome to advisr, Jane!"/>
+						<Label text="Add up to 3 majors and minors that you are considering."/>
+						<StackLayout orientation="horizontal">
+							<StackLayout>
+								<Label text="Majors"/>
+							</StackLayout>
+							<StackLayout>
+								<Label text="Minors"/>
+							</StackLayout>
+						</StackLayout>
+					</StackLayout>
+				</Slides:Slide>
+				<Slides:Slide class="slide" swipe="changeSlide">
+					<StackLayout>
+						<Label text="What are you interested in? Select all that apply."/>
+					</StackLayout>
+				</Slides:Slide>
+
+			</Slides:SlideContainer>
+		</StackLayout>
+		
+	</StackLayout>
+	 
+</Page>
