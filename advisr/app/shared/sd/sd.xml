@@ -1,7 +1,7 @@
 <StackLayout class="sidedrawer-left" loaded="onLoaded" unloaded="menuUnloaded">
-	<StackLayout class="sidedrawer-content">
-		<Label text="Calendar" />
-		<Label text="Settings" />
+	<StackLayout class="sidedrawer-content" id="container">
+		<Label text="Calendar" class="navLink" />
+		<Label text="Settings" class="navLink"/>
 	</StackLayout>
 </StackLayout>
 

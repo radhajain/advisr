@@ -15,7 +15,43 @@
 		 </sd:RadSideDrawer.drawerContent>
 
 		 <sd:RadSideDrawer.mainContent horizontalAlignment="center">
-			<Label text="This is your dashboard" />
+		 	<StackLayout>
+			 	<!-- Title -->
+				<StackLayout orientation="vertical" class="dashboardTitle">
+					<Label text="{{title}}" horizontalAlignment="center" />
+				</StackLayout>
+
+				
+				<GridLayout columns="*,*,*,*" rows="*, *" id="grid">
+					<!-- Card1 -->
+					<StackLayout class="card" id="firstCard" colSpan="3">
+						<Label text="Summary"/>
+						<Label text="Sophomore: Undeclared" textWrap="true"/>
+					</StackLayout>
+					<!-- Card2 -->
+					<StackLayout class="card" id="secondCard" col="4">
+						<Label text="Future Units Per Quarter" textWrap="true"/>
+						<Label text="16"/>
+					</StackLayout>
+					<!-- Card3 -->
+					<StackLayout class="card" id="thirdCard" row="1">
+						<Label text="Major 1:"/>
+						<Label text="Computer Science"/>
+					</StackLayout>
+					<!-- Card3 -->
+					<StackLayout class="card" id="fourthCard" row="1" col="1">
+						<Label text="Major 2:"/>
+						<Label text="Art History"/>
+					</StackLayout>
+					<!-- Card3 -->
+					<StackLayout class="card" id="fifthCard" row="1" col="2" colSpan="2">
+						<Label text="General Requirements:" textWrap="true"/>
+						<Label text="Art History"/>
+					</StackLayout>
+				</GridLayout>
+			</StackLayout>
+
+
 		 </sd:RadSideDrawer.mainContent>
 		</sd:RadSideDrawer>
 </Page>

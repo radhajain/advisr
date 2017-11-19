@@ -1,0 +1,16 @@
+.dashboardTitle {
+	font-size: 40px;
+	display: inline-block;
+	margin-top: 10%;
+}
+
+.card {
+    margin: 2%;
+    border: 10px solid grey;
+    background-color: pink;
+}
+
+#grid {
+	margin: 15%;
+	margin-top: 5%;
+}
