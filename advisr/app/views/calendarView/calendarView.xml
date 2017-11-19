@@ -1,0 +1,24 @@
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating"
+	xmlns:sd="nativescript-pro-ui/sidedrawer"
+	xmlns:sidedrawer="shared/sd"
+	xmlns:calendar="nativescript-pro-ui/calendar" >
+
+	  <ActionBar class="action-bar">
+		    <ActionBar.titleView>
+		      <Label text="Schedule" horizontalAlignment="center" class="action-bar-title" />
+		    </ActionBar.titleView>
+	    	<NavigationButton tap="toggleDrawer" ios.position="left" />
+		</ActionBar>
+
+		<sd:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+		  <sd:RadSideDrawer.drawerContent>
+		    <sidedrawer:sd/>
+		 </sd:RadSideDrawer.drawerContent>
+
+		 <sd:RadSideDrawer.mainContent horizontalAlignment="center">
+		 	<StackLayout>
+		 	 <calendar:RadCalendar id="myCalendar" viewMode="week"/>
+		 	</StackLayout>
+		 </sd:RadSideDrawer.mainContent>
+		</sd:RadSideDrawer>
+</Page>

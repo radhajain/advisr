@@ -10,10 +10,9 @@ exports.pageNavigating = function(args) {
     page = args.object;
     orientationModule.orientationCleanup();
     page.bindingContext = pageData;
+    console.log("on calendar view");
     var title = "Radha Jain's Progress Report"
 	pageData.set("title", title);
-	var date = "November 18, 2017"
-	pageData.set("date", date);
 }
 
 exports.pageLoaded = function(args) {

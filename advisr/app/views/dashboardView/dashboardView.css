@@ -1,3 +1,8 @@
+#dashboardPage {
+	background-color: #E8E8EE; /*very light grey*/
+}
+
+
 .dashboardTitle {
 	font-size: 40px;
 	display: inline-block;
@@ -6,11 +11,47 @@
 
 .card {
     margin: 2%;
-    border: 10px solid grey;
-    background-color: pink;
+    background-color: white;
+}
+
+.cardTitle {
+	margin: 2%;
+	margin-right: 0px;
+	font-size: 25px;
+	color: #003535;
+}
+
+.cardSubtitle {
+	margin: 2%;
 }
 
 #grid {
 	margin: 15%;
 	margin-top: 5%;
+}
+
+#panels {
+	margin: 5%;
+	margin-top: 15%;
+}
+
+.infoTitle {
+	font-size: 25px;
+}
+
+.infoSubtitle {
+	margin-top: 5;
+	font-size: 12px;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
+
+.purple {
+	color: purple;
 }

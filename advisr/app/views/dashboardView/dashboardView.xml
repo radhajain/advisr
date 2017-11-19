@@ -1,6 +1,8 @@
-<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating"
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="dashboardPage"
 	xmlns:sd="nativescript-pro-ui/sidedrawer"
-	xmlns:sidedrawer="shared/sd" >
+	xmlns:sidedrawer="shared/sd"
+	xmlns:pb="nativescript-progressbar"
+	xmlns:Card="nativescript-cardview">
 
 	  <ActionBar class="action-bar">
 		    <ActionBar.titleView>
@@ -20,35 +22,53 @@
 				<StackLayout orientation="vertical" class="dashboardTitle">
 					<Label text="{{title}}" horizontalAlignment="center" />
 				</StackLayout>
-
 				
+				<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
 				<GridLayout columns="*,*,*,*" rows="*, *" id="grid">
 					<!-- Card1 -->
 					<StackLayout class="card" id="firstCard" colSpan="3">
-						<Label text="Summary"/>
-						<Label text="Sophomore: Undeclared" textWrap="true"/>
+						<StackLayout orientation="horizontal">
+							<Label text="Summary:" class="cardTitle"/>
+							<Label text="{{date}}" class="cardTitle"/>
+						</StackLayout>
+						<Label text="Sophomore: Undeclared" textWrap="true" class="cardSubtitle"/>
+						<GridLayout columns="*, *, *" rows="*" id="panels">
+							<StackLayout col="0">
+								<Label text="60 units" class="infoTitle green"/>
+								<Label text="complete" class="infoSubtitle green"/>
+							</StackLayout>
+							<StackLayout col="1">
+								<Label text="130 units" class="infoTitle red" />
+								<Label text="incomplete" class=" infoSubtitle red"/>
+							</StackLayout>
+							<StackLayout col="2">
+								<Label text="90 units" class="infoTitle purple" />
+								<Label text="required for major" class="infoSubtitle purple"/>
+							</StackLayout>
+						</GridLayout>
 					</StackLayout>
 					<!-- Card2 -->
 					<StackLayout class="card" id="secondCard" col="4">
-						<Label text="Future Units Per Quarter" textWrap="true"/>
+						<Label text="Future Units Per Quarter" textWrap="true" class="cardTitle"/>
 						<Label text="16"/>
 					</StackLayout>
 					<!-- Card3 -->
 					<StackLayout class="card" id="thirdCard" row="1">
-						<Label text="Major 1:"/>
-						<Label text="Computer Science"/>
+						<Label text="Major 1:" class="cardTitle"/>
+						<Label text="Computer Science" class="cardSubtitle"/>
 					</StackLayout>
 					<!-- Card3 -->
 					<StackLayout class="card" id="fourthCard" row="1" col="1">
-						<Label text="Major 2:"/>
-						<Label text="Art History"/>
+						<Label text="Major 2:" class="cardTitle"/>
+						<Label text="Art History" class="cardSubtitle"/>
 					</StackLayout>
 					<!-- Card3 -->
 					<StackLayout class="card" id="fifthCard" row="1" col="2" colSpan="2">
-						<Label text="General Requirements:" textWrap="true"/>
-						<Label text="Art History"/>
+						<Label text="General Requirements:" textWrap="true" class="cardTitle"/>
+						<Label text="GER" class="cardSubtitle"/>
 					</StackLayout>
 				</GridLayout>
+			</Card:CardView>
 			</StackLayout>
 
 

@@ -22,10 +22,10 @@ components that have the btn class name.
 }
 
 .action-bar {
-	background-color: #2EC4B6;
+	background-color: #006767; /*teal*/
 	color: white;
 }
 
 .action-bar-title {
-  font-size: 40%;
+  font-size: 40px;
 }
