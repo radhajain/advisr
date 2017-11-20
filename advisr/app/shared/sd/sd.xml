@@ -2,6 +2,7 @@
 	<StackLayout class="sidedrawer-content" id="container">
 		<Button text="Schedule" class="navLink" tap="clickCalendar" />
 		<Button text="Dashboard" class="navLink" tap="clickDashboard" />
+		<Button text="Requirements" class="navLink" tap="clickReq" />
 		<Button text="Settings" class="navLink"/>
 	</StackLayout>
 </StackLayout>
