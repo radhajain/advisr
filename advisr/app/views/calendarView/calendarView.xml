@@ -1,6 +1,7 @@
 <Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating"
 	xmlns:sd="nativescript-pro-ui/sidedrawer"
-	xmlns:sidedrawer="shared/sd" >
+	xmlns:sidedrawer="shared/sd" 
+	xmlns:Card="nativescript-cardview">
 
 	  <ActionBar class="action-bar">
 		    <ActionBar.titleView>
@@ -16,6 +17,7 @@
 
 		 <sd:RadSideDrawer.mainContent>
 		 	<StackLayout orientation="horizontal">
+		 	<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
 		 	 <GridLayout columns="*,*,*,*,*,*" rows="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" id="weekCalendar" visibility="collapsed">
 
 		 	 	<Label text="8 AM" col="0" row="1"/>
@@ -41,7 +43,9 @@
 		 	 	<Label text="F" col="5" row="0"/>	
 
 		 	 </GridLayout>
+		 	</Card:CardView>
 
+		 	 <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
 		 	 <GridLayout columns="*,*,*,*" rows="*,*,*" id="oneYearCalendar">
 
 		 	 	<Label text="Fall" col="1" row="0"/>
@@ -52,6 +56,7 @@
 		 	 	<Label text="Summary" col="0" row="2"/>
 
 		 	 </GridLayout>
+		 	</Card:CardView>
 
 		 	 <StackLayout class="topMargin">
 		 	 	<Label text="View plans for: "/>
