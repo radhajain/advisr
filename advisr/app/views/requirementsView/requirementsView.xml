@@ -1,0 +1,49 @@
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="dashboardPage"
+	xmlns:sd="nativescript-pro-ui/sidedrawer"
+	xmlns:sidedrawer="shared/sd"
+	xmlns:pb="nativescript-progressbar"
+	xmlns:Card="nativescript-cardview">
+
+	  <ActionBar class="action-bar">
+		    <ActionBar.titleView>
+		      <Label text="Dashboard" horizontalAlignment="center" class="action-bar-title" />
+		    </ActionBar.titleView>
+	    	<NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" />
+		</ActionBar>
+
+		<sd:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+		  <sd:RadSideDrawer.drawerContent>
+		    <sidedrawer:sd/>
+		 </sd:RadSideDrawer.drawerContent>
+
+		 <sd:RadSideDrawer.mainContent horizontalAlignment="center">
+		 	<StackLayout>
+			 	<!-- Title -->
+				<StackLayout orientation="vertical" class="dashboardTitle">
+					<Label text="Your Requirements" horizontalAlignment="center" />
+				</StackLayout>
+				
+				<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
+				<GridLayout columns="*" rows="*, *, *" id="grid">
+					<!-- Card1 -->
+					<StackLayout class="card" id="firstCard">
+						<Label text="GER's" textWrap="true" class="cardTitle"/>
+					</StackLayout>
+					<!-- Card2 -->
+					<StackLayout class="card" id="secondCard" row="1">
+						<Label text="Major 1:" class="cardTitle"/>
+						<Label text="Computer Science" class="cardSubtitle"/>
+					</StackLayout>
+					<!-- Card3 -->
+					<StackLayout class="card" id="thirdCard" row="2">
+						<Label text="Major 2:" class="cardTitle"/>
+						<Label text="Art History" class="cardSubtitle"/>
+					</StackLayout>
+				</GridLayout>
+			</Card:CardView>
+			</StackLayout>
+
+
+		 </sd:RadSideDrawer.mainContent>
+		</sd:RadSideDrawer>
+</Page>

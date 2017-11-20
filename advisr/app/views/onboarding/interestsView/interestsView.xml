@@ -2,35 +2,51 @@
 	<StackLayout class="center">
 		<Label text="advisr" class="title"/>
 		<StackLayout>
-			<Slides:SlideContainer id="slides-container" height="60%" width="40%" pageIndicators="true">
+			<Slides:SlideContainer id="slides-container" height="60%" pageIndicators="true">
 				<Slides:Slide class="slide" swipe="changeSlide">
 					<StackLayout>
 						<Label text="Welcome to advisr, Jane!"/>
-						<Label text="Which of the following best describes you?"/>
-						<StackLayout orientation="horizontal">
-							<Button text="Declared" tap="changeSlide"/>
-							<Button text="Deciding" tap="changeSlide"/>
-							<Button text="Exploring" tap="changeSlide"/>
+						<Label text="Which of the following best describes you?" class="question"/>
+						<StackLayout orientation="horizontal" class="buttons">
+							<Button text="Declared" tap="changeSlide" class="buttonOption purple"/>
+							<Button text="Deciding" tap="changeSlide" class="buttonOption blue"/>
+							<Button text="Exploring" tap="changeSlide" class="buttonOption green"/>
 						</StackLayout>
 					</StackLayout>
 				</Slides:Slide>
 				<Slides:Slide class="slide" swipe="changeSlide">
 					<StackLayout>
-						<Label text="Welcome to advisr, Jane!"/>
-						<Label text="Add up to 3 majors and minors that you are considering."/>
-						<StackLayout orientation="horizontal">
-							<StackLayout>
-								<Label text="Majors"/>
+						<Label text="Welcome to advisr, Jane!" />
+						<Label text="Add up to 3 majors and minors that you are considering." class="question"/>
+						<StackLayout orientation="horizontal" class="centerDiv">
+							<StackLayout class="majors">
+								<Label text="Majors" class="listHeader"/>
 							</StackLayout>
-							<StackLayout>
-								<Label text="Minors"/>
+							<StackLayout class="minors">
+								<Label text="Minors" class="listHeader"/>
 							</StackLayout>
 						</StackLayout>
 					</StackLayout>
 				</Slides:Slide>
-				<Slides:Slide class="slide" swipe="changeSlide">
+				<Slides:Slide class="slide" swipe="goToDashboard" disablePan="true">
 					<StackLayout>
-						<Label text="What are you interested in? Select all that apply."/>
+						<Label class="question" text="What are you interested in? Select all that apply."/>
+						<ListView items="{{interests}}" separatorColor="#FFFFFF" height="55%" id="interest-list-view" visibility="{{interests.length ? 'visible' : 'collapse'}}">
+							<ListView.itemTemplate>
+							<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
+								 <StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="interestButtons" tap="itemTap" id="{{one}}">
+								 	<Button text="{{one}}" tap="buttonTap"/>
+								 </StackLayout>
+								 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="interestButtons" tap="itemTap" id="{{two}}">
+								 	<Button text="{{two}}" tap="buttonTap"/>
+								 </StackLayout>
+								 <StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="interestButtons" tap="itemTap" id="{{three}}">
+								 	<Button text="{{three}}" tap="buttonTap"/>
+								 </StackLayout>
+							</GridLayout>
+						 </ListView.itemTemplate>
+          				</ListView>
+          				<Button text="View my results" class="finishButton" tap="finish"/>
 					</StackLayout>
 				</Slides:Slide>
 

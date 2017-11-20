@@ -13,3 +13,8 @@ exports.clickCalendar = function() {
 exports.clickDashboard = function() {
 	frameModule.topmost().navigate("views/dashboardView/dashboardView");
 }
+
+
+exports.clickReq = function() {
+	frameModule.topmost().navigate("views/requirementsView/requirementsView");
+}

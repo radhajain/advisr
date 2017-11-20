@@ -33,15 +33,15 @@
 						</StackLayout>
 						<Label text="Sophomore: Undeclared" textWrap="true" class="cardSubtitle"/>
 						<GridLayout columns="*, *, *" rows="*" id="panels">
-							<StackLayout col="0">
+							<StackLayout col="0" class="panelCard">
 								<Label text="60 units" class="infoTitle green"/>
 								<Label text="complete" class="infoSubtitle green"/>
 							</StackLayout>
-							<StackLayout col="1">
+							<StackLayout col="1" class="panelCard">
 								<Label text="130 units" class="infoTitle red" />
 								<Label text="incomplete" class=" infoSubtitle red"/>
 							</StackLayout>
-							<StackLayout col="2">
+							<StackLayout col="2" class="panelCard">
 								<Label text="90 units" class="infoTitle purple" />
 								<Label text="required for major" class="infoSubtitle purple"/>
 							</StackLayout>

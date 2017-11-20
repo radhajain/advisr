@@ -10,17 +10,12 @@ exports.pageNavigating = function(args) {
     page = args.object;
     orientationModule.orientationCleanup();
     page.bindingContext = pageData;
-    var title = "Radha Jain's Progress Report"
-	pageData.set("title", title);
+	var date = "November 18, 2017"
+	pageData.set("date", date);
 }
 
 exports.pageLoaded = function(args) {
 	orientationModule.setCurrentOrientation("landscape");
-	// pageData.set("showWeekCal", false);
 	
 	 
 }
-
-// exports.toggle = function () {
-//     pageData.set("showWeekCal", !pageData.get("showWeekCal"));
-// }

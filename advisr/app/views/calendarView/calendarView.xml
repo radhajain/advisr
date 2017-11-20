@@ -1,7 +1,6 @@
 <Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating"
 	xmlns:sd="nativescript-pro-ui/sidedrawer"
-	xmlns:sidedrawer="shared/sd"
-	xmlns:calendar="nativescript-pro-ui/calendar" >
+	xmlns:sidedrawer="shared/sd" >
 
 	  <ActionBar class="action-bar">
 		    <ActionBar.titleView>
@@ -15,9 +14,53 @@
 		    <sidedrawer:sd/>
 		 </sd:RadSideDrawer.drawerContent>
 
-		 <sd:RadSideDrawer.mainContent horizontalAlignment="center">
-		 	<StackLayout>
-		 	 <calendar:RadCalendar id="myCalendar" viewMode="week"/>
+		 <sd:RadSideDrawer.mainContent>
+		 	<StackLayout orientation="horizontal">
+		 	 <GridLayout columns="*,*,*,*,*,*" rows="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" id="weekCalendar" visibility="collapsed">
+
+		 	 	<Label text="8 AM" col="0" row="1"/>
+		 	 	<Label text="9 AM" col="0" row="2"/>
+		 	 	<Label text="10 AM" col="0" row="3"/>
+		 	 	<Label text="11 AM" col="0" row="4"/>
+		 	 	<Label text="12 PM" col="0" row="5"/>
+		 	 	<Label text="1 PM" col="0" row="6"/>
+		 	 	<Label text="2 PM" col="0" row="7"/>
+		 	 	<Label text="3 PM" col="0" row="8"/>
+		 	 	<Label text="4 PM" col="0" row="9"/>
+		 	 	<Label text="5 PM" col="0" row="10"/>
+		 	 	<Label text="6 PM" col="0" row="11"/>
+		 	 	<Label text="7 PM" col="0" row="12"/>
+		 	 	<Label text="8 PM" col="0" row="13"/>
+		 	 	<Label text="9 PM" col="0" row="14"/>
+
+
+		 	 	<Label text="M" col="1" row="0"/>
+		 	 	<Label text="Tu" col="2" row="0"/>	
+		 	 	<Label text="W" col="3" row="0"/>	
+		 	 	<Label text="Th" col="4" row="0"/>	
+		 	 	<Label text="F" col="5" row="0"/>	
+
+		 	 </GridLayout>
+
+		 	 <GridLayout columns="*,*,*,*" rows="*,*,*" id="oneYearCalendar">
+
+		 	 	<Label text="Fall" col="1" row="0"/>
+		 	 	<Label text="Winter" col="2" row="0"/>
+		 	 	<Label text="Spring" col="3" row="0"/>
+
+		 	 	<Label text="Classes" col="0" row="1"/>
+		 	 	<Label text="Summary" col="0" row="2"/>
+
+		 	 </GridLayout>
+
+		 	 <StackLayout class="topMargin">
+		 	 	<Label text="View plans for: "/>
+		 	 	<Button text="Quarter plan" />
+		 	 	<Button text="1-Year Plan" />
+		 	 	<Button text="4-Year Plan" />
+		 	 </StackLayout>
+
+
 		 	</StackLayout>
 		 </sd:RadSideDrawer.mainContent>
 		</sd:RadSideDrawer>

@@ -1,4 +1,94 @@
-#slides-container {
-	background-color: blue;
+.title {
 	text-align: center;
+	font-size: 25px;
+	margin-top: 10%;
+}
+
+#slides-container {
+	background-color: pink;
+	text-align: center;
+	margin-top: 10%;
+	height: 40%;
+}
+
+.buttonOption {
+	height: 500px;
+	width: 500px;
+	text-align: center;
+	margin: 20px;
+	font-size: 30px;
+}
+
+.slide {
+}
+
+.question {
+	font-size: 25px;
+	margin-top: 5%;
+}
+
+.listHeader {
+	font-weight: bold;
+}
+
+.buttons {
+	margin-top: 10%;
+	margin-left: 20%;
+}
+
+.centerDiv {
+	margin-top: 10%;
+	margin-left: 40%
+}
+
+#interest-list-view {
+	margin-top: 10%;
+}
+
+.minors {
+	margin-left: 20%;
+}
+
+.interestButtons {
+	margin: 5px;
+	height: 100px;
+	background-color: lightblue;
+}
+
+.selectedInterestButtons {
+	margin: 5px;
+	height: 100px;
+	background-color: green;
+	color: white;
+	opacity: 0.7;
+}
+
+.finishButton {
+	margin-top: 5%;
+	width: 20%;
+	height: 15%;
+	background-color: green;
+	color: white;
+	font-size: 20px;
+	opacity: 0.5;
+}
+
+
+
+.purple {
+	background-color: purple;
+	color: white;
+	opacity: 0.5;
+}
+
+.blue {
+	background-color: lightblue;
+	color: white;
+	opacity: 0.7;
+}
+
+.green {
+	background-color: green;
+	color: white;
+	opacity: 0.5;
 }

@@ -13,4 +13,10 @@
 
 .signinButton {
 	margin-top: 10%;
+	background-color: lightblue;
+	color: white;
+	font-size: 25px;
+	width: 800px;
+	height: 150px;
+	border-radius: 50%;
 }
