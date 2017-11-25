@@ -27,7 +27,7 @@
 				<GridLayout columns="*" rows="*, *, *" id="grid">
 					<!-- Card1 -->
 					<StackLayout class="card" id="firstCard">
-						<Label text="GER's" textWrap="true" class="cardTitle"/>
+						<Label text="GER:" textWrap="true" class="cardTitle"/>
 					</StackLayout>
 					<!-- Card2 -->
 					<StackLayout class="card" id="secondCard" row="1">

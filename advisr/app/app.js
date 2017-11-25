@@ -7,7 +7,7 @@ purpose of the file is to pass control to the app’s first module.
 require("./bundle-config");
 var application = require("application");
 
-application.start({ moduleName: "views/calendarView/calendarView" });
+application.start({ moduleName: "views/onboarding/landingView/landingView" });
 
 /*
 Do not place any code after the application has been started as it will not
