@@ -36,9 +36,13 @@
 	margin-left: 20%;
 }
 
+.backButton {
+	text-align: left;
+}
+
 .centerDiv {
 	margin-top: 10%;
-	margin-left: 40%
+	margin-left: 30%
 }
 
 #interest-list-view {

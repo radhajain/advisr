@@ -14,16 +14,41 @@
 						</StackLayout>
 					</StackLayout>
 				</Slides:Slide>
-				<Slides:Slide class="slide" swipe="changeSlide">
+				<Slides:Slide class="slide" disablePan="true">
 					<StackLayout>
-						<Label text="Welcome to advisr, Jane!" />
 						<Label text="Add up to 3 majors and minors that you are considering." class="question"/>
 						<StackLayout orientation="horizontal" class="centerDiv">
 							<StackLayout class="majors">
 								<Label text="Majors" class="listHeader"/>
+								<StackLayout orientation="horizontal">
+									<Label text="Major 1: "/>
+									<Button text="{{major1}}" tap="showMajor1Picker"/>
+								</StackLayout>
+								<StackLayout orientation="horizontal">
+									<Label text="Major 2: "/>
+									<Button text="{{major2}}" tap="showMajor2Picker"/>
+								</StackLayout>
+								<StackLayout orientation="horizontal" visibility="{{ showMajor3 ? 'visible' : 'collapse'}}">
+									<Label text="Major 3: "/>
+									<Button text="{{major3}}" tap="showMajor3Picker"/>
+								</StackLayout>
+								<Button text="+" tap="addMajorField" id="addMajor" visibility="{{ showMajor3 ? 'collapse' : 'visible'}}"/>
 							</StackLayout>
 							<StackLayout class="minors">
 								<Label text="Minors" class="listHeader"/>
+								<StackLayout orientation="horizontal">
+									<Label text="Minor 1: "/>
+									<Button text="{{minor1}}" tap="showMinor1Picker"/>
+								</StackLayout>
+								<StackLayout orientation="horizontal">
+									<Label text="Minor 2: "/>
+									<Button text="{{minor2}}" tap="showMinor2Picker"/>
+								</StackLayout>
+								<StackLayout orientation="horizontal" visibility="{{ showMinor3 ? 'visible' : 'collapse'}}">
+									<Label text="Minor 3: "/>
+									<Button text="{{minor3}}" tap="showMinor3Picker"/>
+								</StackLayout>
+								<Button text="+" tap="addMinorField" id="addMinor" visibility="{{ showMinor3 ? 'collapse' : 'visible'}}"/>
 							</StackLayout>
 						</StackLayout>
 					</StackLayout>
@@ -51,6 +76,25 @@
 				</Slides:Slide>
 
 			</Slides:SlideContainer>
+
+			<ListPicker id="major1picker" items="{{ majorList }}" visibility="{{showMajor1Picker ? 'visible' : 'collapse'}}"/>
+			<Button text="Done" tap="getMajor1SelectedIndex"  visibility="{{ showMajor1Picker ? 'visible' : 'collapse'}}"/>
+
+			<ListPicker id="major2picker" items="{{ majorList }}" visibility="{{showMajor2Picker ? 'visible' : 'collapse'}}"/>
+			<Button text="Done" tap="getMajor2SelectedIndex"  visibility="{{ showMajor2Picker ? 'visible' : 'collapse'}}"/>
+
+			<ListPicker id="major3picker" items="{{ majorList }}" visibility="{{showMajor3Picker ? 'visible' : 'collapse'}}"/>
+			<Button text="Done" tap="getMajor3SelectedIndex"  visibility="{{ showMajor3Picker ? 'visible' : 'collapse'}}"/>
+
+			<ListPicker id="minor1picker" items="{{ majorList }}" visibility="{{showMinor1Picker ? 'visible' : 'collapse'}}"/>
+			<Button text="Done" tap="getMinor1SelectedIndex"  visibility="{{ showMinor1Picker ? 'visible' : 'collapse'}}"/>
+
+			<ListPicker id="minor2picker" items="{{ majorList }}" visibility="{{showMinor2Picker ? 'visible' : 'collapse'}}"/>
+			<Button text="Done" tap="getMinor2SelectedIndex"  visibility="{{ showMinor2Picker ? 'visible' : 'collapse'}}"/>
+
+			<ListPicker id="minor3picker" items="{{ majorList }}" visibility="{{showMinor3Picker ? 'visible' : 'collapse'}}"/>
+			<Button text="Done" tap="getMinor3SelectedIndex"  visibility="{{ showMinor3Picker ? 'visible' : 'collapse'}}"/>
+
 		</StackLayout>
 		
 	</StackLayout>
