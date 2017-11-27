@@ -6,9 +6,12 @@
 }
 
 .title {
-	text-align: center;
-	font-size: 25px;
 	margin-top: 10%;
+	width: 30%;
+}
+
+.cell {
+	font-size: 18px;
 }
 
 #slides-container {
@@ -31,13 +34,14 @@
 }
 
 .question {
-	font-size: 25px;
+	font-size: 30px;
 	margin-top: 5%;
 }
 
 .picker {
-	border-color: lightgray;
-	border-width: 3px;
+	background-color: lightgray;
+	border-color: darkgray;
+	border-width: 10px;
 	height: 25%;
 	width: 30%;
 	border-radius: 20%;

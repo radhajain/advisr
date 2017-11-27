@@ -5,6 +5,7 @@ var frameModule = require("ui/frame");
 var observable = require("data/observable");
 var layout = require("ui/layouts/grid-layout");
 var StorageUtil = require("~/util/StorageUtil");
+var statusBar = require("nativescript-status-bar");
 
 var page;
 var listView;
@@ -28,6 +29,7 @@ exports.pageNavigating = function(args) {
     orientationModule.orientationCleanup();
     pageData = new observable.Observable();
   	page.bindingContext = pageData;
+  	statusBar.hide();
 };
 
 exports.pageLoaded = function(args) {
@@ -207,11 +209,13 @@ exports.addMinorField = function() {
 exports.goToInterests = function () {
 	StorageUtil.setMajors(chosenMajors);
 	StorageUtil.setMinors(chosenMinors);
+	exports.disablePickers();
 	container.nextSlide();
 }
 
 exports.goToDescription = function() {
 	container.previousSlide();
+	exports.disablePickers();
 }
 
 
@@ -219,12 +223,7 @@ var initPickers = function () {
 	chosenMajors= [];
 	chosenMinors = [];
   	pageData.set("majorList", majors);
-  	pageData.set("showMajor1Picker", false);
-  	pageData.set("showMinor1Picker", false);
-  	pageData.set("showMajor2Picker", false);
-  	pageData.set("showMinor2Picker", false);
-  	pageData.set("showMajor3Picker", false);
-  	pageData.set("showMinor3Picker", false);
+  	exports.disablePickers();
   	pageData.set("showMajor3", false);
   	pageData.set("showMinor3", false);
   	pageData.set("major1", "Select a major");
@@ -233,6 +232,31 @@ var initPickers = function () {
 	pageData.set("minor1", "Select a minor");
 	pageData.set("minor2", "Select a minor");
 	pageData.set("minor3", "Select a minor");
+}
+
+exports.disablePickers = function() {
+	pageData.set("showMajor1Picker", false);
+  	pageData.set("showMinor1Picker", false);
+  	pageData.set("showMajor2Picker", false);
+  	pageData.set("showMinor2Picker", false);
+  	pageData.set("showMajor3Picker", false);
+  	pageData.set("showMinor3Picker", false);
+  	unfocusButtons();
+}
+
+var unfocusButtons = function() {
+	var button1 = page.getElementById("major1button")
+    button1.class= "selectSet";
+    var button2 = page.getElementById("major2button")
+    button2.class= "selectSet";
+    var button3 = page.getElementById("major3button")
+    button3.class= "selectSet";
+    var button4 = page.getElementById("minor1button")
+    button4.class= "selectSet";
+    var button5 = page.getElementById("minor2button")
+    button5.class= "selectSet";
+    var button6 = page.getElementById("minor3button")
+    button6.class= "selectSet";
 }
 
 
