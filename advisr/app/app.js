@@ -13,12 +13,12 @@ var StorageUtil = require('~/util/StorageUtil');
 
 
 
-if (StorageUtil.isOnboardingComplete() && StorageUtil.getMajors().length !== 0) {
-	application.start({ moduleName: "views/dashboardView/dashboardView" });
-} else {
+// if (StorageUtil.isOnboardingComplete() && StorageUtil.getMajors().length !== 0) {
+// 	application.start({ moduleName: "views/dashboardView/dashboardView" });
+// } else {
 	application.start({ moduleName: "views/onboarding/landingView/landingView" });
 
-}
+// }
 
 /*
 Do not place any code after the application has been started as it will not

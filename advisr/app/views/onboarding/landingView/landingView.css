@@ -1,3 +1,11 @@
+#landingPage {
+	background-image: url("res://background_advisr");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
 .center {
 	text-align: center;
 	margin-top: 40%;
@@ -9,6 +17,7 @@
 
 .subtitle {
 	font-size: 25px;
+	color: white;
 }
 
 .signinButton {

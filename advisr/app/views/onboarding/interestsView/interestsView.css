@@ -116,6 +116,14 @@
 .minors {
 	margin-left: 20%;
 }
+#interestsPage {
+	background-image: url("res://background_advisr");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
 
 .interestButtons {
 	margin: 5px;
