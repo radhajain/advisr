@@ -1,3 +1,10 @@
+#interestsPage {
+	background-image: url("res://background_advisr");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
 .title {
 	text-align: center;
 	font-size: 25px;
@@ -5,10 +12,11 @@
 }
 
 #slides-container {
-	background-color: pink;
+	background-color: white;
 	text-align: center;
 	margin-top: 10%;
 	height: 40%;
+	opacity: 0.7;
 }
 
 .buttonOption {
@@ -116,12 +124,7 @@
 .minors {
 	margin-left: 20%;
 }
-#interestsPage {
-	background-image: url("res://background_advisr");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-}
+
 
 
 
