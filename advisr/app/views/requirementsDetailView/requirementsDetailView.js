@@ -31,6 +31,5 @@ exports.pageNavigating = function(args) {
 
 exports.pageLoaded = function(args) {
 	orientationModule.setCurrentOrientation("landscape");
-	
 	 
 }

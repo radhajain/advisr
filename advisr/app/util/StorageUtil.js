@@ -11,8 +11,8 @@ exports.setOnboardingComplete = function() {
 
 
 exports.setUpDB = function() {
-	  appSettings.setString('majors', JSON.stringify([]));
-	  appSettings.setString('minors', JSON.stringify([]));
+  appSettings.setString('majors', JSON.stringify([]));
+  appSettings.setString('minors', JSON.stringify([]));
 }
 
 

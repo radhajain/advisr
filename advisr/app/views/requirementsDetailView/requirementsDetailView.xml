@@ -31,11 +31,11 @@
 						<Label text="{{title}}" textWrap="true" class="cardTitle"/>
 						<Label text="{{major}}" class="cardSubtitle"/>
 					</StackLayout>
-					<GridLayout cols="*,*,*" rows="*" id="grid">
+		<!-- 			<GridLayout cols="*,*,*" rows="*" id="grid">
 						<StackLayout col="0">
 							<Label text="{{coreHeader}}"/>
 						</StackLayout>
-					</GridLayout>
+					</GridLayout> -->
 
 					</StackLayout>
 				</GridLayout>
