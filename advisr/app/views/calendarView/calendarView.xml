@@ -1,7 +1,7 @@
 <Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating"
 	xmlns:sd="nativescript-pro-ui/sidedrawer"
 	xmlns:sidedrawer="shared/sd" 
-	xmlns:Card="nativescript-cardview">
+	xmlns:Card="nativescript-cardview" id="calendarPage">
 
 	  <ActionBar class="action-bar">
 		    <ActionBar.titleView>
@@ -16,76 +16,79 @@
 		 </sd:RadSideDrawer.drawerContent>
 
 		 <sd:RadSideDrawer.mainContent>
-		 		
-			 	<StackLayout orientation="horizontal">
-			 		<StackLayout>
-			 		<Label text="{{title}}" class="title"/>
-			 	<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
-			 	 <GridLayout columns="*,*,*,*,*,*" rows="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*,*" class="calendar" visibility="{{showWeekCal ? 'visible' : 'collapsed' }}">
 
-			 	 	<Label text="8 AM" col="0" row="1"/>
-			 	 	<Label text="9 AM" col="0" row="2"/>
-			 	 	<Label text="10 AM" col="0" row="3"/>
-			 	 	<Label text="11 AM" col="0" row="4"/>
-			 	 	<Label text="12 PM" col="0" row="5"/>
-			 	 	<Label text="1 PM" col="0" row="6"/>
-			 	 	<Label text="2 PM" col="0" row="7"/>
-			 	 	<Label text="3 PM" col="0" row="8"/>
-			 	 	<Label text="4 PM" col="0" row="9"/>
-			 	 	<Label text="5 PM" col="0" row="10"/>
-			 	 	<Label text="6 PM" col="0" row="11"/>
-			 	 	<Label text="7 PM" col="0" row="12"/>
-			 	 	<Label text="8 PM" col="0" row="13"/>
-			 	 	<Label text="9 PM" col="0" row="14"/>
+		 	<StackLayout orientation="horizontal">
+		 		<!-- <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5"> -->
+		 		<StackLayout id="grids">
+		 		<Label text="{{title}}" class="title"/>
+		 	
+		 		<StackLayout class="card">
+			 	 <GridLayout columns="auto,*,*,*,*,*" rows="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*"  class="calendar" visibility="{{showWeekCal ? 'visible' : 'collapsed' }}">
+
+			 	 	<Label text="8 AM" col="0" row="1" class="bordered"/>
+			 	 	<Label text="9 AM" col="0" row="2" class="bordered"/>
+			 	 	<Label text="10 AM" col="0" row="3" class="bordered"/>
+			 	 	<Label text="11 AM" col="0" row="4" class="bordered"/>
+			 	 	<Label text="12 PM" col="0" row="5" class="bordered"/>
+			 	 	<Label text="1 PM" col="0" row="6" class="bordered"/>
+			 	 	<Label text="2 PM" col="0" row="7" class="bordered"/>
+			 	 	<Label text="3 PM" col="0" row="8" class="bordered"/>
+			 	 	<Label text="4 PM" col="0" row="9" class="bordered"/>
+			 	 	<Label text="5 PM" col="0" row="10" class="bordered"/>
+			 	 	<Label text="6 PM" col="0" row="11" class="bordered"/>
+			 	 	<Label text="7 PM" col="0" row="12" class="bordered"/>
+			 	 	<Label text="8 PM" col="0" row="13" class="bordered"/>
+			 	 	<Label text="9 PM" col="0" row="14" class="bordered"/>
 
 
-			 	 	<Label text="M" col="1" row="0"/>
-			 	 	<Label text="Tu" col="2" row="0"/>	
-			 	 	<Label text="W" col="3" row="0"/>	
-			 	 	<Label text="Th" col="4" row="0"/>	
-			 	 	<Label text="F" col="5" row="0"/>	
-
-			 	 </GridLayout>
-			 	</Card:CardView>
-
-			 	 <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
-			 	 <GridLayout columns="*,*,*,*" rows="*,*,*" class="calendar" visibility="{{ showOneYearCal ? 'visible' : 'collapsed' }}">
-
-			 	 	<Label text="Fall" col="1" row="0"/>
-			 	 	<Label text="Winter" col="2" row="0"/>
-			 	 	<Label text="Spring" col="3" row="0"/>
-
-			 	 	<Label text="Classes" col="0" row="1"/>
-			 	 	<Label text="Summary" col="0" row="2"/>
+			 	 	<Label text="M" col="1" row="0" class="center bordered"/>
+			 	 	<Label text="Tu" col="2" row="0" class="center bordered"/>	
+			 	 	<Label text="W" col="3" row="0" class="center bordered"/>	
+			 	 	<Label text="Th" col="4" row="0" class="center bordered"/>	
+			 	 	<Label text="F" col="5" row="0" class="center bordered"/>	
 
 			 	 </GridLayout>
-			 	</Card:CardView>
-
-			 	 <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
-			 	 <GridLayout columns="*,*,*,*" rows="*,*,*,*,*" class="calendar" visibility="{{ showFourYearCal ? 'visible' : 'collapsed' }}">
-
-			 	 	<Label text="Fall" col="1" row="0"/>
-			 	 	<Label text="Winter" col="2" row="0"/>
-			 	 	<Label text="Spring" col="3" row="0"/>
-
-			 	 	<Label text="Freshman" col="0" row="1"/>
-			 	 	<Label text="Sophomore" col="0" row="2"/>
-			 	 	<Label text="Junior" col="0" row="3"/>
-			 	 	<Label text="Senior" col="0" row="4"/>
-
-			 	 </GridLayout>
-			 	</Card:CardView>
 			 	</StackLayout>
 
-			 	 <StackLayout class="topMargin">
-			 	 	<Label text="View plans for: " class="center"/>
-			 	 	<StackLayout orientation="horizontal">
-				 	 	<Button text="Quarter" class="selectPlan" tap="showWeek" id="quarterButton"/>
-				 	 	<Button text="1-Year" class="selectPlan" tap="showOneYear" id="yearButton"/>
-				 	 	<Button text="4-Year" class="selectPlan" tap="showFourYear" id="fourButton"/>
-				 	</StackLayout>
-				 	<Label text="Required Classes:" class="center topMargin"/>
-			 	 </StackLayout>
+			 	 <GridLayout columns="*,*,*" rows="*,*,*,*,*,*,*" class="calendar" visibility="{{ showOneYearCal ? 'visible' : 'collapsed' }}">
+
+			 	 	<Label text="Fall" col="0" row="0" class="center header bordered"/>
+			 	 	<Label text="Winter" col="1" row="0" class="center header bordered"/>
+			 	 	<Label text="Spring" col="2" row="0" class="center header bordered"/>
+
+			 	 	<Label text="Fall Summary" col="0" row="6" class="summary"/> 
+			 	 	<Label text="Winter Summary" col="1" row="6" class="summary"/> 
+			 	 	<Label text="Spring Summary" col="2" row="6" class="summary"/> 
+
+			 	 </GridLayout>
+		
+			 	 <GridLayout columns="auto,*,*,*,*" rows="*,*, *,*,*,*, *,*,*,*,*, *,*,*,*,*,*" class="calendar" visibility="{{ showFourYearCal ? 'visible' : 'collapsed' }}">
+
+			 	 	<Label text="Freshman" col="1" row="0" class="center header bordered"/>
+			 	 	<Label text="Sophomore" col="2" row="0" class="center header bordered"/>
+			 	 	<Label text="Junior" col="3" row="0" class="center header bordered"/>
+			 	 	<Label text="Senior" col="4" row="0" class="center header bordered"/>
+
+			 	 	<Label text="Fall" col="0" row="1" rowSpan="5" />
+			 	 	<Label text="Winter" col="0" row="6" rowSpan="5"/>
+			 	 	<Label text="Spring" col="0" row="11" rowSpan="5"/>
+			 	 	<Label text="Summary" col="0" row="16"/>
+			 	 	
+
+			 	 </GridLayout>
+			 	
+		 	</StackLayout>
+		 	<!-- </Card:CardView> -->
+
+		 	 <StackLayout class="topMargin">
+		 	 	<Label text="View plans for: " class="center"/>
+		 	 	<StackLayout orientation="horizontal">
+			 	 	<Button text="Quarter" class="selectPlan" tap="showWeek" id="quarterButton"/>
+			 	 	<Button text="1-Year" class="selectPlan" tap="showOneYear" id="yearButton"/>
+			 	 	<Button text="4-Year" class="selectPlan" tap="showFourYear" id="fourButton"/>
+			 	</StackLayout>
+			 	<Label text="Required Classes:" class="center topMargin"/>
+		 	 </StackLayout>
 
 
 		 	

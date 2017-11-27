@@ -8,7 +8,7 @@
 		    <ActionBar.titleView>
 		      <Label text="Dashboard" horizontalAlignment="center" class="action-bar-title" />
 		    </ActionBar.titleView>
-	    	<NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" />
+	    	<!-- <NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" /> -->
 		</ActionBar>
 
 		<sd:RadSideDrawer id="sideDrawer" showOverNavigation="true">
@@ -49,22 +49,27 @@
 					</StackLayout>
 					<!-- Card2 -->
 					<StackLayout class="card" id="secondCard" col="4">
-						<Label text="Future Units Per Quarter" textWrap="true" class="cardTitle"/>
+						<Label text="Future Units Per Quarter" textWrap="true" class="cardTitle" tap="viewSchedule"/>
 						<Label text="16"/>
 					</StackLayout>
 					<!-- Card3 -->
 					<StackLayout class="card" id="thirdCard" row="1">
-						<Label text="Major 1:" class="cardTitle"/>
-						<Label text="Computer Science" class="cardSubtitle"/>
+						<Label text="Major 1:" class="cardTitle" tap="viewMoreMajor1"/>
+						<Label text="{{major1}}" class="cardSubtitle"/>
 					</StackLayout>
-					<!-- Card3 -->
-					<StackLayout class="card" id="fourthCard" row="1" col="1">
-						<Label text="Major 2:" class="cardTitle"/>
-						<Label text="Art History" class="cardSubtitle"/>
+					<!-- Card4 -->
+					<StackLayout class="card" id="fourthCard" row="1" col="1" visibility="{{showSecond ? 'visible' : 'collapse'}}">
+						<Label text="Major 2:" class="cardTitle" tap="viewMoreMajor2"/>
+						<Label text="{{major2}}" class="cardSubtitle"/>
 					</StackLayout>
-					<!-- Card3 -->
-					<StackLayout class="card" id="fifthCard" row="1" col="2" colSpan="2">
-						<Label text="General Requirements:" textWrap="true" class="cardTitle"/>
+					<!-- Card4 -->
+					<StackLayout class="card" id="fifthCard" row="1" col="2" visibility="{{showThird ? 'visible' : 'collapse'}}">
+						<Label text="Major 3:" class="cardTitle" tap="viewMoreMajor3"/>
+						<Label text="{{major3}}" class="cardSubtitle"/>
+					</StackLayout>
+					<!-- Card5 -->
+					<StackLayout class="card" id="sixthCard" row="1" col="{{GERcol}}" colSpan="{{GERspan}}">
+						<Label text="General Requirements:" textWrap="true" class="cardTitle" tap="viewMoreGER" />
 						<Label text="GER" class="cardSubtitle"/>
 					</StackLayout>
 				</GridLayout>

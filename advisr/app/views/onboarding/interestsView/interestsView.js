@@ -4,9 +4,12 @@ var orientationModule = require("nativescript-screen-orientation");
 var frameModule = require("ui/frame");
 var observable = require("data/observable");
 var layout = require("ui/layouts/grid-layout");
+var StorageUtil = require("~/util/StorageUtil");
 
 var page;
 var listView;
+var chosenMajors;
+var chosenMinors;
 var pageData;
 var selectedInterests;
 var container;
@@ -16,6 +19,9 @@ var interests = ["Building with my hands", "Mathematical Proofs", "Current Affai
 				"Clean energy", "Theatre", "Foreign Languages", "Human Computer Interaction"];
 var majors = [ "Art", "Anthropology", "Comparative Literature", "Computer Science", "Economics", "History",  "Modern Languages",
 				"MS&E", "Polical Science",  "Psychology"];
+
+
+				
 
 exports.pageNavigating = function(args) {
     page = args.object;
@@ -98,64 +104,94 @@ exports.buttonTap = function(args) {
 //LIST PICKERS FOR MAJORS/MINORS
 
 
-exports.showMajor1Picker = function() {
+exports.showMajor1Picker = function(args) {
+	var button = args.object;
+	button.class = "selectOnClick";
     pageData.set("showMajor1Picker", true);
 }
 
 exports.getMajor1SelectedIndex = function(args) {
 	var picker = page.getElementById("major1picker");
+	chosenMajors[0] = majors[picker.selectedIndex];
     pageData.set("major1", majors[picker.selectedIndex]);
     pageData.set("showMajor1Picker", false);
+    var button = page.getElementById("major1button")
+    button.class= "selectSet";
 }
 
-exports.showMajor2Picker = function() {
+exports.showMajor2Picker = function(args) {
+	var button = args.object;
+	button.class = "selectOnClick";
     pageData.set("showMajor2Picker", true);
 }
 
 exports.getMajor2SelectedIndex = function(args) {
 	var picker = page.getElementById("major2picker");
+	chosenMajors[1] = majors[picker.selectedIndex];
     pageData.set("major2", majors[picker.selectedIndex]);
     pageData.set("showMajor2Picker", false);
+    var button = page.getElementById("major2button")
+    button.class= "selectSet";
 }
 
-exports.showMajor3Picker = function() {
+exports.showMajor3Picker = function(args) {
+	var button = args.object;
+	button.class = "selectOnClick";
     pageData.set("showMajor3Picker", true);
 }
 
 exports.getMajor3SelectedIndex = function(args) {
 	var picker = page.getElementById("major3picker");
+	chosenMajors[2] = majors[picker.selectedIndex];
     pageData.set("major3", majors[picker.selectedIndex]);
     pageData.set("showMajor3Picker", false);
+    var button = page.getElementById("major3button")
+    button.class= "selectSet";
 }
 
-exports.showMinor1Picker = function() {
+exports.showMinor1Picker = function(args) {
+	var button = args.object;
+	button.class = "selectOnClick";
     pageData.set("showMinor1Picker", true);
 }
 
 exports.getMinor1SelectedIndex = function(args) {
 	var picker = page.getElementById("minor1picker");
+	chosenMinors[0] = majors[picker.selectedIndex];
     pageData.set("minor1", majors[picker.selectedIndex]);
     pageData.set("showMinor1Picker", false);
+    var button = page.getElementById("minor1button")
+    button.class= "selectSet";
 }
 
-exports.showMinor2Picker = function() {
+exports.showMinor2Picker = function(args) {
+	var button = args.object;
+	button.class = "selectOnClick";
     pageData.set("showMinor2Picker", true);
 }
 
 exports.getMinor2SelectedIndex = function(args) {
 	var picker = page.getElementById("minor2picker");
+	chosenMinors[1] = majors[picker.selectedIndex];
     pageData.set("minor2", majors[picker.selectedIndex]);
     pageData.set("showMinor2Picker", false);
+    var button = page.getElementById("minor2button")
+    button.class= "selectSet";
 }
 
-exports.showMinor3Picker = function() {
+exports.showMinor3Picker = function(args) {
+	var button = args.object;
+	button.class = "selectOnClick";
     pageData.set("showMinor3Picker", true);
 }
 
 exports.getMinor3SelectedIndex = function(args) {
 	var picker = page.getElementById("minor3picker");
+	chosenMinors[2] = majors[picker.selectedIndex];
     pageData.set("minor3", majors[picker.selectedIndex]);
     pageData.set("showMinor3Picker", false);
+    var button = page.getElementById("minor3button")
+    button.class= "selectSet";
 }
 
 
@@ -168,8 +204,20 @@ exports.addMinorField = function() {
 	pageData.set("showMinor3", true);
 }
 
+exports.goToInterests = function () {
+	StorageUtil.setMajors(chosenMajors);
+	StorageUtil.setMinors(chosenMinors);
+	container.nextSlide();
+}
+
+exports.goToDescription = function() {
+	container.previousSlide();
+}
+
 
 var initPickers = function () {
+	chosenMajors= [];
+	chosenMinors = [];
   	pageData.set("majorList", majors);
   	pageData.set("showMajor1Picker", false);
   	pageData.set("showMinor1Picker", false);
@@ -189,5 +237,6 @@ var initPickers = function () {
 
 
 exports.finish = function() {
+	StorageUtil.setOnboardingComplete();
 	frameModule.topmost().navigate("views/dashboardView/dashboardView");
 }

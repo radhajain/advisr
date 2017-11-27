@@ -1,3 +1,7 @@
+#calendarPage {
+	background-color: #E8E8EE; /*very light grey*/
+}
+
 .title {
 	font-size: 40px;
 	display: inline-block;
@@ -8,29 +12,60 @@
 
 .topMargin {
 	margin-top: 5%;
+	padding: 20%;
 	margin-left: 2%;
+	border-top-width: 2px;
+	border-top-color: gray;
 }
 
 
-.calendar {
+#grids {
 	width: 80%;
+	border-width: 2px;
+	border-color: gray;
+}
+
+.calendar {
 	background-color: lightblue;
+		
+}
+
+.bordered {
+	border-bottom-width: 2px;
+	border-bottom-color: gray;
 }
 
 .selectPlan {
-	margin: 20px;
-	background-color: orange;
+	margin: 18px;
+	border-radius: 30%;
+	border-color: lightblue;
+	border-width: 3px;
 	padding: 10px;
 	margin-left: 0px;
 }
 
 .selectPlanSelected {
-	margin: 20px;
-	background-color: red;
+	margin: 18px;
+	border-radius: 30%;
+	background-color: lightblue;
+	color: white;
 	padding: 10px;
 	margin-left: 0px;
 }
 
 .center {
 	text-align: center;
+}
+
+.header {
+	font-size: 25px;
+}
+
+.summary {
+	background-color: lightgray;
+	border-width: 10px;
+	border-color: gray;
+	width: 500px;
+	height: 500px;
+	margin-bottom: 40px;
 }

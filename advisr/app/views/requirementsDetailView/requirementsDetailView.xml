@@ -1,0 +1,48 @@
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="dashboardPage"
+	xmlns:sd="nativescript-pro-ui/sidedrawer"
+	xmlns:sidedrawer="shared/sd"
+	xmlns:pb="nativescript-progressbar"
+	xmlns:Card="nativescript-cardview">
+
+	  <ActionBar class="action-bar">
+		    <ActionBar.titleView>
+		      <Label text="Dashboard" horizontalAlignment="center" class="action-bar-title" />
+		    </ActionBar.titleView>
+	    	<NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" />
+		</ActionBar>
+
+		<sd:RadSideDrawer id="sideDrawer" showOverNavigation="true">
+		  <sd:RadSideDrawer.drawerContent>
+		    <sidedrawer:sd/>
+		 </sd:RadSideDrawer.drawerContent>
+
+		 <sd:RadSideDrawer.mainContent horizontalAlignment="center">
+		 	<StackLayout>
+			 	<!-- Title -->
+				<StackLayout orientation="vertical" class="dashboardTitle">
+					<Label text="Your Requirements" horizontalAlignment="center" />
+				</StackLayout>
+				
+				<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
+				<GridLayout columns="*" rows="*" id="grid">
+					<StackLayout>
+					<!-- Card1 -->
+					<StackLayout class="card" id="firstCard">
+						<Label text="{{title}}" textWrap="true" class="cardTitle"/>
+						<Label text="{{major}}" class="cardSubtitle"/>
+					</StackLayout>
+					<GridLayout cols="*,*,*" rows="*" id="grid">
+						<StackLayout col="0">
+							<Label text="{{coreHeader}}"/>
+						</StackLayout>
+					</GridLayout>
+
+					</StackLayout>
+				</GridLayout>
+			</Card:CardView>
+			</StackLayout>
+
+
+		 </sd:RadSideDrawer.mainContent>
+		</sd:RadSideDrawer>
+</Page>
