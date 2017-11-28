@@ -256,7 +256,7 @@ var unfocusButtons = function() {
     var button5 = page.getElementById("minor2button")
     button5.class= "selectSet";
     var button6 = page.getElementById("minor3button")
-    button6.class= "selectSet";
+    button5.class= "selectSet";
 }
 
 

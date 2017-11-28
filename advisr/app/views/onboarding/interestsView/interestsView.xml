@@ -5,6 +5,24 @@
 			<Slides:SlideContainer id="slides-container" height="60%" pageIndicators="true">
 				<Slides:Slide class="slide" swipe="changeSlide">
 					<StackLayout>
+						<Label text="Tell us a bit about you to get started" class="question"/>
+						<StackLayout class="center">
+							<Label text="What is your name?" class="topMargin yearQ"/>
+							<TextField hint="Enter your name" text="{{ name }}" autocorrect="false" autocapitalization="none" id="name" class="topMargin"/>
+							<Label text="What year are you in?" class="topMargin yearQ" />
+							<StackLayout orientation="horizontal" class="centralYearButtons">
+								<Button id="fresh" class="yearButton" text="Freshman" tap="addFreshman"/>
+								<Button id="soph" class="yearButton" text="Sophomore" tap="addSophomore"/>
+								<Button id="jun" class="yearButton" text="Junior" tap="addJunior"/>
+								<Button id="sen" class="yearButton" text="Senior" tap="addSenior"/>
+							</StackLayout>
+							<Button text="Sync with Axess" tap="axessSync" id="axessSync"/>
+						</StackLayout>
+					</StackLayout>
+				</Slides:Slide>
+
+				<Slides:Slide class="slide" swipe="changeSlide">
+					<StackLayout>
 						<Label text="Which of the following best describes you?" class="question"/>
 						<StackLayout orientation="horizontal" class="buttons">
 							<Button text="Declared" tap="changeSlide" class="buttonOption purple"/>
@@ -22,15 +40,15 @@
 								<StackLayout class="majors">
 									<Label text="Majors" class="listHeader"/>
 									<StackLayout orientation="horizontal" class="classlist">
-										<Label text="Major 1: "/>
+										<Label text="Major 1: " class="class-label"/>
 										<Button text="{{major1}}" tap="showMajor1Picker" class="select" id="major1button"/>
 									</StackLayout>
 									<StackLayout orientation="horizontal">
-										<Label text="Major 2: "/>
+										<Label text="Major 2: " class="class-label"/>
 										<Button text="{{major2}}" tap="showMajor2Picker" class="select" id="major2button"/>
 									</StackLayout>
 									<StackLayout orientation="horizontal" visibility="{{ showMajor3 ? 'visible' : 'collapse'}}">
-										<Label text="Major 3: "/>
+										<Label text="Major 3: " class="class-label"/>
 										<Button text="{{major3}}" tap="showMajor3Picker" class="select" id="major3button"/>
 									</StackLayout>
 									<Button text="+" tap="addMajorField" id="addMajor" visibility="{{ showMajor3 ? 'collapse' : 'visible'}}"/>
@@ -38,15 +56,15 @@
 								<StackLayout class="minors">
 									<Label text="Minors" class="listHeader"/>
 									<StackLayout orientation="horizontal" class="classlist">
-										<Label text="Minor 1: "/>
+										<Label text="Minor 1: " class="class-label"/>
 										<Button text="{{minor1}}" tap="showMinor1Picker" class="select" id="minor1button"/>
 									</StackLayout>
 									<StackLayout orientation="horizontal">
-										<Label text="Minor 2: "/>
+										<Label text="Minor 2: " class="class-label"/>
 										<Button text="{{minor2}}" tap="showMinor2Picker" class="select" id="minor2button"/>
 									</StackLayout>
 									<StackLayout orientation="horizontal" visibility="{{ showMinor3 ? 'visible' : 'collapse'}}">
-										<Label text="Minor 3: "/>
+										<Label text="Minor 3: " class="class-label"/>
 										<Button text="{{minor3}}" tap="showMinor3Picker" class="select" id="minor3button"/>
 									</StackLayout>
 									<Button text="+" tap="addMinorField" id="addMinor" visibility="{{ showMinor3 ? 'collapse' : 'visible'}}"/>
