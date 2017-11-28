@@ -6,6 +6,7 @@ var observable = require("data/observable");
 var layout = require("ui/layouts/grid-layout");
 var StorageUtil = require("~/util/StorageUtil");
 var statusBar = require("nativescript-status-bar");
+var FancyAlert = require("nativescript-fancyalert");
 
 var page;
 var listView;
@@ -101,6 +102,13 @@ exports.buttonTap = function(args) {
   	 listView.refresh();
 
 }
+
+
+exports.axessSync = function() {
+	// FancyAlert.showSuccess('Sound?', 'You can use sound and customize many aspects like animation in/out, color, background style and much more.', 'Amazing!');
+
+	FancyAlert.TNSFancyAlert.showWaiting("Getting your class history...", "You look like a smart one", null, 3, 350);
+};
 
 
 //LIST PICKERS FOR MAJORS/MINORS
