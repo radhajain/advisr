@@ -13,6 +13,7 @@ var listView;
 var chosenMajors;
 var chosenMinors;
 var pageData;
+var year;
 var selectedInterests;
 var container;
 var interests = ["Building with my hands", "Mathematical Proofs", "Current Affairs", "Coding Projects", 
@@ -103,11 +104,65 @@ exports.buttonTap = function(args) {
 
 }
 
+exports.addName = function(args) {
+	var nameField = page.getViewById("name");
+	var name = nameField.text;
+	if (name === "") {
+	  FancyAlert.TNSFancyAlert.showError("Not so fast!", "Please enter your name to continue", "OK", null, 350);
+	} else {
+		StorageUtil.setName(name.trim());
+	}
+}
+
+var deselectAllYears = function() {
+	var button1 = page.getViewById("fresh");
+    button1.class="yearButton";
+    var otherButton1 = page.getViewById("soph");
+    otherButton1.class="yearButton";
+    var otherButton2 = page.getViewById("jun");
+    otherButton2.class="yearButton";
+    var otherButton3 = page.getViewById("sen");
+    otherButton3.class="yearButton";
+
+}
+
+
+exports.addFreshman = function() {
+	deselectAllYears();
+	var button1 = page.getViewById("fresh");
+    button1.class="yearButtonSelected";
+    year = "Freshman";
+}
+
+exports.addSophomore = function() {
+	deselectAllYears();
+	var button1 = page.getViewById("soph");
+    button1.class="yearButtonSelected";
+    year = "Sophomore";
+}
+
+exports.addJunior = function() {
+	deselectAllYears();
+	var button1 = page.getViewById("jun");
+    button1.class="yearButtonSelected";
+    year = "Junior";
+}
+
+exports.addSenior = function() {
+	deselectAllYears();
+	var button1 = page.getViewById("sen");
+    button1.class="yearButtonSelected";
+    year = "Senior";
+}
 
 exports.axessSync = function() {
-	// FancyAlert.showSuccess('Sound?', 'You can use sound and customize many aspects like animation in/out, color, background style and much more.', 'Amazing!');
-
+	if (!year) {
+		FancyAlert.TNSFancyAlert.showError("Almost there!", "Please enter your year first", "OK", null, 350);
+		return;
+	}
+	StorageUtil.setYear(year);
 	FancyAlert.TNSFancyAlert.showWaiting("Getting your class history...", "You look like a smart one", null, 3, 350);
+	container.nextSlide();
 };
 
 

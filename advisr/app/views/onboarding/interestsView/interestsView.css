@@ -117,11 +117,15 @@
 }
 
 .yearButtonSelected {
-	margin: 18px;
+	margin: 30px;
 	border-radius: 30%;
+	border-color: lightblue;
 	background-color: lightblue;
 	color: white;
-	padding: 10px;
+	border-width: 3px;
+	padding: 20px;
+	margin-left: 0px;
+	font-size: 18px;
 }
 
 #axessSync {

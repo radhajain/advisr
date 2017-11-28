@@ -7,9 +7,13 @@ var interests = ["Building with my hands", "Mathematical Proofs", "Current Affai
 				"Law & Justice", "Literature", "Complex Electrical Systems", "Filmmaking", "Creating Art",
 				"Clean energy", "Theatre", "Foreign Languages", "Human Computer Interaction"];
 
+
+// var matchedClasses = ["E40M", "Math 51H"... FILL IN ];
+
 var CS = [
 	{core: ["CS106A", "CS106B", "CS107", "CS103", "CS109", "CS147", "CS247"]},
 	{electives: ["CS193", "CS108", "CS148", "CS142", "CS210A"]}];
+
 
 
 
@@ -29,6 +33,21 @@ exports.setUpDB = function() {
 }
 
 
+exports.setYear = function(year) {
+	appSettings.setString('year', year);
+}
+
+exports.getYear = function() {
+	appSettings.getString('year');
+}
+
+exports.setName = function(name) {
+	appSettings.setString('name', name);
+}
+
+exports.getName = function() {
+	appSettings.getString('name');
+}
 
 exports.setMajors = function(list) {
 	appSettings.setString('majors', JSON.stringify(list));

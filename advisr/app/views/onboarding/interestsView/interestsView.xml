@@ -8,7 +8,7 @@
 						<Label text="Tell us a bit about you to get started" class="question"/>
 						<StackLayout class="center">
 							<Label text="What is your name?" class="topMargin yearQ"/>
-							<TextField hint="Enter your name" text="{{ name }}" autocorrect="false" autocapitalization="none" id="name" class="topMargin"/>
+							<TextField hint="Enter your name" text="{{ name }}" autocorrect="false" autocapitalization="none" id="name" class="topMargin" returnPress="addName"/>
 							<Label text="What year are you in?" class="topMargin yearQ" />
 							<StackLayout orientation="horizontal" class="centralYearButtons">
 								<Button id="fresh" class="yearButton" text="Freshman" tap="addFreshman"/>
