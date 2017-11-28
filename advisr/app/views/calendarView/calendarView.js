@@ -3,6 +3,7 @@ var app = require("tns-core-modules/application");
 var orientationModule = require("nativescript-screen-orientation");
 var observable = require("data/observable");
 var pageData = new observable.Observable();
+var FancyAlert = require("nativescript-fancyalert");
 
 var page;
 
@@ -63,4 +64,8 @@ exports.showFourYear = function () {
     otherButton1.class="selectPlan";
     var otherButton2 = page.getViewById("yearButton");
     otherButton2.class="selectPlan";
+}
+
+exports.sync = function() {
+    FancyAlert.TNSFancyAlert.showWaiting("Syncing with your calendar...", "Doing magic and playing with grasshoppers", null, 3, 350);
 }

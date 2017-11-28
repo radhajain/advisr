@@ -69,3 +69,11 @@
 	height: 500px;
 	margin-bottom: 40px;
 }
+
+.syncButton {
+	background-color: green;
+	opacity: 0.8;
+	color: white;
+	padding: 10px;
+	border-radius: 30%;
+}
