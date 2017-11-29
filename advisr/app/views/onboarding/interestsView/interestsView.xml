@@ -21,7 +21,7 @@
 					</StackLayout>
 				</Slides:Slide>
 
-				<Slides:Slide class="slide" swipe="changeSlide">
+	<!-- 			<Slides:Slide class="slide" swipe="changeSlide">
 					<StackLayout>
 						<Label text="Which of the following best describes you?" class="question"/>
 						<StackLayout orientation="horizontal" class="buttons">
@@ -30,7 +30,7 @@
 							<Button text="Exploring" tap="changeSlide" class="buttonOption green"/>
 						</StackLayout>
 					</StackLayout>
-				</Slides:Slide>
+				</Slides:Slide> -->
 				<Slides:Slide class="slide" disablePan="true" tap="disablePickers">
 					<StackLayout>
 						<Label text="Add up to 3 majors and minors that you are considering." class="question"/>
@@ -42,14 +42,17 @@
 									<StackLayout orientation="horizontal" class="classlist">
 										<Label text="Major 1: " class="class-label"/>
 										<Button text="{{major1}}" tap="showMajor1Picker" class="select" id="major1button"/>
+										<Image src="res://ic_highlight_off" class="cancelButton" id="major1" tap="clearVal"/>
 									</StackLayout>
 									<StackLayout orientation="horizontal">
 										<Label text="Major 2: " class="class-label"/>
 										<Button text="{{major2}}" tap="showMajor2Picker" class="select" id="major2button"/>
+										<Image src="res://ic_highlight_off" class="cancelButton" id="major2" tap="clearVal"/>
 									</StackLayout>
 									<StackLayout orientation="horizontal" visibility="{{ showMajor3 ? 'visible' : 'collapse'}}">
 										<Label text="Major 3: " class="class-label"/>
 										<Button text="{{major3}}" tap="showMajor3Picker" class="select" id="major3button"/>
+										<Image src="res://ic_highlight_off" class="cancelButton" id="major3" tap="clearVal"/>
 									</StackLayout>
 									<Button text="+" tap="addMajorField" id="addMajor" visibility="{{ showMajor3 ? 'collapse' : 'visible'}}"/>
 								</StackLayout>
@@ -58,14 +61,17 @@
 									<StackLayout orientation="horizontal" class="classlist">
 										<Label text="Minor 1: " class="class-label"/>
 										<Button text="{{minor1}}" tap="showMinor1Picker" class="select" id="minor1button"/>
+										<Image src="res://ic_highlight_off" class="cancelButton" id="minor1" tap="clearVal"/>
 									</StackLayout>
 									<StackLayout orientation="horizontal">
 										<Label text="Minor 2: " class="class-label"/>
 										<Button text="{{minor2}}" tap="showMinor2Picker" class="select" id="minor2button"/>
+										<Image src="res://ic_highlight_off" class="cancelButton" id="minor2" tap="clearVal"/>
 									</StackLayout>
 									<StackLayout orientation="horizontal" visibility="{{ showMinor3 ? 'visible' : 'collapse'}}">
 										<Label text="Minor 3: " class="class-label"/>
 										<Button text="{{minor3}}" tap="showMinor3Picker" class="select" id="minor3button"/>
+										<Image src="res://ic_highlight_off" class="cancelButton" id="minor3" tap="clearVal"/>
 									</StackLayout>
 									<Button text="+" tap="addMinorField" id="addMinor" visibility="{{ showMinor3 ? 'collapse' : 'visible'}}"/>
 								</StackLayout>

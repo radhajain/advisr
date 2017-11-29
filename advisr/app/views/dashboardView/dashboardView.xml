@@ -31,7 +31,7 @@
 							<Label text="Summary:" class="cardTitle"/>
 							<Label text="{{date}}" class="cardTitle"/>
 						</StackLayout>
-						<Label text="Sophomore: Undeclared" textWrap="true" class="cardSubtitle"/>
+						<Label text="{{userInfo}}" textWrap="true" class="cardSubtitle"/>
 						<GridLayout columns="*, *, *" rows="*" id="panels">
 							<StackLayout col="0" class="panelCard">
 								<Label text="60 units" class="infoTitle green"/>

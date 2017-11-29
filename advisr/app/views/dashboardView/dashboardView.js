@@ -16,8 +16,27 @@ exports.pageNavigating = function(args) {
     page = args.object;
     orientationModule.orientationCleanup();
     page.bindingContext = pageData;
-    var title = "Radha Jain's Progress Report";
+    
+	var name = StorageUtil.getName();
+	if (!name) {
+		var title = "Progress Report";
+	} else{
+		var title = name + "'s Progress Report";		
+	}
 	pageData.set("title", title);
+	var year = StorageUtil.getYear();
+	var majors = StorageUtil.getMajors();
+	if (majors[1]) {
+		var info = year + ": " + majors[0] + ", " + majors[1];
+		if (majors[2]) {
+			var info = year + ": " + majors[0] + ", " + majors[1] + ", " + majors[2];
+		}
+		
+	} else {
+		var info = year + ": " + majors[0];
+	}
+	console.log(majors);
+	pageData.set("userInfo", info);
 	init();
 	
 }

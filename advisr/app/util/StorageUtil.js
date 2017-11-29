@@ -11,7 +11,7 @@ var interests = ["Building with my hands", "Mathematical Proofs", "Current Affai
 // var matchedClasses = ["E40M", "Math 51H"... FILL IN ];
 
 var CS = [
-	{core: ["CS106A", "CS106B", "CS107", "CS103", "CS109", "CS147", "CS247"]},
+	{core: [ ["CS106A", 5,"Intro to CS"], "CS106B", "CS107", "CS103", "CS109", "CS147", "CS247"]},
 	{electives: ["CS193", "CS108", "CS148", "CS142", "CS210A"]}];
 
 
@@ -38,7 +38,7 @@ exports.setYear = function(year) {
 }
 
 exports.getYear = function() {
-	appSettings.getString('year');
+	return appSettings.getString('year');
 }
 
 exports.setName = function(name) {
@@ -46,7 +46,7 @@ exports.setName = function(name) {
 }
 
 exports.getName = function() {
-	appSettings.getString('name');
+	return appSettings.getString('name');
 }
 
 exports.setMajors = function(list) {

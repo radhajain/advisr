@@ -116,6 +116,14 @@
 	font-size: 23px;
 }
 
+.cancelButton {
+	width: 40px;
+}
+
+.class-label {
+	font-size: 25px;
+}
+
 .yearButtonSelected {
 	margin: 30px;
 	border-radius: 30%;
@@ -166,7 +174,7 @@
 	font-size: 40px;
 	color: gray;
 	font-weight: bold;
-	margin-left: 20%;
+	margin-left: 15%;
 }
 
 .prevButton {

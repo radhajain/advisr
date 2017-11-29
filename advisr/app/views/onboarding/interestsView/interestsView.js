@@ -104,14 +104,15 @@ exports.buttonTap = function(args) {
 
 }
 
-exports.addName = function(args) {
+exports.addName = function() {
 	var nameField = page.getViewById("name");
 	var name = nameField.text;
 	if (name === "") {
 	  FancyAlert.TNSFancyAlert.showError("Not so fast!", "Please enter your name to continue", "OK", null, 350);
 	} else {
-		StorageUtil.setName(name.trim());
+		StorageUtil.setName(name);
 	}
+	console.log(StorageUtil.getName());
 }
 
 var deselectAllYears = function() {
@@ -160,6 +161,9 @@ exports.axessSync = function() {
 		FancyAlert.TNSFancyAlert.showError("Almost there!", "Please enter your year first", "OK", null, 350);
 		return;
 	}
+	if (!StorageUtil.getName()) {
+		exports.addName();
+	}
 	StorageUtil.setYear(year);
 	FancyAlert.TNSFancyAlert.showWaiting("Getting your class history...", "You look like a smart one", null, 3, 350);
 	container.nextSlide();
@@ -167,7 +171,19 @@ exports.axessSync = function() {
 
 
 //LIST PICKERS FOR MAJORS/MINORS
-
+exports.clearVal = function(args) {
+	var m = args.object.id.substring(0, 5);
+	console.log(m);
+	var index = args.object.id.substring(5)-1;
+	console.log(index);
+	if (m === "major") {
+		chosenMajors.splice(index, 1);
+		pageData.set(args.object.id, "Select a major");
+	} else { //minor
+		chosenMinors.splice(index, 1);
+		pageData.set(args.object.id, "Select a minor");
+	}
+}
 
 exports.showMajor1Picker = function(args) {
 	var button = args.object;
