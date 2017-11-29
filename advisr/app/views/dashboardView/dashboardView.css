@@ -21,6 +21,10 @@
 	color: #003535;
 }
 
+.center {
+	text-align: center;
+}
+
 .cardSubtitle {
 	margin: 2%;
 }
@@ -43,6 +47,12 @@
 
 .infoTitle {
 	font-size: 25px;
+}
+
+.progressNumber {
+	margin-top: 10px;
+	font-size: 25px;
+	text-align: center;
 }
 
 .infoSubtitle {

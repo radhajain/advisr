@@ -54,18 +54,31 @@
 					</StackLayout>
 					<!-- Card3 -->
 					<StackLayout class="card" id="thirdCard" row="1">
-						<Label text="Major 1:" class="cardTitle" tap="viewMoreMajor1"/>
-						<Label text="{{major1}}" class="cardSubtitle"/>
+						<StackLayout orientation="horizontal">
+							<Label text="{{major1}}" class="cardTitle"/>
+							<Label text=": Major 1" class="cardSubtitle" tap="viewMoreMajor1"/>
+						</StackLayout>
+						<Label text="{{progress1}}" class="progressNumber"/>
+						<Label text="complete" class="center"/>
 					</StackLayout>
 					<!-- Card4 -->
 					<StackLayout class="card" id="fourthCard" row="1" col="1" visibility="{{showSecond ? 'visible' : 'collapse'}}">
-						<Label text="Major 2:" class="cardTitle" tap="viewMoreMajor2"/>
-						<Label text="{{major2}}" class="cardSubtitle"/>
+						<StackLayout orientation="horizontal">
+							<Label text="{{major2}}" class="cardTitle"/>
+							<Label text=": Major 2" class="cardSubitle" tap="viewMoreMajor2"/>
+							
+						</StackLayout>
+						<Label text="{{progress2}}" class="progressNumber"/>
+						<Label text="complete" class="center"/>
 					</StackLayout>
 					<!-- Card4 -->
 					<StackLayout class="card" id="fifthCard" row="1" col="2" visibility="{{showThird ? 'visible' : 'collapse'}}">
-						<Label text="Major 3:" class="cardTitle" tap="viewMoreMajor3"/>
-						<Label text="{{major3}}" class="cardSubtitle"/>
+						<StackLayout orientation="horizontal">
+							<Label text="{{major3}}" class="cardTitle"/>
+							<Label text=": Major 3" class="cardSubitle" tap="viewMoreMajor3"/>
+						</StackLayout>
+						<Label text="{{progress3}}" class="progressNumber"/>
+						<Label text="complete" class="center"/>
 					</StackLayout>
 					<!-- Card5 -->
 					<StackLayout class="card" id="sixthCard" row="1" col="{{GERcol}}" colSpan="{{GERspan}}">

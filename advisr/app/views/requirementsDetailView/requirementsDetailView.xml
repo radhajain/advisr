@@ -2,7 +2,8 @@
 	xmlns:sd="nativescript-pro-ui/sidedrawer"
 	xmlns:sidedrawer="shared/sd"
 	xmlns:pb="nativescript-progressbar"
-	xmlns:Card="nativescript-cardview">
+	xmlns:Card="nativescript-cardview"
+	xmlns:CheckBox="nativescript-checkbox">
 
 	  <ActionBar class="action-bar">
 		    <ActionBar.titleView>

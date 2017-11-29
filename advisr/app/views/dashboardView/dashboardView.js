@@ -7,6 +7,7 @@ var frameModule = require("ui/frame");
 var StorageUtil = require("~/util/StorageUtil");
 
 var page;
+var year;
 var secondMajor = false;
 var thirdMajor = false;
 var GERspan = 3;
@@ -24,21 +25,18 @@ exports.pageNavigating = function(args) {
 		var title = name + "'s Progress Report";		
 	}
 	pageData.set("title", title);
-	var year = StorageUtil.getYear();
+	year = StorageUtil.getYear();
 	var majors = StorageUtil.getMajors();
 	if (majors[1]) {
 		var info = year + ": " + majors[0] + ", " + majors[1];
 		if (majors[2]) {
 			var info = year + ": " + majors[0] + ", " + majors[1] + ", " + majors[2];
 		}
-		
 	} else {
 		var info = year + ": " + majors[0];
 	}
-	console.log(majors);
 	pageData.set("userInfo", info);
 	init();
-	
 }
 
 
@@ -59,6 +57,15 @@ var init = function() {
 	pageData.set("showThird", thirdMajor);
 	pageData.set("GERspan", GERspan);
 	pageData.set("GERcol", 4-GERspan);
+	if (year === "Freshman" || year ==="Sophomore") {
+		pageData.set("progress1", "30%");
+		pageData.set("progress2", "10%");
+		pageData.set("progress3", "10%");
+	} else {
+		pageData.set("progress1", "70%");
+		pageData.set("progress2", "50%");
+		pageData.set("progress3", "30%");
+	}
 }
 
 
