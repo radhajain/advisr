@@ -76,6 +76,7 @@
 						<StackLayout orientation="horizontal">
 							<Label text="{{major3}}" class="cardTitle"/>
 							<Label text=": Major 3" class="cardSubitle" tap="viewMoreMajor3"/>
+							<Image src="res://10_progress"/>
 						</StackLayout>
 						<Label text="{{progress3}}" class="progressNumber"/>
 						<Label text="complete" class="center"/>

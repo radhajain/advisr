@@ -26,45 +26,64 @@
 				<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
 				<GridLayout id="grid" columns="*" rows="*" >
 					<StackLayout>
-					<!-- Card1 -->
-					<StackLayout class="card" id="firstCard">
-						<Label text="GER:" textWrap="true" class="cardTitle"/>
-						<Label text="More >" tap="viewMoreGER" class="more"/>
-					</StackLayout>
 					<!-- Card2 -->
 					<StackLayout class="card" id="secondCard" row="1">
-						<Label text="Major 1:" class="cardTitle"/>
-						<Label text="{{major1}}" class="cardSubtitle"/>
+						<StackLayout orientation="horizontal">
+							<Label text="Major 1:" class="cardTitle"/>
+							<Label text="{{major1}}" class="cardSubtitle"/>
+						</StackLayout>
+						<Label text="Core: " class="classesLabel"/>
+						<Label text="Electives: " class="classesLabel"/>
 						<Label text="More >" tap="viewMoreMajor1" class="more"/>
 					</StackLayout>
 					<!-- Card3 -->
 					<StackLayout class="card" id="thirdCard" row="2" visibility="{{secondMajor ? 'visible' : 'collapse'}}">
-						<Label text="Major 2:" class="cardTitle"/>
-						<Label text="{{major2}}" class="cardSubtitle"/>
+						<StackLayout orientation="horizontal">
+							<Label text="Major 2:" class="cardTitle"/>
+							<Label text="{{major2}}" class="cardSubtitle"/>
+						</StackLayout>
+						<Label text="Core: " class="classesLabel"/>
+						<Label text="Electives: " class="classesLabel"/>
 						<Label text="More >" tap="viewMoreMajor2" class="more"/>
 					</StackLayout>
 						<!-- Card3 -->
 					<StackLayout class="card" id="fourthCard" row="2" visibility="{{thirdMajor ? 'visible' : 'collapse'}}">
-						<Label text="Major 3:" class="cardTitle"/>
-						<Label text="{{major3}}" class="cardSubtitle"/>
+						<StackLayout orientation="horizontal">
+							<Label text="Major 3:" class="cardTitle"/>
+							<Label text="{{major3}}" class="cardSubtitle"/>
+						</StackLayout>
+						<Label text="Core: " class="classesLabel"/>
+						<Label text="Electives: " class="classesLabel"/>
 						<Label text="More >" tap="viewMoreMajor3" class="more"/>
 					</StackLayout>
 						<!-- Card3 -->
 					<StackLayout class="card" id="fifthCard" row="2" visibility="{{firstMinor ? 'visible' : 'collapse'}}">
-						<Label text="Minor 1:" class="cardTitle"/>
-						<Label text="{{minor1}}" class="cardSubtitle"/>
+						<StackLayout orientation="horizontal">
+							<Label text="Minor 1:" class="cardTitle"/>
+							<Label text="{{minor1}}" class="cardSubtitle"/>
+						</StackLayout>
+						<Label text="Core: " class="classesLabel"/>
+						<Label text="Electives: " class="classesLabel"/>
 						<Label text="More >" tap="viewMoreMinor1" class="more"/>
 					</StackLayout>
 						<!-- Card3 -->
 					<StackLayout class="card" id="sixthCard" row="2" visibility="{{secondMinor ? 'visible' : 'collapse'}}">
-						<Label text="Minor 2:" class="cardTitle"/>
-						<Label text="{{minor2}}" class="cardSubtitle"/>
+						<StackLayout orientation="horizontal">
+							<Label text="Minor 2:" class="cardTitle"/>
+							<Label text="{{minor2}}" class="cardSubtitle"/>
+						</StackLayout>
+						<Label text="Core: " class="classesLabel"/>
+						<Label text="Electives: " class="classesLabel"/>
 						<Label text="More >" tap="viewMoreMinor2" class="more"/>
 					</StackLayout>
 						<!-- Card3 -->
 					<StackLayout class="card" id="seventhCard" row="2" visibility="{{thirdMinor ? 'visible' : 'collapse'}}">
-						<Label text="Minor 3:" class="cardTitle"/>
-						<Label text="{{minor3}}" class="cardSubtitle"/>
+						<StackLayout orientation="horizontal">
+							<Label text="Minor 3:" class="cardTitle"/>
+							<Label text="{{minor3}}" class="cardSubtitle"/>
+						</StackLayout>
+						<Label text="Core: " class="classesLabel"/>
+						<Label text="Electives: " class="classesLabel"/>
 						<Label text="More >" tap="viewMoreMinor3" class="more"/>
 					</StackLayout>
 				</StackLayout>
