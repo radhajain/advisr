@@ -2,7 +2,7 @@ var appSettings = require("application-settings");
 
 
 //MATTHEW - add classes and matched classes here
-var interests = ["Building with my hands", "Mathematical Proofs", "Current Affairs", "Coding Projects", 
+var interests = ["Building with my hands", "Mathematical Proofs", "Current Affairs", "Coding Projects",
 				"The economy", "Evaluating human perspectives", "Discussing Art" ,"Psychology", "Critiquing Society",
 				"Law & Justice", "Literature", "Complex Electrical Systems", "Filmmaking", "Creating Art",
 				"Clean energy", "Theatre", "Foreign Languages", "Human Computer Interaction"];
@@ -12,21 +12,21 @@ var interests = ["Building with my hands", "Mathematical Proofs", "Current Affai
 
 
 var Computer_Science_Array = [
-	{core: [["CS107", 5, "Computer Organization and Systems"], 
-  ["CS110", 5, "Principles of Computer Systems"], 
-  ["CS103", 5, "Mathematical Foundations of Computing"], 
-  ["CS109", 5, "Introduction to Probability for Computer Scientists"], 
-  ["CS147", 5, "Introduction to Human-Computer Interaction Design"], 
+	{core: [["CS107", 5, "Computer Organization and Systems"],
+  ["CS110", 5, "Principles of Computer Systems"],
+  ["CS103", 5, "Mathematical Foundations of Computing"],
+  ["CS109", 5, "Introduction to Probability for Computer Scientists"],
+  ["CS147", 5, "Introduction to Human-Computer Interaction Design"],
   ["CS247", 4, "Human-Computer Interaction Design Studio"]]},
 	{electives: [["CS193A", 3, "Android Programming"],
-  ["CS108", 4, "Object-Oriented Systems Design"], 
-  ["CS148", 4, "Introduction to Computer Graphics and Imaging"], 
-  ["CS142", 3, "Web Applications"], 
+  ["CS108", 4, "Object-Oriented Systems Design"],
+  ["CS148", 4, "Introduction to Computer Graphics and Imaging"],
+  ["CS142", 3, "Web Applications"],
   ["CS210A", 4, "Software Project Experience with Corporate Partners"]]}];
 
 var Art_Array = [
-  {core: [["ARTHIST 1A", 5, "Introduction to the Visual Arts: Prehistoric through Medieval"], 
-  ["ARTHIST 1B", 5, "Introduction to the Visual Arts: History of Western Art from the Renaissance to the Present"], 
+  {core: [["ARTHIST 1A", 5, "Introduction to the Visual Arts: Prehistoric through Medieval"],
+  ["ARTHIST 1B", 5, "Introduction to the Visual Arts: History of Western Art from the Renaissance to the Present"],
   ["ARTHIST 2", 5, "Asian Arts and Cultures"],
   ["ARTHIST 3", 5, "Introduction to World Architecture"],
   ["FILMSTUD 4", 5, "Introduction to Film Study"]
@@ -38,7 +38,7 @@ var Art_Array = [
 ];
 
 var Anthropology_Array = [
-  {core: [["ANTHRO 90B", 5, "Theory of Cultural and Social Anthropology"], 
+  {core: [["ANTHRO 90B", 5, "Theory of Cultural and Social Anthropology"],
   ["ANTHRO 90C", 5, "Theory of Ecological and Environmental Anthropology"],
   ["ANTHRO 901", 5, "Method and Evidence in Anthropology"],
   ["ANTHRO 193", 5, "Anthropology Capstone: Contemporary Debates in Anthropology"]]},
@@ -62,7 +62,7 @@ var Anthropology_Array = [
 var Comparative_Literature_Array = [
   {core: [["COMPLIT 121", 5, "Poems, Poetry, Worlds"],
   ["COMPLIT 122", 5, "Literature as Performance"],
-  ["COMPLIT 123", 5, "The Novel and the World"]]}, 
+  ["COMPLIT 123", 5, "The Novel and the World"]]},
 
   {electives: [["COMPLIT 101", 5, "What Is Comparative Literature?"],
   ["COMPLIT 121", 5, "Poems, Poetry, Worlds"],
@@ -78,7 +78,7 @@ var Economics_Array = [
   ["ECON 52", 5, "Economic Analysis III"],
   ["ECON 102A", 5, "Introduction to Statistical Methods (Postcalculus) for Social Scientists"],
   ["ECON 102B", 5, "Applied Econometrics"]
-  ]}, 
+  ]},
   {electives: [["ECON 102C", 5, "Advanced Topics in Econometrics"],
   ["ECON 111", 5, "Money and Banking"],
   ["ECON 112", 5, "Financial Markets and Institutions: Recent Developments"],
@@ -97,7 +97,7 @@ var Economics_Array = [
   ]}
 ];
 var History_Array = [
-  {core: [["HISTORY 1B", 5, "Global History: The Early Modern World, 1300 to 1800"]]}, 
+  {core: [["HISTORY 1B", 5, "Global History: The Early Modern World, 1300 to 1800"]]},
   {electives: [["HISTORY 7S", 5, "Stanford Collects: A History of Collecting"],
   ["HISTORY 9S", 5, "Censorship & Propaganda: From Renaissance to Revolution"],
   ["HISTORY 22S", 5, "From 'superfluous women' to the 'Yolocaust': The Experience of War in 20th Century Europe "],
@@ -115,7 +115,7 @@ var MSandE_Array = [
   ["MS&E 125", 5, "Introduction to Applied Statistics"],
   ["MS&E 111", 5, "Introduction to Optimization"],
   ["MS&E 193", 5, "Technology and National Security"],
-  ["MS&E 140", 5, "Accounting for Managers and Entrepreneurs"]]}, 
+  ["MS&E 140", 5, "Accounting for Managers and Entrepreneurs"]]},
   {electives: [["MS&E 147", 5, "Finance and Society for non-MBAs"],
     ["MS&E 152", 5, "Introduction to Decision Analysis"],
     ["MS&E 145", 5, "Introduction to Investment Science"],
@@ -134,7 +134,7 @@ var Political_Science_Array = [
   ["POLISCI 102", 3, "Politics and Public Policy"],
   ["POLISCI 103", 3, "Justice"],
   ["POLISCI 114D", 3, "Democracy, Development, and the Rule of Law"],
-  ["POLISCI 122", 3, "Introduction to American Law"]]}, 
+  ["POLISCI 122", 3, "Introduction to American Law"]]},
   {electives: [["POLISCI 10N", 3, "International Organizations and the World Order"],
   ["POLISCI 11N", 3, "The Rwandan Genocide"],
   ["POLISCI 18N", 3, "Civil War and International Politics: Syria in Context"],
@@ -148,7 +148,7 @@ var Political_Science_Array = [
 var Psychology_Array = [
   {core: [["PSYCH 1", 5, "Intorduction to Psychology"],
   ["PSYCH 10", 5, "Introduction to Statistical Methods"]
-  ]}, 
+  ]},
   {electives: [["PSYCH 30", 3, "Introduction to Perception"],
   ["PSYCH 35", 3, "Minds and Machines"],
   ["PSYCH 45", 3, "Introduction to Learning and Memory"],
@@ -159,7 +159,7 @@ var Psychology_Array = [
   ["PSYCH 80", 3, "Introduction to Personality and Affective Science"],
   ["PSYCH 90", 3, "Introduction to Clinical Psychology"],
   ["PSYCH 95", 3, "Introduction to Abnormal Psychology"]
-];
+]}];
 
 
 exports.getClasses = function(className) {
