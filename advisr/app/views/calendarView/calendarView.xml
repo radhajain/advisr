@@ -88,6 +88,7 @@
 			 	 	<Button text="4-Year" class="selectPlan" tap="showFourYear" id="fourButton"/>
 			 	</StackLayout>
 			 	<Label text="Required Classes:" class="center topMargin"/>
+			 	<Image src="res://70_progress"/>
 			 	<Button text="Sync with GCal" class="syncButton" tap="sync"/>
 		 	 </StackLayout>
 

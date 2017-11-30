@@ -83,6 +83,7 @@
 				<Slides:Slide class="slide" swipe="goToDashboard" disablePan="true">
 					<StackLayout>
 						<Label class="question" text="What are you interested in? Select all that apply."/>
+						<Image src="res://70_progress"/>
 						<ListView items="{{interests}}" separatorColor="#FFFFFF" height="55%" id="interest-list-view" visibility="{{interests.length ? 'visible' : 'collapse'}}">
 							<ListView.itemTemplate>
 							<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">

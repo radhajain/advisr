@@ -3,7 +3,7 @@
 		<Button text="Schedule" class="navLink" tap="clickCalendar" />
 		<Button text="Dashboard" class="navLink" tap="clickDashboard" />
 		<Button text="Requirements" class="navLink" tap="clickReq" />
-		<Button text="Settings" class="navLink"/>
+		<Button text="Settings" class="navLink" tap="clickSettings"/>
 	</StackLayout>
 </StackLayout>
 

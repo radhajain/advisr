@@ -18,3 +18,7 @@ exports.clickDashboard = function() {
 exports.clickReq = function() {
 	frameModule.topmost().navigate("views/requirementsView/requirementsView");
 }
+
+exports.clickSettings = function() {
+	frameModule.topmost().navigate("views/settingsView/settingsView");
+}

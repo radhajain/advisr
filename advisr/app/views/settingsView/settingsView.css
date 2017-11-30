@@ -1,0 +1,75 @@
+#dashboardPage {
+	background-color: #E8E8EE; /*very light grey*/
+}
+
+
+.dashboardTitle {
+	font-size: 40px;
+	display: inline-block;
+	margin-top: 10%;
+}
+
+.card {
+    margin: 2%;
+    background-color: white;
+}
+
+.cell {
+
+}
+
+.classesLabel {
+}
+
+.cardTitle {
+	margin: 2%;
+	margin-right: 0px;
+	font-size: 25px;
+	color: #003535;
+}
+
+.cardSubtitle {
+	margin: 2%;
+}
+
+.more {
+	margin: 2%;
+	text-align: right;
+}
+
+#grid {
+	margin: 15%;
+	margin-top: 5%;
+}
+
+#panels {
+	margin: 5%;
+	margin-top: 15%;
+}
+
+.panelCard {
+	border-color: gray;
+	border-right-width: 1px;
+	text-align: center;
+}
+
+.infoTitle {
+	font-size: 25px;
+}
+
+.infoSubtitle {
+	margin-top: 5;
+	font-size: 12px;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
+
+.purple {
+	color: purple;
+}
