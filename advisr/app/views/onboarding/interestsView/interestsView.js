@@ -20,7 +20,7 @@ var interests = ["Building with my hands", "Mathematical Proofs", "Current Affai
 				"The economy", "Evaluating human perspectives", "Discussing Art" ,"Psychology", "Critiquing Society",
 				"Law & Justice", "Literature", "Complex Electrical Systems", "Filmmaking", "Creating Art",
 				"Clean energy", "Theatre", "Foreign Languages", "Human Computer Interaction"];
-var majors = [ "Art", "Anthropology", "Comparative Literature", "Computer Science", "Economics", "History",  "Modern Languages",
+var majors = [ "Art", "Anthropology", "Comparative Literature", "Computer Science", "Economics", "History",
 				"MS&E", "Polical Science",  "Psychology"];
 
 

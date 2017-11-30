@@ -58,10 +58,12 @@ var init = function() {
 	pageData.set("GERspan", GERspan);
 	pageData.set("GERcol", 4-GERspan);
 	if (year === "Freshman" || year ==="Sophomore") {
+		pageData.set("freshSoph", true);
 		pageData.set("progress1", "30%");
 		pageData.set("progress2", "10%");
 		pageData.set("progress3", "10%");
 	} else {
+		pageData.set("freshSoph", false);
 		pageData.set("progress1", "70%");
 		pageData.set("progress2", "50%");
 		pageData.set("progress3", "30%");

@@ -60,6 +60,8 @@
 						</StackLayout>
 						<Label text="{{progress1}}" class="progressNumber"/>
 						<Label text="complete" class="center"/>
+						<Image src="res://70_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}"/>
+						<Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}"/>
 					</StackLayout>
 					<!-- Card4 -->
 					<StackLayout class="card" id="fourthCard" row="1" col="1" visibility="{{showSecond ? 'visible' : 'collapse'}}">

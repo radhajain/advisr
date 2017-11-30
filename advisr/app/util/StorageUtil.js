@@ -127,6 +127,40 @@ var MSandE_Array = [
     ["MS&E 112", 5, "Mathematical Programming and Combinatorial Optimization"]]}
 ];
 
+var Political_Science_Array = [
+  {core: [["POLISCI 29N", 3, "Mixed-Race Politics and Culture"],
+  ["POLISCI 31N", 3, "Political Freedom: Rights, Justice, and Democracy in the Western Tradition"],
+  ["POLISCI 31Q", 3, "Justice and the City"],
+  ["POLISCI 102", 3, "Politics and Public Policy"],
+  ["POLISCI 103", 3, "Justice"],
+  ["POLISCI 114D", 3, "Democracy, Development, and the Rule of Law"],
+  ["POLISCI 122", 3, "Introduction to American Law"]]}, 
+  {electives: [["POLISCI 10N", 3, "International Organizations and the World Order"],
+  ["POLISCI 11N", 3, "The Rwandan Genocide"],
+  ["POLISCI 18N", 3, "Civil War and International Politics: Syria in Context"],
+  ["POLISCI 43Q", 3, "Immigration Crisis? Policy Dilemmas in the US and Europe"],
+  ["POLISCI 45N", 3, "Civil War Narratives"],
+  ["POLISCI 101", 3, "Introduction to International Relations"],
+  ["POLISCI 110C", 3, "America and the World Economy"],
+  ["POLISCI 110D", 3, "War and Peace in American Foreign Policy"]]}
+];
+
+var Psychology_Array = [
+  {core: [["PSYCH 1", 5, "Intorduction to Psychology"],
+  ["PSYCH 10", 5, "Introduction to Statistical Methods"]
+  ]}, 
+  {electives: [["PSYCH 30", 3, "Introduction to Perception"],
+  ["PSYCH 35", 3, "Minds and Machines"],
+  ["PSYCH 45", 3, "Introduction to Learning and Memory"],
+  ["PSYCH 50", 3, "Introduction to Cognitive Neuroscience"],
+  ["PSYCH 60", 3, "Introduction to Developmental Psychology"],
+  ["PSYCH 70", 4, "Self and Society: Introduction to Social Psychology"],
+  ["PSYCH 75", 5, "Introduction to Cultural Psychology"],
+  ["PSYCH 80", 3, "Introduction to Personality and Affective Science"],
+  ["PSYCH 90", 3, "Introduction to Clinical Psychology"],
+  ["PSYCH 95", 3, "Introduction to Abnormal Psychology"]
+];
+
 
 exports.getClasses = function(className) {
 	if(className === "History"){
@@ -145,6 +179,10 @@ exports.getClasses = function(className) {
 		return History_Array;
 	}else if (className === "MS&E") {
 		return MSandE_Array;
+	} else if (className === "Psychology") {
+		return Psychology_Array;
+	} else if (className === "Political Science") {
+		return Political_Science_Array;
 	} else {
 		return null;
 	}
