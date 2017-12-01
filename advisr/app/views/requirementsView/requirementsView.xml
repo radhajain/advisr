@@ -33,7 +33,9 @@
 							<Label text="{{major1}}" class="cardSubtitle"/>
 						</StackLayout>
 						<Label text="Core: " class="classesLabel"/>
+						<Label text="{{major1coreComplete}}"/>
 						<Label text="Electives: " class="classesLabel"/>
+						<Label text="{{major1electivesComplete}}"/>
 						<Label text="More >" tap="viewMoreMajor1" class="more"/>
 					</StackLayout>
 					<!-- Card3 -->
@@ -43,7 +45,9 @@
 							<Label text="{{major2}}" class="cardSubtitle"/>
 						</StackLayout>
 						<Label text="Core: " class="classesLabel"/>
+						<Label text="{{major2coreComplete}}"/>
 						<Label text="Electives: " class="classesLabel"/>
+						<Label text="{{major2electivesComplete}}"/>
 						<Label text="More >" tap="viewMoreMajor2" class="more"/>
 					</StackLayout>
 						<!-- Card3 -->
@@ -53,7 +57,9 @@
 							<Label text="{{major3}}" class="cardSubtitle"/>
 						</StackLayout>
 						<Label text="Core: " class="classesLabel"/>
+						<Label text="{{major3coreComplete}}"/>
 						<Label text="Electives: " class="classesLabel"/>
+						<Label text="{{major3electivesComplete}}"/>
 						<Label text="More >" tap="viewMoreMajor3" class="more"/>
 					</StackLayout>
 						<!-- Card3 -->
@@ -63,7 +69,9 @@
 							<Label text="{{minor1}}" class="cardSubtitle"/>
 						</StackLayout>
 						<Label text="Core: " class="classesLabel"/>
+						<Label text="{{minor1coreComplete}}"/>
 						<Label text="Electives: " class="classesLabel"/>
+						<Label text="{{minor1electivesComplete}}"/>
 						<Label text="More >" tap="viewMoreMinor1" class="more"/>
 					</StackLayout>
 						<!-- Card3 -->
@@ -73,7 +81,9 @@
 							<Label text="{{minor2}}" class="cardSubtitle"/>
 						</StackLayout>
 						<Label text="Core: " class="classesLabel"/>
+						<Label text="{{minor2coreComplete}}"/>
 						<Label text="Electives: " class="classesLabel"/>
+						<Label text="{{minor2electivesComplete}}"/>
 						<Label text="More >" tap="viewMoreMinor2" class="more"/>
 					</StackLayout>
 						<!-- Card3 -->
@@ -83,7 +93,9 @@
 							<Label text="{{minor3}}" class="cardSubtitle"/>
 						</StackLayout>
 						<Label text="Core: " class="classesLabel"/>
+						<Label text="{{minor3coreComplete}}"/>
 						<Label text="Electives: " class="classesLabel"/>
+						<Label text="{{minor3electivesComplete}}"/>
 						<Label text="More >" tap="viewMoreMinor3" class="more"/>
 					</StackLayout>
 				</StackLayout>

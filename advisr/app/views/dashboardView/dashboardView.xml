@@ -62,28 +62,32 @@
 						</StackLayout>
 						<Label text="{{progress1}}" class="progressNumber"/>
 						<Label text="complete" class="center"/>
-						<Image src="res://70_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}"/>
-						<Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}"/>
+						<Image src="res://seventy_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressBar"/>
+						<Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressBar"/>
 					</StackLayout>
 					<!-- Card4 -->
 					<StackLayout class="card" id="fourthCard" row="1" col="1" visibility="{{showSecond ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
 						<StackLayout orientation="horizontal">
-							<Label text="{{major2}}" class="cardTitle"/>
+							<Label text="{{major2}}" class="cardTitle" textWrap="true"/>
 							<Label text=": Major 2" class="cardSubitle" />
 							
 						</StackLayout>
 						<Label text="{{progress2}}" class="progressNumber"/>
 						<Label text="complete" class="center"/>
+						<Image src="res://50_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressBar"/>
+						<Image src="res://10_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressBar"/>
 					</StackLayout>
 					<!-- Card4 -->
 					<StackLayout class="card" id="fifthCard" row="1" col="2" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
 						<StackLayout orientation="horizontal">
-							<Label text="{{major3}}" class="cardTitle"/>
+							<Label text="{{major3}}" class="cardTitle" textWrap="true"/>
 							<Label text=": Major 3" class="cardSubitle" />
 							<Image src="res://10_progress"/>
 						</StackLayout>
 						<Label text="{{progress3}}" class="progressNumber"/>
 						<Label text="complete" class="center"/>
+						<Image src="res://30_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressBar"/>
+						<Image src="res://10_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressBar"/>
 					</StackLayout>
 					<!-- Card5 -->
 					<StackLayout class="card" id="sixthCard" row="1" col="{{GERcol}}" colSpan="{{GERspan}}">
