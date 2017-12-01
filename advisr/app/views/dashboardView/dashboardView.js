@@ -40,12 +40,12 @@ exports.pageNavigating = function(args) {
 	if (minors[0]) {
 		pageData.set("showMinors", true);
 		if (minors[1]) {
-			var userMinors = "Minors: " + ": " + minors[0] + ", " + minors[1];
+			var userMinors = "Minors: " + minors[0] + ", " + minors[1];
 			if (minors[2]) {
-				var userMinors = "Minors: " + ": " + minors[0] + ", " + minors[1] + ", " + minors[2];
+				var userMinors = "Minors: " + minors[0] + ", " + minors[1] + ", " + minors[2];
 			}
 		} else {
-			var userMinors = "Minors: " + ": " + minors[0];
+			var userMinors = "Minors: " + minors[0];
 		}
 	} else {
 		pageData.set("showMinors", false);

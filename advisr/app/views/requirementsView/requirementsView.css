@@ -24,8 +24,32 @@
 .cardTitle {
 	margin: 2%;
 	margin-right: 0px;
-	font-size: 25px;
+	margin-top: 15px;
+	font-size: 20px;
 	color: #003535;
+}
+
+.details {
+	margin-top: 10px;
+	margin-left: 2%;
+}
+
+.card {
+	border-top-width: 2px;
+	border-top-color: gray;
+}
+
+.progressNumber {
+	font-size: 20px;
+}
+
+.smallLabel {
+	font-size: 10px;
+}
+
+.padding {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 .cardSubtitle {
@@ -35,6 +59,7 @@
 .more {
 	margin: 2%;
 	text-align: right;
+	margin-bottom: 5px;
 }
 
 #grid {
