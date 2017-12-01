@@ -27,43 +27,49 @@
 				<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
 				<GridLayout columns="*,*,*,*" rows="*, *" id="grid">
 					<!-- Card1 -->
-					<StackLayout class="card" id="firstCard" colSpan="3">
+					
+					<StackLayout class="card" id="firstCard" colSpan="4">
 						<StackLayout orientation="horizontal">
 							<Label text="Summary:" class="cardTitle"/>
 							<Label text="{{date}}" class="cardTitle"/>
 						</StackLayout>
 						<Label text="{{userInfo}}" textWrap="true" class="cardSubtitle"/>
 						<Label text="{{userMinors}}" class="cardSubtitle" visibility="{{ showMinors ? 'visible' : 'collapse'}}"/>
-						<GridLayout columns="*, *, *" rows="*" id="panels">
+						<GridLayout columns="*, *, *, *" rows="*" id="panels">
 							<StackLayout col="0" class="panelCard">
-								<Label text="60 units" class="infoTitle green"/>
-								<Label text="complete" class="infoSubtitle green"/>
+								<Label text="50 units" class="infoTitle blue"/>
+								<Label text="complete" class="infoSubtitle black"/>
 							</StackLayout>
 							<StackLayout col="1" class="panelCard">
-								<Label text="130 units" class="infoTitle red" />
-								<Label text="incomplete" class=" infoSubtitle red"/>
+								<Label text="130 units" class="infoTitle blue" />
+								<Label text="incomplete" class=" infoSubtitle black"/>
 							</StackLayout>
 							<StackLayout col="2" class="panelCard">
-								<Label text="90 units" class="infoTitle purple" />
-								<Label text="required for major" class="infoSubtitle purple"/>
+								<Label text="16 units/q" class="infoTitle blue" />
+								<Label text="avg. needed to go abroad" class="infoSubtitle black"/>
 							</StackLayout>
+                            <StackLayout col="3" class="panelCard">
+                                <Label text="3.85" class="infoTitle blue" />
+                                <Label text="cumulative GPA" class="infoSubtitle black"/>
+                            </StackLayout>
 						</GridLayout>
 					</StackLayout>
 					<!-- Card2 -->
-					<StackLayout class="card" id="secondCard" col="4">
+					<!-- StackLayout class="card" id="secondCard" col="4">
 						<Label text="Future Units Per Quarter" textWrap="true" class="cardTitle" tap="viewSchedule"/>
 						<Label text="16"/>
-					</StackLayout>
+					</StackLayout-->
+					<!-- Card3 -->
 					<!-- Card3 -->
 					<StackLayout class="card" id="thirdCard" row="1" tap="viewMoreMajor1">
 						<StackLayout orientation="horizontal">
 							<Label text="{{major1}}" class="cardTitle" textWrap="true"/>
 							<Label text=": Major 1" class="cardSubtitle"/>
 						</StackLayout>
+						<Image src="res://seventy_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar" />
+                        <Image src="res://10_ progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
 						<Label text="{{progress1}}" class="progressNumber"/>
 						<Label text="complete" class="center"/>
-						<Image src="res://seventy_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressBar"/>
-						<Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressBar"/>
 					</StackLayout>
 					<!-- Card4 -->
 					<StackLayout class="card" id="fourthCard" row="1" col="1" visibility="{{showSecond ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
@@ -72,10 +78,10 @@
 							<Label text=": Major 2" class="cardSubitle" />
 							
 						</StackLayout>
+						<Image src="res://50_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar"/>
+                        <Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
 						<Label text="{{progress2}}" class="progressNumber"/>
 						<Label text="complete" class="center"/>
-						<Image src="res://50_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressBar"/>
-						<Image src="res://10_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressBar"/>
 					</StackLayout>
 					<!-- Card4 -->
 					<StackLayout class="card" id="fifthCard" row="1" col="2" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
@@ -92,7 +98,13 @@
 					<!-- Card5 -->
 					<StackLayout class="card" id="sixthCard" row="1" col="{{GERcol}}" colSpan="{{GERspan}}">
 						<Label text="General Requirements:" textWrap="true" class="cardTitle" tap="viewMoreGER" />
-						<Label text="GER" class="cardSubtitle"/>
+                        <Label text="PWR 1: " class="GER"/>
+                        <Label text="complete" class="infoSubtitle black"/>
+                        <Label text="PWR 2: " class="GER"/>
+                        <Label text="complete" class="infoSubtitle black"/>
+                        <Label text="THINK: " class="GER"/>
+                        <Label text="complete" class="infoSubtitle black"/>
+                        <Label text="4/8 complete" class="infoSubtitle black"/>
 					</StackLayout>
 				</GridLayout>
 			</Card:CardView>
