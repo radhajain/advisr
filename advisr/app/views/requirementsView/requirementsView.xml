@@ -27,126 +27,199 @@
 				<GridLayout id="grid" columns="*" rows="auto" >
 					<StackLayout>
 					<!-- Card2 -->
-					<StackLayout class="card" id="secondCard" row="1">
+					<StackLayout class="card" id="secondCard" row="1" tap="viewMoreMajor1">
 						<StackLayout orientation="horizontal">
 							<Label text="Major 1:" class="cardTitle"/>
 							<Label text="{{major1}}" class="cardTitle"/>
 						</StackLayout>
-						<StackLayout class="details">
-							<Label text="Core: " class="classesLabel"/>
-							<StackLayout class="padding">
-								<Label text="{{major1coreComplete}}" class="progressNumber"/>
-								<Label text="complete" class="smallLabel"/>
+						<GridLayout id="major1grid" columns="*, *, *" rows="auto" >
+							<StackLayout col="0" class="details">
+								<Label text="Overall: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{major1Complete}}" class="progressNumber"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
 							</StackLayout>
-							<Label text="Electives: " class="classesLabel"/>
-							<StackLayout class="padding">
-								<Label text="{{major1electivesComplete}}"/>
-								<Label text="complete" class="smallLabel"/>
+							<StackLayout col="1">
+								<Label text="Core: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{major1coreComplete}}" class="progressNumber"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
 							</StackLayout>
+							<StackLayout col="2">
+								<Label text="Electives: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{major1electivesComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+						</GridLayout>
+
 							<Label text="More >" tap="viewMoreMajor1" class="more"/>
-						</StackLayout>
+						
 					</StackLayout>
 					<!-- Card3 -->
-					<StackLayout class="card" id="thirdCard" row="2" visibility="{{secondMajor ? 'visible' : 'collapse'}}">
+					<StackLayout class="card" id="thirdCard" row="2" visibility="{{secondMajor ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
 						<StackLayout orientation="horizontal">
 							<Label text="Major 2:" class="cardTitle"/>
 							<Label text="{{major2}}" class="cardTitle"/>
 						</StackLayout>
-						<StackLayout class="details">
-						<Label text="Core: " class="classesLabel"/>
-						<StackLayout class="padding">
-							<Label text="{{major2coreComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
-						<Label text="Electives: " class="classesLabel"/>
-						<StackLayout class="padding">
-							<Label text="{{major2electivesComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
+						<GridLayout id="major2grid" columns="*, *, *" rows="auto" >
+							<StackLayout col="0" class="details">
+								<Label text="Overall: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{major2Complete}}" class="progressNumber"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout col="1">
+								<Label text="Core: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{major2coreComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout col="2">
+								<Label text="Electives: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{major2electivesComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+						</GridLayout>
 						<Label text="More >" tap="viewMoreMajor2" class="more"/>
 					</StackLayout>
-					</StackLayout>
+				
 						<!-- Card3 -->
-					<StackLayout class="card" id="fourthCard" row="2" visibility="{{thirdMajor ? 'visible' : 'collapse'}}">
+					<StackLayout class="card" id="fourthCard" row="2" visibility="{{thirdMajor ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
 						<StackLayout orientation="horizontal">
 							<Label text="Major 3:" class="cardTitle"/>
 							<Label text="{{major3}}" class="cardTitle"/>
 						</StackLayout>
-						<StackLayout class="details">
-						<Label text="Core: " class="classesLabel"/>
-						<StackLayout class="padding">
-							<Label text="{{major3coreComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
-						<Label text="Electives: " class="classesLabel"/>
-						<StackLayout class="padding">
-							<Label text="{{major3electivesComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
+						<GridLayout id="major3grid" columns="*, *, *" rows="auto" >
+							<StackLayout col="0" class="details">
+								<Label text="Overall: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{major3Complete}}" class="progressNumber"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout col="1">
+								<Label text="Core: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{major3coreComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout col="2">
+								<Label text="Electives: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{major3electivesComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+						</GridLayout>
 						<Label text="More >" tap="viewMoreMajor3" class="more"/>
 					</StackLayout>
-					</StackLayout>
+				
 						<!-- Card3 -->
-					<StackLayout class="card" id="fifthCard" row="2" visibility="{{firstMinor ? 'visible' : 'collapse'}}">
+					<StackLayout class="card" id="fifthCard" row="2" visibility="{{firstMinor ? 'visible' : 'collapse'}}" tap="viewMoreMinor1">
 						<StackLayout orientation="horizontal">
 							<Label text="Minor 1:" class="cardTitle"/>
 							<Label text="{{minor1}}" class="cardTitle"/>
 						</StackLayout>
-						<StackLayout class="details">
-						<Label text="Core: " class="classesLabel"/>
-						<StackLayout class="padding">
-							<Label text="{{minor1coreComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
-						<Label text="Electives: " class="classesLabel"/>
-						<StackLayout class="padding">
-							<Label text="{{minor1electivesComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
+						<GridLayout id="minor1grid" columns="*, *, *" rows="auto" >
+							<StackLayout col="0" class="details">
+								<Label text="Overall: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{minor1Complete}}" class="progressNumber"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout col="1">
+								<Label text="Core: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{minor1coreComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout col="2">
+								<Label text="Electives: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{minor1electivesComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+						</GridLayout>
 						<Label text="More >" tap="viewMoreMinor1" class="more"/>
 					</StackLayout>
-					</StackLayout>
+			
 						<!-- Card3 -->
-					<StackLayout class="card" id="sixthCard" row="2" visibility="{{secondMinor ? 'visible' : 'collapse'}}">
+					<StackLayout class="card" id="sixthCard" row="2" visibility="{{secondMinor ? 'visible' : 'collapse'}}" tap="viewMoreMinor2">
 						<StackLayout orientation="horizontal">
 							<Label text="Minor 2:" class="cardTitle"/>
 							<Label text="{{minor2}}" class="cardTitle"/>
 						</StackLayout>
-						<StackLayout class="details">
-						<Label text="Core: " class="classesLabel"/>
-						<StackLayout class="padding">
-							<Label text="{{minor2coreComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
-						<Label text="Electives: " class="classesLabel"/>
-						<StackLayout class="padding">
-							<Label text="{{minor2electivesComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
+						<GridLayout id="minor2grid" columns="*, *, *" rows="auto" >
+							<StackLayout col="0" class="details">
+								<Label text="Overall: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{minor2Complete}}" class="progressNumber"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout col="1">
+								<Label text="Core: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{minor2coreComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout col="2">
+								<Label text="Electives: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{minor2electivesComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+						</GridLayout>
 						<Label text="More >" tap="viewMoreMinor2" class="more"/>
 					</StackLayout>
-					</StackLayout>
+			
 						<!-- Card3 -->
-					<StackLayout class="card" id="seventhCard" row="2" visibility="{{thirdMinor ? 'visible' : 'collapse'}}">
+					<StackLayout class="card" id="seventhCard" row="2" visibility="{{thirdMinor ? 'visible' : 'collapse'}}" tap="viewMoreMinor3">
 						<StackLayout orientation="horizontal">
 							<Label text="Minor 3:" class="cardTitle"/>
 							<Label text="{{minor3}}" class="cardTitle"/>
 						</StackLayout>
-						<Label text="Core: " class="classesLabel"/>
-						<StackLayout class="details">
-						<StackLayout class="padding">
-							<Label text="{{minor3coreComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
-						
-						<Label text="Electives: " class="classesLabel"/>
-						<StackLayout class="padding">
-							<Label text="{{minor3electivesComplete}}"/>
-							<Label text="complete" class="smallLabel"/>
-						</StackLayout>
+						<GridLayout id="minor3grid" columns="*, *, *" rows="auto" >
+							<StackLayout col="0" class="details">
+								<Label text="Overall: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{minor3Complete}}" class="progressNumber"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+							<StackLayout col="1">
+								<Label text="Core: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{minor3coreComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
+
+							<StackLayout col="2">	
+								<Label text="Electives: " class="classesLabel"/>
+								<StackLayout class="padding">
+									<Label text="{{minor3electivesComplete}}"/>
+									<Label text="complete" class="smallLabel"/>
+								</StackLayout>
+							</StackLayout>
 						<Label text="More >" tap="viewMoreMinor3" class="more"/>
-					</StackLayout>
-					</StackLayout>
+					</GridLayout>
+				</StackLayout>
+					
 				</StackLayout>
 				</GridLayout>
 			</Card:CardView>

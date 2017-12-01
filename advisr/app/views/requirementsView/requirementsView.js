@@ -16,6 +16,7 @@ var firstMinor = false;
 var secondMinor = false;
 var thirdMinor = false;
 
+
 exports.pageNavigating = function(args) {
     page = args.object;
     orientationModule.orientationCleanup();
@@ -125,6 +126,22 @@ var setGrid = function(classes, id, core) {
 
 exports.loadMajorData = function() {
 	if (year === "Freshman" || year === "Sophomore"){
+		loadPerMajor(StorageUtil.getClasses(majors[0]), "major1", 0.3);
+		if (secondMajor) {
+			loadPerMajor(StorageUtil.getClasses(majors[1]), "major2", 0.1);
+		} 
+		if (thirdMajor) {
+			loadPerMajor(StorageUtil.getClasses(majors[2]), "major3", 0.1);
+		}
+		if (firstMinor) {
+			loadPerMajor(StorageUtil.getClasses(minors[0]), "minor1", 0.3);
+		}
+		if (secondMinor) {
+			loadPerMajor(StorageUtil.getClasses(minors[1]), "minor2", 0.1);
+		}
+		if (thirdMinor) {
+			loadPerMajor(StorageUtil.getClasses(minors[2]), "minor2", 0.1);
+		}
 		
 	} else {
 		loadPerMajor(StorageUtil.getClasses(majors[0]), "major1", 0.7);
@@ -156,16 +173,13 @@ var loadPerMajor = function(classes, id, perc) {
 	if (completedElectives < 0) {
 		completedCore = Math.round(perc*(totalClasses));
 		completedElectives = 0;
-		console.log(completedCore + "/" + numCore);
-		console.log(completedElectives + "/" + numElectives);
 		pageData.set(id + "coreComplete", completedCore.toString() + "/" + numCore.toString());
 		pageData.set(id + "electivesComplete", completedElectives.toString() + "/" + numElectives.toString());
 	} else {
-		console.log(numCore + "/" + numCore);
-		console.log(completedElectives + "/" + numElectives);
 		pageData.set(id + "coreComplete", numCore.toString() + "/" + numCore.toString());
 		pageData.set( id + "electivesComplete", completedElectives.toString() + "/" + numElectives.toString());
 	}
+	pageData.set( id + "Complete", (perc*100).toString() + "%");
 
 }
 
