@@ -7,12 +7,11 @@
 	<Page.actionBar>
 	  <ActionBar class="action-bar" title="Dashboard">
 		    <ActionBar.titleView>
-		      <!-- <Label text="Dashboard" horizontalAlignment="center" class="action-bar-title" /> -->
-		      <StackLayout orientation="horizontal">
-	          <Button text="Home" />
-	          <Button text="Plans" />
-	          <Button text="Classes" />
-	        </StackLayout>
+				<StackLayout orientation="horizontal">
+		          <Button text="Home" />
+		          <Button text="Plans" />
+		          <Button text="Classes" />
+	            </StackLayout>
 		    </ActionBar.titleView>
 	    	<!-- <NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" /> -->
 		</ActionBar>
@@ -34,15 +33,15 @@
 			<GridLayout columns="*,*,*,*" rows="*, *" id="grid">
 				<!-- Card1 -->
 				
-				<StackLayout class="card" id="firstCard" colSpan="2">
+				<StackLayout class="card" id="firstCard" colSpan="1">
 					<StackLayout orientation="horizontal">
 						<Label text="Summary:" class="cardTitle"/>
 						<Label text="{{date}}" class="cardTitle"/>
 					</StackLayout>
 					<Label text="{{userInfo}}" textWrap="true" class="cardSubtitle"/>
 					<Label text="{{userMinors}}" class="cardSubtitle" visibility="{{ showMinors ? 'visible' : 'collapse'}}"/>
-					<GridLayout columns="*, *" rows="*" id="panels">
-						<StackLayout col="0" class="panelCard">
+					<GridLayout columns="*" rows="*,*" id="panels">
+						<StackLayout row="0" class="panelCard">
 							<Label text="50 units" class="infoTitle blue"/>
 							<Label text="complete" class="infoSubtitle black" textWrap="true"/>
 						</StackLayout>
@@ -54,7 +53,7 @@
 							<Label text="16 units/q" class="infoTitle blue" />
 							<Label text="avg. needed to go abroad" class="infoSubtitle black" textWrap="true"/>
 						</StackLayout> -->
-	                    <StackLayout col="1" class="panelCard">
+	                    <StackLayout row="1" class="panelCard">
 	                        <Label text="3.85" class="infoTitle blue" />
 	                        <Label text="cumulative GPA" class="infoSubtitle black"/>
 	                    </StackLayout>

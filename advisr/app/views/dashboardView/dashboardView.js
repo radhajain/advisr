@@ -98,7 +98,6 @@ exports.viewSchedule = function() {
 	frameModule.topmost().navigate("views/calendarView/calendarView");
 }
 
-
 exports.viewMoreGER = function() {
 	var options = {
 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',

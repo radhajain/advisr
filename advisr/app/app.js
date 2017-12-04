@@ -9,10 +9,6 @@ var application = require("application");
 var StorageUtil = require('~/util/StorageUtil');
 
 
-
-
-
-
 if (StorageUtil.isOnboardingComplete() && StorageUtil.getMajors().length !== 0 && StorageUtil.getName()) {
 	application.start({ moduleName: "views/dashboardView/dashboardView" });
 } else {
