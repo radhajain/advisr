@@ -1,4 +1,4 @@
-<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="dashboardPage"
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="settingsPage"
 	xmlns:sd="nativescript-pro-ui/sidedrawer"
 	xmlns:sidedrawer="shared/sd"
 	xmlns:pb="nativescript-progressbar"

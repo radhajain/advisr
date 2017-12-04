@@ -1,6 +1,9 @@
-#dashboardPage {
-	background-color: #E8E8EE; /*very light grey*/
-}
+/*#dashboardPage {
+	background-image: url("res://background_advisr");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}*/
 
 
 .dashboardTitle {
@@ -15,7 +18,7 @@
 }
 
 .cardTitle {
-	margin: 2%;
+	margin: 5%;
 	margin-bottom: 0%;
 	margin-right: 0px;
 	font-size: 25px;
@@ -27,7 +30,7 @@
 }
 
 .cardSubtitle {
-	margin: 2%;
+	margin-left: 5%;
 }
 
 #grid {

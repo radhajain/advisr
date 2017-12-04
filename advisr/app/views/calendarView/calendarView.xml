@@ -1,7 +1,7 @@
-<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating"
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="calendarPage" class="page"
 	xmlns:sd="nativescript-pro-ui/sidedrawer"
 	xmlns:sidedrawer="shared/sd" 
-	xmlns:Card="nativescript-cardview" id="calendarPage">
+	xmlns:Card="nativescript-cardview" >
 
 	  <ActionBar class="action-bar">
 		    <ActionBar.titleView>

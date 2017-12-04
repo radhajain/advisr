@@ -22,10 +22,18 @@ components that have the btn class name.
 }
 
 .action-bar {
-	background-color: #005572; /*teal*/
+	opacity: 0.53;
+	background-color: #000000; /*teal*/
 	color: white;
 }
 
 .action-bar-title {
   font-size: 40px;
+}
+
+.page {
+	background-image: url("res://background_advisr");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }

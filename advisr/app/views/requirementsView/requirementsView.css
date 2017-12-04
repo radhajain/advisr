@@ -1,7 +1,9 @@
-#dashboardPage {
-	background-color: #E8E8EE; /*very light grey*/
-}
-
+/*#dashboardPage {
+	background-image: url("res://background_advisr");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}*/
 
 .dashboardTitle {
 	font-size: 40px;

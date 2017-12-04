@@ -1,6 +1,9 @@
-#calendarPage {
-	background-color: #E8E8EE; /*very light grey*/
-}
+/*#calendarPage {
+	background-image: url("res://background_advisr");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}*/
 
 .title {
 	font-size: 40px;
