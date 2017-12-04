@@ -16,6 +16,7 @@
 
 .cardTitle {
 	margin: 2%;
+	margin-bottom: 0%;
 	margin-right: 0px;
 	font-size: 25px;
 	color: #003535;
@@ -30,8 +31,12 @@
 }
 
 #grid {
-	margin: 15%;
+	margin: 10%;
 	margin-top: 5%;
+}
+
+#GERgrid {
+	margin: 5%;
 }
 
 #panels {
@@ -40,25 +45,40 @@
 }
 
 .panelCard {
-	border-color: gray;
+	border-right-color: gray;
 	border-right-width: 1px;
+	border-left-color: gray;
+	border-left-width: 1px;
 	text-align: center;
 }
+
+.infoLabel {
+	font-size: 20px;
+	margin: 2%;
+}
+
+.small-infoLabel {
+	font-size: 15px;
+	margin: 2%;
+	margin-top: 0%;
+	color: gray;
+}
+
 
 .infoTitle {
 	font-size: 30px;
 }
 
 .progressNumber {
-	margin-top: 10px;
-	font-size: 25px;
+	margin-top: 40px;
+	font-size: 30px;
 	text-align: center;
 }
 
 .GER {
     margin-top: 10px;
-    font-size: 25px;
-    margin: 2%;
+    font-size: 20px;
+    margin: 5%;
 }
 
 .progressbar {
@@ -69,6 +89,13 @@
 .infoSubtitle {
 	margin-top: 5;
 	font-size: 16px;
+}
+
+.doneButton {
+	height: 30px;
+	width: 30px;
+	background-color: lightblue;
+	margin-left: 0px;
 }
 
 .blue {

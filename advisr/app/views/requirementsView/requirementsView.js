@@ -5,6 +5,7 @@ var observable = require("data/observable");
 var pageData = new observable.Observable();
 var frameModule = require("ui/frame");
 var StorageUtil = require("~/util/StorageUtil");
+var gridLayout = require("ui/layouts/grid-layout");
 
 var page;
 var majors;
@@ -27,6 +28,7 @@ exports.pageNavigating = function(args) {
 }
 
 var init = function() {
+	var grid = page.getViewById("grid");
 	majors = StorageUtil.getMajors();
 	minors = StorageUtil.getMinors();
 	year = StorageUtil.getYear();
@@ -35,16 +37,19 @@ var init = function() {
 	pageData.set("major1", majors[0]);
 	setGrid(StorageUtil.getClasses(majors[0]), "coreMajor1", true);
 	setGrid(StorageUtil.getClasses(majors[0]), "electivesMajor1", false);
+	setClassPicture("firstMajorCard", majors[0]);
 	if (numMajors >= 2) {
 		pageData.set("major2", majors[1]);
 		setGrid(StorageUtil.getClasses(majors[1]), "coreMajor2", true);
 		setGrid(StorageUtil.getClasses(majors[1]), "electivesMajor2", false);
 		secondMajor = true;
+		setClassPicture("secondMajorCard", majors[1]);
 		if (numMajors === 3) {
 			pageData.set("major3", majors[2]);
 			setGrid(StorageUtil.getClasses(majors[2]), "coreMajor3", true);
 			setGrid(StorageUtil.getClasses(majors[2]), "electivesMajor3", false);
 			thirdMajor = true;
+			setClassPicture("thirdMajorCard", majors[2]);
 		}
 	}
 	pageData.set("secondMajor", secondMajor);
@@ -52,12 +57,15 @@ var init = function() {
 	if (numMinors >= 1) {
 		pageData.set("minor1", minors[0]);
 		firstMinor = true;
+		setClassPicture("firstMinorCard", minors[0]);
 		if (numMinors >= 2) {
 			pageData.set("minor2", minors[1]);
 			secondMinor = true;
+			setClassPicture("secondMinorCard", minors[1]);
 			if (numMinors === 3) {
 				pageData.set("minor3", minors[2]);
 				thirdMinor = true;
+				setClassPicture("thirdMinorCard", minors[2]);
 			}
 		}
 	}
@@ -66,6 +74,23 @@ var init = function() {
 	pageData.set("thirdMinor", thirdMinor);
 	exports.loadMajorData();
 }
+
+var setClassPicture = function(id, major) {
+	var div = page.getViewById(id);
+	var pictureId;
+	if (major === "Political Science") {
+		pictureId = "political-science";
+	} else if (major === "Computer Science") {
+		pictureId = "computer-science";
+	} else if (major === "Comparative Literature") {
+		pictureId = "comparative-literature";
+	} else {
+		pictureId = major.toLowerCase()
+	}
+	console.log("card " + pictureId);
+	div.class = "card " + pictureId;
+}
+
 
 
 var setGrid = function(classes, id, core) {

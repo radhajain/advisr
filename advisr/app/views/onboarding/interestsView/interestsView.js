@@ -183,6 +183,7 @@ exports.clearVal = function(args) {
 		chosenMinors.splice(index, 1);
 		pageData.set(args.object.id, "Select a minor");
 	}
+	pageData.set(args.object.id + "data", false);
 }
 
 exports.showMajor1Picker = function(args) {
@@ -198,6 +199,7 @@ exports.getMajor1SelectedIndex = function(args) {
     pageData.set("showMajor1Picker", false);
     var button = page.getElementById("major1button")
     button.class= "selectSet";
+    pageData.set("major1data", true);
 }
 
 exports.showMajor2Picker = function(args) {
@@ -213,6 +215,7 @@ exports.getMajor2SelectedIndex = function(args) {
     pageData.set("showMajor2Picker", false);
     var button = page.getElementById("major2button")
     button.class= "selectSet";
+    pageData.set("major2data", true);
 }
 
 exports.showMajor3Picker = function(args) {
@@ -228,6 +231,7 @@ exports.getMajor3SelectedIndex = function(args) {
     pageData.set("showMajor3Picker", false);
     var button = page.getElementById("major3button")
     button.class= "selectSet";
+    pageData.set("major3data", true);
 }
 
 exports.showMinor1Picker = function(args) {
@@ -243,6 +247,7 @@ exports.getMinor1SelectedIndex = function(args) {
     pageData.set("showMinor1Picker", false);
     var button = page.getElementById("minor1button")
     button.class= "selectSet";
+    pageData.set("minor1data", true);
 }
 
 exports.showMinor2Picker = function(args) {
@@ -258,6 +263,7 @@ exports.getMinor2SelectedIndex = function(args) {
     pageData.set("showMinor2Picker", false);
     var button = page.getElementById("minor2button")
     button.class= "selectSet";
+    pageData.set("minor2data", true);
 }
 
 exports.showMinor3Picker = function(args) {
@@ -273,6 +279,7 @@ exports.getMinor3SelectedIndex = function(args) {
     pageData.set("showMinor3Picker", false);
     var button = page.getElementById("minor3button")
     button.class= "selectSet";
+    pageData.set("minor3data", true);
 }
 
 
@@ -311,6 +318,12 @@ var initPickers = function () {
 	pageData.set("minor1", "Select a minor");
 	pageData.set("minor2", "Select a minor");
 	pageData.set("minor3", "Select a minor");
+	pageData.set("major1data", false);
+	pageData.set("major2data", false);
+	pageData.set("major3data", false);
+	pageData.set("minor1data", false);
+	pageData.set("minor2data", false);
+	pageData.set("minor3data", false);
 }
 
 exports.disablePickers = function() {

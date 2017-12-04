@@ -163,7 +163,7 @@
 
 .centerDiv {
 	margin-top: 10%;
-	margin-left: 22%;
+	margin-left: 15%;
 }
 
 #interest-list-view {
@@ -175,6 +175,7 @@
 	color: gray;
 	font-weight: bold;
 	margin-left: 15%;
+	position: right;
 }
 
 .prevButton {
@@ -182,13 +183,26 @@
 	color: gray;
 	font-weight: bold;
 	margin-left: 3%;
+	position: left;
 }
 
 .minors {
-	margin-left: 20%;
+	margin-left: 15%;
+	width: 30%;
+	
+}
+
+.majors {
+	width: 30%;
+	
 }
 
 
+
+.wholeSlide {
+	width: 100%;
+	
+}
 
 
 .interestButtons {

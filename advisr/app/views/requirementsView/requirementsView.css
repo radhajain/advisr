@@ -56,16 +56,92 @@
 	margin: 2%;
 }
 
+.headerPic {
+	height: 10px;
+}
+
 .more {
 	margin: 2%;
 	text-align: right;
 	margin-bottom: 5px;
+	font-size: 15px;
+	color: gray;
 }
 
 #grid {
-	margin: 15%;
+	margin: 5%;
 	margin-top: 5%;
 }
+
+.white {
+	margin-top: 30%;
+	/*width: 80%;*/
+	background-color: white;
+	height: 70%;
+}
+
+
+.art {
+	background-image: url("res://art");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.economics {
+	background-image: url("res://economics");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.history {
+	background-image: url("res://history");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.psychology {
+	background-image: url("res://psychology");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.computer-science {
+	background-image: url("res://computer-science");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.political-science {
+	background-image: url("res://political-science");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.comparative-literature {
+	background-image: url("res://comparative-literature");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.MSandE {
+	background-image: url("res://economics");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.anthropology {
+	background-image: url("res://anthropology");
+	background-repeat: no-repeat;
+	background-position: center;
+}	
+
 
 #panels {
 	margin: 5%;
@@ -75,6 +151,10 @@
 .panelCard {
 	border-color: gray;
 	border-right-width: 1px;
+	text-align: center;
+}
+
+.center {
 	text-align: center;
 }
 
