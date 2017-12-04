@@ -5,22 +5,31 @@
 	background-size: cover;
 }*/
 
+.dashboard {
+	padding: 0px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
 
 .dashboardTitle {
-	font-size: 40px;
+	font-size: 36px;
+	color: #CCCCD0;
 	display: inline-block;
-	margin-top: 10%;
+	margin-left: 100px;
+	margin-top: 100px;
+	margin-bottom: 0px;
+
 }
 
 .card {
-    margin: 2%;
+    margin: 10px;
     background-color: white;
 }
 
 .cardTitle {
 	margin: 5%;
-	margin-bottom: 0%;
-	margin-right: 0px;
+/*	margin-bottom: 0%;
+	margin-right: 0px;*/
 	font-size: 25px;
 	color: #003535;
 }
@@ -34,7 +43,7 @@
 }
 
 #grid {
-	margin: 10%;
+	margin: 5%;
 	margin-top: 5%;
 }
 
@@ -46,11 +55,11 @@
 	margin: 5%;
 	margin-left: 0px;
 	margin-right: 0px;
-	margin-top: 15%;
+	margin-top: 5%;
 }
 
 .panelCard {
-	padding: 60px;
+	padding: 20px;
 	border-right-color: gray;
 	border-right-width: 2px;
 	text-align: center;
@@ -120,7 +129,7 @@
     color: #4B3B47
 }
 
-.green {
+/*.green {
 	color: green;
 }
 
@@ -130,4 +139,4 @@
 
 .purple {
 	color: purple;
-}
+}*/

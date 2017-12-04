@@ -25,10 +25,13 @@ components that have the btn class name.
 	opacity: 0.53;
 	background-color: #000000; /*teal*/
 	color: white;
+	
 }
 
 .action-bar-title {
   font-size: 40px;
+/*  height: 300px;
+  width: 300px;*/
 }
 
 .page {
