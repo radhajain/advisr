@@ -38,6 +38,8 @@
 						<Label text="Summary:" class="cardTitle"/>
 						<Label text="{{date}}" class="cardTitle"/>
 					</StackLayout>
+
+					
 					<Label text="{{userInfo}}" textWrap="true" class="cardSubtitle"/>
 					<Label text="{{userMinors}}" class="cardSubtitle" visibility="{{ showMinors ? 'visible' : 'collapse'}}"/>
 					<GridLayout columns="*" rows="*,*" id="panels">
@@ -45,14 +47,6 @@
 							<Label text="50 units" class="infoTitle blue"/>
 							<Label text="complete" class="infoSubtitle black" textWrap="true"/>
 						</StackLayout>
-						<!-- <StackLayout col="1" class="panelCard">
-							<Label text="130 units" class="infoTitle blue" />
-							<Label text="incomplete" class="infoSubtitle black" textWrap="true"/>
-						</StackLayout>
-						<StackLayout col="2" class="panelCard">
-							<Label text="16 units/q" class="infoTitle blue" />
-							<Label text="avg. needed to go abroad" class="infoSubtitle black" textWrap="true"/>
-						</StackLayout> -->
 	                    <StackLayout row="1" class="panelCard">
 	                        <Label text="3.85" class="infoTitle blue" />
 	                        <Label text="cumulative GPA" class="infoSubtitle black"/>
@@ -90,59 +84,84 @@
 				<!-- Card5 -->
 				<StackLayout class="card" id="sixthCard" row="1" col="{{GERcol}}" colSpan="{{GERspan}}">
 					<Label text="General Requirements:" textWrap="true" class="cardTitle" tap="viewMoreGER" />
-					<GridLayout columns="*,*,*" rows="*,*,*,*,*" id="GERgrid">
-						<StackLayout orientation="horizontal">
+					<GridLayout columns="*,*,*,*,*,*" rows="*,*,*,*,*" id="GERgrid">
+						<StackLayout row="0" col="0">
+							<Label text="PWR 1" class="GER"/>
+						</StackLayout>
+						<StackLayout row="1" col="0">
+							<Label text="PWR 2" class="GER"/>
+						</StackLayout>
+						<StackLayout row="2" col="0">
+							<Label text="THINK" class="GER"/>
+						</StackLayout>
+						<StackLayout row="3" col="0" colSpan="2">
+							<Label text="LANGUAGE" class="GER"/>
+						</StackLayout>					
+						<StackLayout row="0" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
-	                    	<Label text="PWR 1" class="GER"/>
-	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="1">
+						</StackLayout>
+						<StackLayout row="1" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
-	                    	<Label text="PWR 2" class="GER"/>
-	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="2">
+						</StackLayout>
+						<StackLayout row="2" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
-	                    	<Label text="THINK" class="GER"/>
-	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="3">
+						</StackLayout>
+
+						<!-- WAYS -->
+						<StackLayout row="0" col="0">
+							<Label text="PWR 1" class="GER"/>
+						</StackLayout>
+						<StackLayout row="1" col="0">
+							<Label text="PWR 2" class="GER"/>
+						</StackLayout>
+						<StackLayout row="2" col="0">
+							<Label text="THINK" class="GER"/>
+						</StackLayout>
+						<StackLayout row="3" col="0" colSpan="2">
+							<Label text="LANGUAGE" class="GER"/>
+						</StackLayout>	
+
+
+						<!-- Col 1 Checkboxes -->				
+						<StackLayout row="0" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
-	                    	<Label text="AQR 1" class="GER"/>
-	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="0" col="1">
+						</StackLayout>
+						<StackLayout row="1" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
-	                    	<Label text="AQR 2" class="GER"/>
-	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="1" col="1">
+						</StackLayout>
+						<StackLayout row="2" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
-	                    	<Label text="CE" class="GER"/>
-	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="2" col="1">
-							<Image src="res://ic_done" class="doneButton"/>
+						</StackLayout>
+					
+
+	                    <StackLayout orientation="horizontal" row="0" col="3">
 	                    	<Label text="AII" class="GER"/>
 	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="3" col="1">
-							<Image src="res://ic_done" class="doneButton"/>
-	                    	<Label text="ED" class="GER" />
+	                    <StackLayout orientation="horizontal" row="1" col="3">
+	                    	<Label text="AQR" class="GER"/>
 	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="0" col="2">
-							<Image src="res://ic_done" class="doneButton"/>
-	                    	<Label text="AQR 2" class="GER"/>
-	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="1" col="2">
-							<Image src="res://ic_done" class="doneButton"/>
+	                    <StackLayout orientation="horizontal" row="2" col="3">
 	                    	<Label text="CE" class="GER"/>
 	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="2" col="2">
-							<Image src="res://ic_done" class="doneButton"/>
-	                    	<Label text="AII" class="GER"/>
-	                    </StackLayout>
-	                    <StackLayout orientation="horizontal" row="3" col="2">
-							<Image src="res://ic_done" class="doneButton"/>
+	                    <StackLayout orientation="horizontal" row="3" col="3">
 	                    	<Label text="ED" class="GER" />
+	                    </StackLayout>
+	                    <StackLayout orientation="horizontal" row="0" col="5">
+	                    	<Label text="ER" class="GER"/>
+	                    </StackLayout>
+	                    <StackLayout orientation="horizontal" row="1" col="5">
+	                    	<Label text="FR" class="GER"/>
+	                    </StackLayout>
+	                    <StackLayout orientation="horizontal" row="2" col="5">
+	                    	<Label text="SMA" class="GER"/>
+	                    </StackLayout>
+	                    <StackLayout orientation="horizontal" row="3" col="5">
+	                    	<Label text="SI" class="GER" />
 	                    </StackLayout>
 	           
-			            <StackLayout col="3" row="5">
-			                <Label text="4/8 complete" class="infoSubtitle black"/>
-			            </StackLayout>
+	<!-- 		            <StackLayout col="3" row="5">
+			                <Label text="4/8 complete" class="infoSubtitle black"/> 
+			            </StackLayout> -->
 	              	</GridLayout>
 				</StackLayout>
 			</GridLayout>
