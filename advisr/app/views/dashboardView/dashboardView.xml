@@ -8,9 +8,9 @@
 	  <ActionBar class="action-bar" title="Dashboard">
 		    <ActionBar.titleView>
 				<StackLayout orientation="horizontal">
-		          <Button text="Home" />
-		          <Button text="Plans" />
-		          <Button text="Classes" />
+		          <Button text="Home" class="current"/>
+		          <Button text="Plans" tap="viewSchedule"/>
+		          <Button text="Classes" tap="viewRequirements"/>
 	            </StackLayout>
 		    </ActionBar.titleView>
 	    	<!-- <NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" /> -->
