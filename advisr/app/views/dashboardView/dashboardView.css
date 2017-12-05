@@ -14,7 +14,7 @@
 
 .dashboardTitle {
 	font-size: 36px;
-	color: #CCCCD0;
+	color: white;
 /*	display: inline-block;
 */	margin-left: 162px;
 	margin-top: 100px;
@@ -35,9 +35,14 @@ button {
 
 .cardTitle {
 	margin-top: 5%;
-	margin-left: 5%;
+	margin-left: 10%;
 	font-size: 25px;
 	color: #003535;
+}
+
+.cardSubtitle {
+	margin-left: 10%;
+	font-size: 20px;
 }
 
 .inlineTitle {
@@ -53,10 +58,7 @@ button {
 	text-align: center;
 }
 
-.cardSubtitle {
-	margin-left: 5%;
-	font-size: 20px;
-}
+
 
 #grid {
 	margin: 5%;
@@ -67,15 +69,16 @@ button {
 	margin: 5%;
 }
 
-#panels {
+/*#panels {
 	margin: 5%;
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 5%;
-}
+}*/
 
 .panelCard {
 	padding: 20px;
+	margin-top: 60px;
 	border-right-color: gray;
 	border-right-width: 2px;
 	text-align: center;
@@ -98,14 +101,18 @@ button {
 
 .small-infoLabel {
 	font-size: 15px;
-	margin: 2%;
-	margin-top: 0%;
+/*	margin: 2%;
+	margin-top: 0%;*/
 	color: gray;
 }
 
 
 .infoTitle {
-	font-size: 30px;
+	font-size: 35px;
+}
+
+.infoSubtitle {
+	font-size: 20px;
 }
 
 .progressNumber {
@@ -125,10 +132,7 @@ button {
     width: 65%;
 }
 
-.infoSubtitle {
-	margin-top: 5;
-	font-size: 16px;
-}
+
 
 .doneButton {
 	height: 30px;
@@ -138,7 +142,7 @@ button {
 }
 
 .blue {
-    color: #0C5E8A
+    color: #338241
 }
 
 .black {
@@ -150,15 +154,3 @@ button {
    font-family: 'FontAwesome', 'fontawesome-webfont';
    font-size: 20px;
 }
-
-/*.green {
-	color: green;
-}
-
-.red {
-	color: red;
-}
-
-.purple {
-	color: purple;
-}*/

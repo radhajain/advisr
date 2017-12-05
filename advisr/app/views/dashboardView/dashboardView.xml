@@ -39,8 +39,9 @@
 						<Label text="{{year}}" class="cardSubtitle"/>
 					</StackLayout>
 
-					<GridLayout columns="*" rows="*,*" id="panels">
-						<StackLayout row="0" class="panelCard">
+<!-- 					<GridLayout columns="*" rows="*,*" id="panels"> -->
+					<StackLayout orientation="vertical" id="panels">
+						<StackLayout row="0" class="panelCard" verticalAlightment="bottom">
 							<Label text="50 units" class="infoTitle blue"/>
 							<Label text="complete" class="infoSubtitle black" textWrap="true"/>
 						</StackLayout>
@@ -48,7 +49,7 @@
 	                        <Label text="3.85" class="infoTitle blue" />
 	                        <Label text="cumulative GPA" class="infoSubtitle black"/>
 	                    </StackLayout>
-					</GridLayout>
+					</StackLayout>
 					
 					<!-- <Label text="{{userInfo}}" textWrap="true" class="cardSubtitle"/>
 					<Label text="{{userMinors}}" class="cardSubtitle" visibility="{{ showMinors ? 'visible' : 'collapse'}}"/> -->
