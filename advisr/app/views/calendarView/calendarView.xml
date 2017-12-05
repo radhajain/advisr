@@ -1,29 +1,32 @@
-<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="calendarPage" class="page"
+<Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:calendar="nativescript-pro-ui/calendar" navigatingTo="pageNavigating" id="calendarPage" class="page"
 	xmlns:sd="nativescript-pro-ui/sidedrawer"
 	xmlns:sidedrawer="shared/sd" 
 	xmlns:Card="nativescript-cardview" >
 
-	  <ActionBar class="action-bar">
+	<Page.actionBar>
+	  <ActionBar class="action-bar" title="Dashboard">
 		    <ActionBar.titleView>
-		      <Label text="Schedule" horizontalAlignment="center" class="action-bar-title" />
+				<StackLayout orientation="horizontal" >
+					<Button text="&#xf015;    Home" tap="viewDashboard" class="fa"/>
+		         	<Button text="&#xf073;    Schedule" tap="viewSchedule" class="fa"/>
+		         	<Button text="&#xf14a;    Classes" tap="viewRequirements" class="fa"/>
+					<Button text="&#xf08b;    Logout" tap="viewLogout" class="fa"/>
+	            </StackLayout>
 		    </ActionBar.titleView>
-	    	<NavigationButton tap="toggleDrawer" ios.position="left" />
+	    	<!-- <NavigationButton tap=ome"toggleDrawer" text="Menu" ios.position="left" /> -->
 		</ActionBar>
+	</Page.actionBar>
 
-		<sd:RadSideDrawer id="sideDrawer" showOverNavigation="true">
-		  <sd:RadSideDrawer.drawerContent>
-		    <sidedrawer:sd/>
-		 </sd:RadSideDrawer.drawerContent>
+	<StackLayout orientation="horizontal">
+	 		<!-- <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5"> -->
+	 	<StackLayout id="grids">
+	 		<Label text="{{title}}" class="title"/>
+  	 		<StackLayout >
+  	 			<calendar:RadCalendar id="myCalendar" eventSource="{{ events }}" eventsViewMode="Inline" visibility="{{showMonthCal ? 'visible' : 'collapsed' }}" />
+  	 		</StackLayout>
 
-		 <sd:RadSideDrawer.mainContent>
-
-		 	<StackLayout orientation="horizontal">
-		 		<!-- <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5"> -->
-		 		<StackLayout id="grids">
-		 		<Label text="{{title}}" class="title"/>
-		 	
-		 		<StackLayout class="card">
-			 	 <GridLayout columns="auto,*,*,*,*,*" rows="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*"  class="calendar" visibility="{{showWeekCal ? 'visible' : 'collapsed' }}">
+			<StackLayout class="card">
+			 	<GridLayout columns="auto,*,*,*,*,*" rows="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*"  class="calendar" visibility="{{showWeekCal ? 'visible' : 'collapsed' }}">
 
 			 	 	<Label text="8 AM" col="0" row="1" class="bordered"/>
 			 	 	<Label text="9 AM" col="0" row="2" class="bordered"/>
@@ -47,150 +50,141 @@
 			 	 	<Label text="Th" col="4" row="0" class="center bordered"/>	
 			 	 	<Label text="F" col="5" row="0" class="center bordered"/>	
 
-			 	 </GridLayout>
-			 	</StackLayout>
+			 	</GridLayout>
+		    </StackLayout>
+	    	<GridLayout columns="*,*,*" rows="*,*,*,*,*,*,*" class="calendar" visibility="{{ showOneYearCal ? 'visible' : 'collapsed' }}">
 
-			 	 <GridLayout columns="*,*,*" rows="*,*,*,*,*,*,*" class="calendar" visibility="{{ showOneYearCal ? 'visible' : 'collapsed' }}">
+		 	 	<Label text="Fall" col="0" row="0" class="center header bordered"/>
+		 	 	<Label text="Winter" col="1" row="0" class="center header bordered"/>
+		 	 	<Label text="Spring" col="2" row="0" class="center header bordered"/>
 
-			 	 	<Label text="Fall" col="0" row="0" class="center header bordered"/>
-			 	 	<Label text="Winter" col="1" row="0" class="center header bordered"/>
-			 	 	<Label text="Spring" col="2" row="0" class="center header bordered"/>
-
-			 	 	<!-- FALL -->
-			 	 	<Label text="Class 1" col="0" row="1" class="class"/> 
-			 	 	<Label text="Class 2" col="0" row="2" class="class"/> 
-			 	 	<Label text="Class 3" col="0" row="3" class="class"/> 
-			 	 	<Label text="Class 4" col="0" row="4" class="class"/> 
-
-
-			 	 	<!-- WINTER -->
-			 	 	<Label text="Class 1" col="1" row="1" class="class"/> 
-			 	 	<Label text="Class 2" col="1" row="2" class="class"/> 
-			 	 	<Label text="Class 3" col="1" row="3" class="class"/> 
-			 	 	<Label text="Class 4" col="1" row="4" class="class"/> 
-
-			 	 	<!-- SPRING -->
-			 	 	<Label text="Class 1" col="2" row="1" class="class"/> 
-			 	 	<Label text="Class 2" col="2" row="2" class="class"/> 
-			 	 	<Label text="Class 3" col="2" row="3" class="class"/> 
-			 	 	
-			 	 	
-			 	 	
+		 	 	<!-- FALL -->
+		 	 	<Label text="Class 1" col="0" row="1" class="class"/> 
+		 	 	<Label text="Class 2" col="0" row="2" class="class"/> 
+		 	 	<Label text="Class 3" col="0" row="3" class="class"/> 
+		 	 	<Label text="Class 4" col="0" row="4" class="class"/> 
 
 
-			 	 	<Label text="Fall Summary" col="0" row="6" class="summary"/> 
-			 	 	<Label text="Winter Summary" col="1" row="6" class="summary"/> 
-			 	 	<Label text="Spring Summary" col="2" row="6" class="summary"/> 
+		 	 	<!-- WINTER -->
+		 	 	<Label text="Class 1" col="1" row="1" class="class"/> 
+		 	 	<Label text="Class 2" col="1" row="2" class="class"/> 
+		 	 	<Label text="Class 3" col="1" row="3" class="class"/> 
+		 	 	<Label text="Class 4" col="1" row="4" class="class"/> 
 
-			 	 </GridLayout>
-		
-			 	 <GridLayout columns="auto,*,*,*" rows="*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*" class="calendar" visibility="{{ showFourYearCal ? 'visible' : 'collapsed' }}">
+		 	 	<!-- SPRING -->
+		 	 	<Label text="Class 1" col="2" row="1" class="class"/> 
+		 	 	<Label text="Class 2" col="2" row="2" class="class"/> 
+		 	 	<Label text="Class 3" col="2" row="3" class="class"/> 
+		 	 	
+		 	 	
+		 	 	<Label text="Fall Summary" col="0" row="6" class="summary"/> 
+		 	 	<Label text="Winter Summary" col="1" row="6" class="summary"/> 
+		 	 	<Label text="Spring Summary" col="2" row="6" class="summary"/> 
 
-			 	 	<Label text="Fall" col="1" row="0" class="center header bordered"/>
-			 	 	<Label text="Winter" col="2" row="0" class="center header bordered"/>
-			 	 	<Label text="Spring" col="3" row="0" class="center header bordered"/>
+		 	 </GridLayout>
 
-			 	 	<Label text="Freshman" col="0" row="1" rowSpan="5" class="rightBorder"/>
-			 	 	<Label text="Sophomore" col="0" row="6" rowSpan="5" class="rightBorder"/>
-			 	 	<Label text="Junior" col="0" row="11" rowSpan="5" class="rightBorder"/>
-			 	 	<Label text="Senior" col="0" row="16" rowSpan="5" class="rightBorder"/>
+		 	 <GridLayout columns="auto,*,*,*" rows="*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*" class="calendar" visibility="{{ showFourYearCal ? 'visible' : 'collapsed' }}">
 
+		 	 	<Label text="Fall" col="1" row="0" class="center header bordered"/>
+		 	 	<Label text="Winter" col="2" row="0" class="center header bordered"/>
+		 	 	<Label text="Spring" col="3" row="0" class="center header bordered"/>
 
-			 	 	<!-- Freshman Fall -->
-			 	 	<Label text="Class 1" col="1" row="1" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="2" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="3" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="4" class="fyclass"/> 
-
-			 	 	<!-- Freshman Winter -->
-			 	 	<Label text="Class 1" col="2" row="1" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="2" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="3" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="4" class="fyclass"/> 
-
-			 	 	<!-- Freshman Spring -->
-			 	 	<Label text="Class 1" col="3" row="1" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="3" row="2" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="3" row="3" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="3" row="4" class="fyclass"/> 
+		 	 	<Label text="Freshman" col="0" row="1" rowSpan="5" class="rightBorder"/>
+		 	 	<Label text="Sophomore" col="0" row="6" rowSpan="5" class="rightBorder"/>
+		 	 	<Label text="Junior" col="0" row="11" rowSpan="5" class="rightBorder"/>
+		 	 	<Label text="Senior" col="0" row="16" rowSpan="5" class="rightBorder"/>
 
 
-			 	 	<!-- Sophomore Fall -->
-			 	 	<Label text="Class 1" col="1" row="6" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="7" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="8" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="9" class="fyclass"/> 
+		 	 	<!-- Freshman Fall -->
+		 	 	<Label text="Class 1" col="1" row="1" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="1" row="2" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="1" row="3" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="1" row="4" class="fyclass"/> 
 
-			 	 	<!-- Sophomore Winter -->
-			 	 	<Label text="Class 1" col="2" row="6" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="7" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="8" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="9" class="fyclass"/> 
+		 	 	<!-- Freshman Winter -->
+		 	 	<Label text="Class 1" col="2" row="1" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="2" row="2" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="2" row="3" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="2" row="4" class="fyclass"/> 
 
-			 	 	<!-- Sophomore Spring -->
-			 	 	<Label text="Class 1" col="3" row="6" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="3" row="7" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="3" row="8" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="3" row="9" class="fyclass"/> 
-
-			 	 	<!-- Junior Fall -->
-			 	 	<Label text="Class 1" col="1" row="11" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="12" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="13" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="14" class="fyclass"/> 
-
-			 	 	<!-- Junior Winter -->
-			 	 	<Label text="Class 1" col="2" row="11" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="12" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="13" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="14" class="fyclass"/> 
-
-			 	 	<!-- Junior Spring -->
-			 	 	<Label text="Class 1" col="3" row="11" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="3" row="12" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="3" row="13" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="3" row="14" class="fyclass"/> 
+		 	 	<!-- Freshman Spring -->
+		 	 	<Label text="Class 1" col="3" row="1" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="3" row="2" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="3" row="3" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="3" row="4" class="fyclass"/> 
 
 
-			 	 	 <!-- Senior Fall -->
-			 	 	<Label text="Class 1" col="1" row="16" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="17" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="18" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="19" class="fyclass"/> 
+		 	 	<!-- Sophomore Fall -->
+		 	 	<Label text="Class 1" col="1" row="6" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="1" row="7" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="1" row="8" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="1" row="9" class="fyclass"/> 
 
-			 	 	<!-- Senior Winter -->
-			 	 	<Label text="Class 1" col="2" row="16" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="17" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="18" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="19" class="fyclass"/> 
+		 	 	<!-- Sophomore Winter -->
+		 	 	<Label text="Class 1" col="2" row="6" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="2" row="7" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="2" row="8" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="2" row="9" class="fyclass"/> 
 
-			 	 	<!-- Senior Spring -->
-			 	 	<Label text="Class 1" col="3" row="16" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="3" row="17" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="3" row="18" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="3" row="19" class="fyclass"/> 
+		 	 	<!-- Sophomore Spring -->
+		 	 	<Label text="Class 1" col="3" row="6" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="3" row="7" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="3" row="8" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="3" row="9" class="fyclass"/> 
+
+		 	 	<!-- Junior Fall -->
+		 	 	<Label text="Class 1" col="1" row="11" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="1" row="12" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="1" row="13" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="1" row="14" class="fyclass"/> 
+
+		 	 	<!-- Junior Winter -->
+		 	 	<Label text="Class 1" col="2" row="11" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="2" row="12" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="2" row="13" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="2" row="14" class="fyclass"/> 
+
+		 	 	<!-- Junior Spring -->
+		 	 	<Label text="Class 1" col="3" row="11" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="3" row="12" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="3" row="13" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="3" row="14" class="fyclass"/> 
+
+
+		 	 	 <!-- Senior Fall -->
+		 	 	<Label text="Class 1" col="1" row="16" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="1" row="17" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="1" row="18" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="1" row="19" class="fyclass"/> 
+
+		 	 	<!-- Senior Winter -->
+		 	 	<Label text="Class 1" col="2" row="16" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="2" row="17" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="2" row="18" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="2" row="19" class="fyclass"/> 
+
+		 	 	<!-- Senior Spring -->
+		 	 	<Label text="Class 1" col="3" row="16" class="fyclass"/> 
+		 	 	<Label text="Class 2" col="3" row="17" class="fyclass"/> 
+		 	 	<Label text="Class 3" col="3" row="18" class="fyclass"/> 
+		 	 	<Label text="Class 4" col="3" row="19" class="fyclass"/> 
 
 
 
-			 	 </GridLayout>
-			 	
+		 	 </GridLayout>
+		</StackLayout>
+		 	<!-- Side Bar -->
+	 	<StackLayout class="topMargin">
+	 	 	<Label text="View plans for: " class="center"/>
+	 	 	<StackLayout orientation="vertical">
+	 	 		<Button text="Calendar View" class="selectPlan" tap="showCalendar" id="calendarButton"/>
+		 	 	<Button text="Weekly View" class="selectPlan" tap="showWeek" id="quarterButton"/>
+		 	 	<Button text="1-Year Plan" class="selectPlan" tap="showOneYear" id="yearButton"/>
+		 	 	<Button text="4-Year Plan" class="selectPlan" tap="showFourYear" id="fourButton"/>
 		 	</StackLayout>
-		 	<!-- </Card:CardView> -->
-
-		 	 <StackLayout class="topMargin">
-		 	 	<Label text="View plans for: " class="center"/>
-		 	 	<StackLayout orientation="horizontal">
-			 	 	<Button text="Quarter" class="selectPlan" tap="showWeek" id="quarterButton"/>
-			 	 	<Button text="1-Year" class="selectPlan" tap="showOneYear" id="yearButton"/>
-			 	 	<Button text="4-Year" class="selectPlan" tap="showFourYear" id="fourButton"/>
-			 	</StackLayout>
-			 	<Label text="Required Classes:" class="center topMargin"/>
-			 	<Button text="Sync with GCal" class="syncButton" tap="sync"/>
-		 	 </StackLayout>
-
-
-		 	
-		 </StackLayout>
-		 </sd:RadSideDrawer.mainContent>
-		</sd:RadSideDrawer>
+		 	<Label text="Required Classes:" class="center topMargin"/>
+		 	<Button text="Sync with GCal" class="syncButton" tap="sync"/>
+	 	</StackLayout>
+		
+	 </StackLayout> 
 </Page>

@@ -126,6 +126,10 @@ exports.pageLoaded = function(args) {
 	 
 }
 
+exports.viewDashboard = function() {
+	frameModule.topmost().navigate("views/dashboardView/dashboardView");
+}
+
 exports.viewSchedule = function() {
 	frameModule.topmost().navigate("views/calendarView/calendarView");
 }

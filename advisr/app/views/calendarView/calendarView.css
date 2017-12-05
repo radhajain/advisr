@@ -100,3 +100,15 @@
 	padding: 10px;
 	border-radius: 30%;
 }
+
+button {
+	margin: 100px;
+}
+
+.fa {
+   font-family: 'FontAwesome', 'fontawesome-webfont';
+   font-size: 20px;
+}
+
+
+
