@@ -36,7 +36,7 @@
 				<StackLayout class="card" id="firstCard" colSpan="1">
 					<StackLayout orientation="horizontal">
 						<Label text="Summary:" class="cardTitle"/>
-						<Label text="{{date}}" class="cardTitle"/>
+						<Label text="{{year}}" class="cardTitle"/>
 					</StackLayout>
 
 					
@@ -54,7 +54,7 @@
 					</GridLayout>
 				</StackLayout>
 
-				<StackLayout class="card" id="thirdCard" row="1" tap="viewMoreMajor1">
+				<StackLayout class="card" id="thirdCard" row="0" col="1" tap="viewMoreMajor1">
 					<Label text="Major 1: " class="cardTitle"/>
 					<Label text="{{major1}}" class="cardSubtitle" textWrap="true"/>
 					<Image src="res://seventy_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar" />
@@ -63,7 +63,7 @@
 					<Label text="complete"  class="small-infoLabel center"/>
 				</StackLayout>
 				<!-- Card4 -->
-				<StackLayout class="card" id="fourthCard" row="1" col="1" visibility="{{showSecond ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
+				<StackLayout class="card" id="fourthCard" row="0" col="2" visibility="{{showSecond ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
 					<Label text="Major 2:" class="cardTitle" />
 					<Label text="{{major2}}" class="cardSubtitle" textWrap="true"/>
 					<Image src="res://50_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar"/>
@@ -72,7 +72,7 @@
 					<Label text="complete"  class="small-infoLabel center"/>
 				</StackLayout>
 				<!-- Card4 -->
-				<StackLayout class="card" id="fifthCard" row="1" col="2" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
+				<StackLayout class="card" id="fifthCard" row="0" col="3" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
 					<Label text="Major 3: " class="cardTitle" />
 					<Label text="{{major3}}" class="cardSubtitle" textWrap="true"/>
 					<Image src="res://10_progress"/>
@@ -82,7 +82,7 @@
 					<Image src="res://10_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressBar"/>
 				</StackLayout>
 				<!-- Card5 -->
-				<StackLayout class="card" id="sixthCard" row="1" col="{{GERcol}}" colSpan="{{GERspan}}">
+				<StackLayout class="card" id="sixthCard" row="{{GERrow}}" col="{{GERcol}}" colSpan= "2">
 					<Label text="General Requirements:" textWrap="true" class="cardTitle" tap="viewMoreGER" />
 					<GridLayout columns="*,*,*,*,*,*" rows="*,*,*,*,*" id="GERgrid">
 						<StackLayout row="0" col="0">

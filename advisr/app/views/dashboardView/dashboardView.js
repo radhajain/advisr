@@ -10,8 +10,14 @@ var page;
 var year;
 var secondMajor = false;
 var thirdMajor = false;
+
+//GER card tile positioning
+var GERrow = 0;
+var GERcol = 0;
 var GERspan = 3;
+
 var majors;
+var minors;
 
 exports.pageNavigating = function(args) {
     page = args.object;
@@ -26,6 +32,7 @@ exports.pageNavigating = function(args) {
 	}
 	pageData.set("title", title);
 	year = StorageUtil.getYear();
+	pageData.set("year", year);
 	var majors = StorageUtil.getMajors();
 	if (majors[1]) {
 		var info = year + ": " + majors[0] + ", " + majors[1];
@@ -58,6 +65,21 @@ exports.pageNavigating = function(args) {
 
 var init = function() {
 	majors = StorageUtil.getMajors();
+	minors = StorageUtil.getMinors();
+
+	major_num = majors.length;
+	minor_num = minors.length;
+	tile_sum = major_num + minor_num;
+
+	if (tile_sum == 1 || tile_sum == 2) {
+		GERcol = 2;
+	} else if (tile_sum == 2) {
+		GERrow = 1;
+	} else if (tile_sum >= 3) {
+		GERrow = 1;
+		GERcol = tile_sum - 3
+	}
+
 	pageData.set("major1", majors[0]);
 	if (majors.length >= 2) {
 		pageData.set("major2", majors[1]);
@@ -69,10 +91,20 @@ var init = function() {
 			GERspan = 1;
 		}
 	}
+
+
+
+
+
+
+
 	pageData.set("showSecond", secondMajor);
 	pageData.set("showThird", thirdMajor);
 	pageData.set("GERspan", GERspan);
-	pageData.set("GERcol", 4-GERspan);
+	pageData.set("GERcol", GERcol);
+	pageData.set("GERrow", GERrow);
+
+	//pageData.set("GERcol", 4-GERspan);
 	if (year === "Freshman" || year ==="Sophomore") {
 		pageData.set("freshSoph", true);
 		pageData.set("progress1", "30%");
