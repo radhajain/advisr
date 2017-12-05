@@ -7,13 +7,14 @@
 	<Page.actionBar>
 	  <ActionBar class="action-bar" title="Dashboard">
 		    <ActionBar.titleView>
-				<StackLayout orientation="horizontal">
-		          <Button text="Home" class="current"/>
-		          <Button text="Plans" tap="viewSchedule"/>
-		          <Button text="Classes" tap="viewRequirements"/>
+				<StackLayout orientation="horizontal" >
+					<Button text="&#xf015;    Home" tap="viewSchedule" class="fa"/>
+		         	<Button text="&#xf073;    Schedule" tap="viewSchedule" class="fa"/>
+		         	<Button text="&#xf14a;    Classes" tap="viewRequirements" class="fa"/>
+					<Button text="&#xf08b;    Logout" tap="viewLogout" class="fa"/>
 	            </StackLayout>
 		    </ActionBar.titleView>
-	    	<!-- <NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" /> -->
+	    	<!-- <NavigationButton tap=ome"toggleDrawer" text="Menu" ios.position="left" /> -->
 		</ActionBar>
 	</Page.actionBar>
 
@@ -25,23 +26,19 @@
 <!-- 	 <sd:RadSideDrawer.mainContent horizontalAlignment="center">-->	
  	<StackLayout class= "dashboard">
 	 	<!-- Title -->
-		<StackLayout orientation="vertical" class="dashboardTitle">
-			<Label text="Progress Report" horizontalAlignment="left" />
-		</StackLayout>
-		
-		<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
+    	<Label text="Progress Report" class="dashboardTitle"/>
+
+    	<!-- Dashboard -->
+		<Card:CardView class="cardStyle" top-margin= "0" elevation="40" radius="5">
 			<GridLayout columns="*,*,*,*" rows="*, *" id="grid">
 				<!-- Card1 -->
 				
 				<StackLayout class="card" id="firstCard" colSpan="1">
-					<StackLayout orientation="horizontal">
-						<Label text="Summary:" class="cardTitle"/>
-						<Label text="{{year}}" class="cardTitle"/>
+	 				<StackLayout orientation="vertical">
+						<Label text="Summary:" class="cardTitle" textWrap="true"/>
+						<Label text="{{year}}" class="cardSubtitle"/>
 					</StackLayout>
 
-					
-					<Label text="{{userInfo}}" textWrap="true" class="cardSubtitle"/>
-					<Label text="{{userMinors}}" class="cardSubtitle" visibility="{{ showMinors ? 'visible' : 'collapse'}}"/>
 					<GridLayout columns="*" rows="*,*" id="panels">
 						<StackLayout row="0" class="panelCard">
 							<Label text="50 units" class="infoTitle blue"/>
@@ -52,8 +49,15 @@
 	                        <Label text="cumulative GPA" class="infoSubtitle black"/>
 	                    </StackLayout>
 					</GridLayout>
+					
+					<!-- <Label text="{{userInfo}}" textWrap="true" class="cardSubtitle"/>
+					<Label text="{{userMinors}}" class="cardSubtitle" visibility="{{ showMinors ? 'visible' : 'collapse'}}"/> -->
+
 				</StackLayout>
 
+
+
+				<!-- Major 1-->
 				<StackLayout class="card" id="thirdCard" row="0" col="1" tap="viewMoreMajor1">
 					<Label text="Major 1: " class="cardTitle"/>
 					<Label text="{{major1}}" class="cardSubtitle" textWrap="true"/>
@@ -62,7 +66,8 @@
 					<Label text="{{progress1}}" class="progressNumber blue"/>
 					<Label text="complete"  class="small-infoLabel center"/>
 				</StackLayout>
-				<!-- Card4 -->
+				
+				<!-- Major 2-->
 				<StackLayout class="card" id="fourthCard" row="0" col="2" visibility="{{showSecond ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
 					<Label text="Major 2:" class="cardTitle" />
 					<Label text="{{major2}}" class="cardSubtitle" textWrap="true"/>
@@ -71,7 +76,8 @@
 					<Label text="{{progress2}}" class="progressNumber blue"/>
 					<Label text="complete"  class="small-infoLabel center"/>
 				</StackLayout>
-				<!-- Card4 -->
+				
+				<!-- Major 3 -->
 				<StackLayout class="card" id="fifthCard" row="0" col="3" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
 					<Label text="Major 3: " class="cardTitle" />
 					<Label text="{{major3}}" class="cardSubtitle" textWrap="true"/>
@@ -81,9 +87,10 @@
 					<Image src="res://30_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressBar"/>
 					<Image src="res://10_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressBar"/>
 				</StackLayout>
-				<!-- Card5 -->
+
+				<!-- GER -->
 				<StackLayout class="card" id="sixthCard" row="{{GERrow}}" col="{{GERcol}}" colSpan= "2">
-					<Label text="General Requirements:" textWrap="true" class="cardTitle" tap="viewMoreGER" />
+					<Label text="General Education Requirements:" textWrap="true" class="cardTitle" tap="viewMoreGER" />
 					<GridLayout columns="*,*,*,*,*,*" rows="*,*,*,*,*" id="GERgrid">
 						<StackLayout row="0" col="0">
 							<Label text="PWR 1" class="GER"/>

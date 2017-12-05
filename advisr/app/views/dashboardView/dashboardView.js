@@ -134,6 +134,10 @@ exports.viewRequirements = function() {
 	frameModule.topmost().navigate("views/requirementsView/requirementsView");
 }
 
+exports.viewLogout = function() {
+	frameModule.topmost().navigate("views/onboarding/landingView/landingView");
+}
+
 exports.viewMoreGER = function() {
 	var options = {
 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',

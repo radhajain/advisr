@@ -6,41 +6,47 @@
 }*/
 
 
-.dashboard {
+/*.dashboard {
 	padding: 0px;
 	margin-top: 10px;
 	margin-left: 10px;
-}
+}*/
 
 .dashboardTitle {
 	font-size: 36px;
 	color: #CCCCD0;
-	display: inline-block;
-	margin-left: 100px;
+/*	display: inline-block;
+*/	margin-left: 162px;
 	margin-top: 100px;
 	margin-bottom: 0px;
+	padding: 0;
 
 }
 
-/*.current {
-	color: black;
-}*/
 
 button {
 	margin: 100px;
 }
 
 .card {
-    margin: 10px;
+    margin: 25px;
     background-color: white;
 }
 
 .cardTitle {
-	margin: 5%;
+	margin-top: 5%;
+	margin-left: 5%;
+	font-size: 25px;
+	color: #003535;
+}
+
+.inlineTitle {
+	margin-top: 5%;
 /*	margin-bottom: 0%;
 	margin-right: 0px;*/
 	font-size: 25px;
 	color: #003535;
+	margin-left: 10px;
 }
 
 .center {
@@ -49,7 +55,7 @@ button {
 
 .cardSubtitle {
 	margin-left: 5%;
-	font-size: 17.5px;
+	font-size: 20px;
 }
 
 #grid {
@@ -103,7 +109,7 @@ button {
 }
 
 .progressNumber {
-	margin-top: 40px;
+	margin-top: 10px;
 	font-size: 30px;
 	text-align: center;
 }
@@ -137,6 +143,12 @@ button {
 
 .black {
     color: #4B3B47
+}
+
+
+.fa {
+   font-family: 'FontAwesome', 'fontawesome-webfont';
+   font-size: 20px;
 }
 
 /*.green {
