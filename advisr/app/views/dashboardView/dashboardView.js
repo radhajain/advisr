@@ -71,7 +71,7 @@ var init = function() {
 	minor_num = minors.length;
 	tile_sum = major_num + minor_num;
 
-	if (tile_sum == 1 || tile_sum == 2) {
+	if (tile_sum == 1) {
 		GERcol = 2;
 	} else if (tile_sum == 2) {
 		GERrow = 1;

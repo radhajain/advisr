@@ -35,13 +35,13 @@ button {
 
 .cardTitle {
 	margin-top: 5%;
-	margin-left: 10%;
+	margin-left: 45px;
 	font-size: 25px;
 	color: #003535;
 }
 
 .cardSubtitle {
-	margin-left: 10%;
+	margin-left: 45px;
 	font-size: 20px;
 }
 
@@ -79,8 +79,8 @@ button {
 .panelCard {
 	padding: 20px;
 	margin-top: 60px;
-	border-right-color: gray;
-	border-right-width: 2px;
+/*	border-right-color: gray;
+	border-right-width: 2px;*/
 	text-align: center;
 }
 
@@ -109,10 +109,12 @@ button {
 
 .infoTitle {
 	font-size: 35px;
+	text-align: center;
 }
 
 .infoSubtitle {
 	font-size: 20px;
+	text-align: center;
 }
 
 .progressNumber {
@@ -128,7 +130,9 @@ button {
 }
 
 .progressbar {
-    height: 65;
+	margin: 0;
+	padding:0;
+    height: 65%;
     width: 65%;
 }
 

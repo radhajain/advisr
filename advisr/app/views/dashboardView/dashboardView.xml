@@ -40,7 +40,7 @@
 					</StackLayout>
 
 <!-- 					<GridLayout columns="*" rows="*,*" id="panels"> -->
-					<StackLayout orientation="vertical" id="panels">
+					<StackLayout orientation="vertical" >
 						<StackLayout row="0" class="panelCard" verticalAlightment="bottom">
 							<Label text="50 units" class="infoTitle blue"/>
 							<Label text="complete" class="infoSubtitle black" textWrap="true"/>
@@ -60,40 +60,98 @@
 
 				<!-- Major 1-->
 				<StackLayout class="card" id="thirdCard" row="0" col="1" tap="viewMoreMajor1">
-					<Label text="Major 1: " class="cardTitle"/>
-					<Label text="{{major1}}" class="cardSubtitle" textWrap="true"/>
-					<Image src="res://seventy_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar" />
-	                <Image src="res://10_ progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
-					<Label text="{{progress1}}" class="progressNumber blue"/>
-					<Label text="complete"  class="small-infoLabel center"/>
+					<StackLayout orientation="vertical">
+						<Label text="Major 1: " class="cardTitle"/>
+						<Label text="{{major1}}" class="cardSubtitle" textWrap="true"/>
+					</StackLayout>
+
+					<StackLayout orientation="vertical" id="panels">
+			            <StackLayout spacing="0">
+							<Image src="res://seventy_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar" />
+			            	<Image src="res://30_ progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />		
+			            </StackLayout>
+			            <StackLayout text-align="center">
+                        	<Label text="{{progress1}}" class="infoTitle blue" />
+                        	<Label text="classes complete" class="infoSubtitle black"/>
+                        </StackLayout>
+	           	    </StackLayout>
+
 				</StackLayout>
 				
 				<!-- Major 2-->
+
 				<StackLayout class="card" id="fourthCard" row="0" col="2" visibility="{{showSecond ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
-					<Label text="Major 2:" class="cardTitle" />
-					<Label text="{{major2}}" class="cardSubtitle" textWrap="true"/>
-					<Image src="res://50_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar"/>
-	                <Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
-					<Label text="{{progress2}}" class="progressNumber blue"/>
-					<Label text="complete"  class="small-infoLabel center"/>
-				</StackLayout>
+					<StackLayout orientation="vertical">
+						<Label text="Major 2:" class="cardTitle" />
+						<Label text="{{major2}}" class="cardSubtitle" textWrap="true"/>
+					</StackLayout>
+
+					<StackLayout orientation="vertical" id="panels">
+			            <StackLayout spacing="0">
+							<Image src="res://50_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar"/>
+	                		<Image src="res://10_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
+			            </StackLayout>
+			            <StackLayout text-align="center">
+                        	<Label text="{{progress2}}" class="infoTitle blue"/>
+                        	<Label text="classes complete"  class="infoSubtitle"/>
+                        </StackLayout>
+	           	    </StackLayout>
+	           	</StackLayout>
+
+				<StackLayout class="card" id="fifthCard" row="0" col="3" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
+					<StackLayout orientation="vertical">
+						<Label text="Major 3:" class="cardTitle" />
+						<Label text="{{major3}}" class="cardSubtitle" textWrap="true"/>
+					</StackLayout>
+
+					<StackLayout orientation="vertical" id="panels">
+			            <StackLayout spacing="0">
+							<Image src="res://30_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar"/>
+	                		<Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
+			            </StackLayout>
+			            <StackLayout text-align="center">
+                        	<Label text="{{progress3}}" class="infoTitle blue"/>
+                        	<Label text="classes complete"  class="infoSubtitle"/>
+                        </StackLayout>
+	           	    </StackLayout>
+	           	</StackLayout>
 				
 				<!-- Major 3 -->
-				<StackLayout class="card" id="fifthCard" row="0" col="3" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
+<!-- 				<StackLayout class="card" id="fifthCard" row="0" col="3" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
 					<Label text="Major 3: " class="cardTitle" />
 					<Label text="{{major3}}" class="cardSubtitle" textWrap="true"/>
 					<Image src="res://10_progress"/>
 					<Label text="{{progress3}}" class="progressNumber blue"/>
 					<Label text="complete" class="small-infoLabel center"/>
-					<Image src="res://30_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressBar"/>
-					<Image src="res://10_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressBar"/>
-				</StackLayout>
+	                <Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
+	                <Image src="res://10_ progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
+				</StackLayout> -->
 
 				<!-- GER -->
-				<StackLayout class="card" id="sixthCard" row="{{GERrow}}" col="{{GERcol}}" colSpan= "2">
-					<Label text="General Education Requirements:" textWrap="true" class="cardTitle" tap="viewMoreGER" />
-					<GridLayout columns="*,*,*,*,*,*" rows="*,*,*,*,*" id="GERgrid">
+				<StackLayout class="card" id="sixthCard" row="{{GERrow}}" col="{{GERcol}}" colSpan= "2" tap="viewMoreGER">
+					<StackLayout orientation="vertical">
+						<Label text="General Education Requirements:" textWrap="true" class="cardTitle"/>
+					</StackLayout>
+					<StackLayout orientation="vertical" >
+						<StackLayout row="0" class="panelCard" verticalAlightment="bottom">
+							<Label text="4/12" class="infoTitle blue"/>
+							<Label text="classes complete" class="infoSubtitle black" textWrap="true"/>
+						</StackLayout>
+					
+	                    <StackLayout row="2" class="panelCard">
+	                    </StackLayout>
+					</StackLayout>
+
+
+
+					<!-- <GridLayout columns="*,*" rows="*,*,*,*,*" id="GERgrid">
 						<StackLayout row="0" col="0">
+						</StackLayout>
+
+						<StackLayout row="0" col="1">
+						</StackLayout> -->
+
+						<!-- <StackLayout row="0" col="0">
 							<Label text="PWR 1" class="GER"/>
 						</StackLayout>
 						<StackLayout row="1" col="0">
@@ -113,10 +171,10 @@
 						</StackLayout>
 						<StackLayout row="2" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
-						</StackLayout>
+						</StackLayout> -->
 
 						<!-- WAYS -->
-						<StackLayout row="0" col="0">
+<!-- 						<StackLayout row="0" col="0">
 							<Label text="PWR 1" class="GER"/>
 						</StackLayout>
 						<StackLayout row="1" col="0">
@@ -130,8 +188,8 @@
 						</StackLayout>	
 
 
-						<!-- Col 1 Checkboxes -->				
-						<StackLayout row="0" col="1">
+<!-- 						Col 1 Checkboxes				--> 						
+	<!-- 					<StackLayout row="0" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
 						</StackLayout>
 						<StackLayout row="1" col="1">
@@ -139,10 +197,10 @@
 						</StackLayout>
 						<StackLayout row="2" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
-						</StackLayout>
+						</StackLayout> -->
 					
 
-	                    <StackLayout orientation="horizontal" row="0" col="3">
+<!-- 	                    <StackLayout orientation="horizontal" row="0" col="3">
 	                    	<Label text="AII" class="GER"/>
 	                    </StackLayout>
 	                    <StackLayout orientation="horizontal" row="1" col="3">
@@ -167,16 +225,13 @@
 	                    	<Label text="SI" class="GER" />
 	                    </StackLayout>
 	           
-	<!-- 		            <StackLayout col="3" row="5">
+			            <StackLayout col="3" row="5">
 			                <Label text="4/8 complete" class="infoSubtitle black"/> 
-			            </StackLayout> -->
-	              	</GridLayout>
-				</StackLayout>
+			            </StackLayout>
+	              	</GridLayout>  -->
+				</StackLayout> 
 			</GridLayout>
 		</Card:CardView>
 	</StackLayout>
 
-
-<!-- 	 </sd:RadSideDrawer.mainContent>
-		</sd:RadSideDrawer> -->
 </Page>
