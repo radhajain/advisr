@@ -12,6 +12,18 @@
 	margin-top: 10%;
 }
 
+.cell{
+	margin:8px;
+}
+
+.classesLabel{
+	margin:10px;
+}
+
+#coreMajor1, #electivesMajor1{
+	margin:2%;
+}
+
 .card {
     margin: 2%;
     background-color: white;
