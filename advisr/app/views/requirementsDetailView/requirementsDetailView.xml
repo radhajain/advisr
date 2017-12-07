@@ -5,73 +5,60 @@
 	xmlns:Card="nativescript-cardview"
 	xmlns:CheckBox="nativescript-checkbox">
 
-	  <ActionBar class="action-bar">
-		    <ActionBar.titleView>
-		      <Label text="Dashboard" horizontalAlignment="center" class="action-bar-title" />
-		    </ActionBar.titleView>
-	    	<NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" />
-		</ActionBar>
-
-		<sd:RadSideDrawer id="sideDrawer" showOverNavigation="true">
-		  <sd:RadSideDrawer.drawerContent>
-		    <sidedrawer:sd/>
-		 </sd:RadSideDrawer.drawerContent>
-
-		 <sd:RadSideDrawer.mainContent horizontalAlignment="center">
-		 	<StackLayout>
-			 	<!-- Title -->
-				<StackLayout orientation="vertical" class="dashboardTitle">
-					<Label text="Your Requirements" horizontalAlignment="center" />
+		
+ 	<StackLayout>
+	 	<!-- Title -->
+		<StackLayout orientation="vertical" class="dashboardTitle">
+			<Label text="Your Requirements" horizontalAlignment="center" />
+		</StackLayout>
+		
+		<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
+			<GridLayout columns="*" rows="*" id="grid">
+				<StackLayout>
+				<!-- Card1 -->
+				<StackLayout class="card" id="firstCard">
+					<StackLayout orientation="horizontal">
+					<Label text="{{title}}" textWrap="true" class="cardTitle"/>
+					<Label text="{{major}}" class="cardSubtitle"/>
 				</StackLayout>
-				
-				<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
-				<GridLayout columns="*" rows="*" id="grid">
-					<StackLayout>
-					<!-- Card1 -->
-					<StackLayout class="card" id="firstCard">
-						<StackLayout orientation="horizontal">
-						<Label text="{{title}}" textWrap="true" class="cardTitle"/>
-						<Label text="{{major}}" class="cardSubtitle"/>
-					</StackLayout>
-					<Label text="Core: " class="classesLabel"/>
-						<ListView items="{{coreMajor1}}" separatorColor="#FFFFFF" id="coreMajor1" visibility="{{coreMajor1.length ? 'visible' : 'collapse'}}">
-							<ListView.itemTemplate>
-								<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
-									<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
-								 	<Label text="{{one}}" class="cell"/>
-								 </StackLayout>
-								 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
-								 	<Label text="{{two}}" class="cell"/>
-								 </StackLayout>
-								 <StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
-								 	<Label text="{{three}}" class="cell"/>
-								 </StackLayout>
-								</GridLayout>
-							</ListView.itemTemplate>
-						</ListView>
-						<Label text="Electives: " class="classesLabel"/>
-						<ListView items="{{electivesMajor1}}" separatorColor="#FFFFFF" id="electivesMajor1" visibility="{{electivesMajor1.length ? 'visible' : 'collapse'}}">
-							<ListView.itemTemplate>
-								<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
-									<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
-								 	<Label col="0" row="0" text="{{one}}" class="cell"/>
-								 </StackLayout>
-								 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
-								 	<Label text="{{two}}" class="cell"/>
-								 </StackLayout>
-								 <StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
-								 	<Label text="{{three}}" class="cell"/>
-								 </StackLayout>
-								</GridLayout>
-							</ListView.itemTemplate>
-						</ListView>
-					</StackLayout>
-					</StackLayout>
-				</GridLayout>
-			</Card:CardView>
-			</StackLayout>
+				<Label text="Core: " class="classesLabel"/>
+					<ListView items="{{coreMajor1}}" separatorColor="#FFFFFF" id="coreMajor1" visibility="{{coreMajor1.length ? 'visible' : 'collapse'}}">
+						<ListView.itemTemplate>
+							<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
+								<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
+							 	<Label text="{{one}}" class="cell"/>
+							 </StackLayout>
+							 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
+							 	<Label text="{{two}}" class="cell"/>
+							 </StackLayout>
+							 <StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
+							 	<Label text="{{three}}" class="cell"/>
+							 </StackLayout>
+							</GridLayout>
+						</ListView.itemTemplate>
+					</ListView>
+					<Label text="Electives: " class="classesLabel"/>
+					<ListView items="{{electivesMajor1}}" separatorColor="#FFFFFF" id="electivesMajor1" visibility="{{electivesMajor1.length ? 'visible' : 'collapse'}}">
+						<ListView.itemTemplate>
+							<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
+								<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
+							 	<Label col="0" row="0" text="{{one}}" class="cell"/>
+							 </StackLayout>
+							 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
+							 	<Label text="{{two}}" class="cell"/>
+							 </StackLayout>
+							 <StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
+							 	<Label text="{{three}}" class="cell"/>
+							 </StackLayout>
+							</GridLayout>
+						</ListView.itemTemplate>
+					</ListView>
+				</StackLayout>
+				</StackLayout>
+			</GridLayout>
+		</Card:CardView>
+	</StackLayout>
 
 
-		 </sd:RadSideDrawer.mainContent>
-		</sd:RadSideDrawer>
+
 </Page>

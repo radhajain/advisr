@@ -28,12 +28,12 @@
 		 	 	<Button text="1-Year Plan" class="selectPlan" tap="showOneYear" id="yearButton"/>
 		 	 	<Button text="4-Year Plan" class="selectPlan" tap="showFourYear" id="fourButton"/>
 		 	</StackLayout>
-		 	<Label text="Required Classes:" class="center topMargin"/>
+		 	<Label text="Recommended Classes:" class="center topMargin"/>
 		 	<Button text="Sync with GCal" class="syncButton" tap="sync"/>
 	 	</StackLayout>
 
 	 	<StackLayout id="grids">
-	 		<Label text="{{title}}" class="title"/>
+	 		<Label text="{{title}}" class="contentTitle"/>
   	 		<StackLayout >
   	 			<calendar:RadCalendar id="myCalendar" eventSource="{{ events }}" eventsViewMode="Inline" visibility="{{showMonthCal ? 'visible' : 'collapsed' }}" />
   	 		</StackLayout>
