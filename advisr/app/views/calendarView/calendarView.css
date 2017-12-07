@@ -83,7 +83,7 @@
 	height: 500px;
 	margin-bottom: 40px;
 	text-align: center;
-	color: 338241;
+	color: #338241;
 }
 
 .class {
@@ -98,9 +98,9 @@
 
 .fyclass {
 	background-color: white;
-	border-radius: 25px;
+	border-radius: 10px;
 	/*border-color: blue;*/
-	margin-bottom: 40px;
+	margin-bottom: 10px;
 	box-shadow: 10px;
 	text-align: center;
 }

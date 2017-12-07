@@ -12,12 +12,13 @@ var secondMajor = false;
 var thirdMajor = false;
 
 //GER card tile positioning
-var GERrow = 0;
+var GERrow = 1;
 var GERcol = 0;
 var GERspan = 3;
 
 var majors;
 var minors;
+var tile_sum;
 
 exports.pageNavigating = function(args) {
     page = args.object;
@@ -67,17 +68,24 @@ var init = function() {
 	majors = StorageUtil.getMajors();
 	minors = StorageUtil.getMinors();
 
-	major_num = majors.length;
-	minor_num = minors.length;
-	tile_sum = major_num + minor_num;
+	tile_sum = majors.length + minors.length;
 
-	if (tile_sum == 1) {
+	// if (tile_sum === 1) {
+	// 	GERcol = 2;
+	// } else {
+	// 	GERrow = 1;
+	// 	if (tile_sum === 2) {
+	// 		GERcol = 0;
+	// 	} else if (tile_sum >== 3) {
+	// 		GERcol = tile_sum - 3;
+	// 	}
+	// }
+
+	if(tile_sum === 1){
+		GERrow = 0;
 		GERcol = 2;
-	} else if (tile_sum == 2) {
-		GERrow = 1;
-	} else if (tile_sum >= 3) {
-		GERrow = 1;
-		GERcol = tile_sum - 3
+	} else if (tile_sum > 3){
+		GERcol = tile_sum - 3;
 	}
 
 	pageData.set("major1", majors[0]);
