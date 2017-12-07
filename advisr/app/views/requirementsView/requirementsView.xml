@@ -4,20 +4,30 @@
 	xmlns:pb="nativescript-progressbar"
 	xmlns:Card="nativescript-cardview">
 
-	  <ActionBar class="action-bar">
+
+	<Page.actionBar>
+	  <ActionBar class="action-bar" title="Dashboard">
 		    <ActionBar.titleView>
-		      <Label text="Dashboard" horizontalAlignment="center" class="action-bar-title" />
+				<StackLayout orientation="horizontal" >
+					<Button text="&#xf015;    Home" tap="viewSchedule" class="fa"/>
+		         	<Button text="&#xf073;    Schedule" tap="viewSchedule" class="fa"/>
+		         	<Button text="&#xf14a;    Classes" tap="viewRequirements" class="fa"/>
+					<Button text="&#xf08b;    Logout" tap="viewLogout" class="fa"/>
+	            </StackLayout>
 		    </ActionBar.titleView>
-	    	<NavigationButton tap="toggleDrawer" text="Menu" ios.position="left" />
+	    	<!-- <NavigationButton tap=ome"toggleDrawer" text="Menu" ios.position="left" /> -->
 		</ActionBar>
+	</Page.actionBar>
 
-		<sd:RadSideDrawer id="sideDrawer" showOverNavigation="true">
-		  <sd:RadSideDrawer.drawerContent>
-		    <sidedrawer:sd/>
-		 </sd:RadSideDrawer.drawerContent>
 
-		 <sd:RadSideDrawer.mainContent horizontalAlignment="center">
-		 	<StackLayout>
+	<StackLayout orientation="horizontal">
+
+
+
+
+
+
+<!-- 		 	<StackLayout>
 			 	<!-- Title -->
 				<StackLayout orientation="vertical" class="dashboardTitle">
 					<Label text="Your Requirements" horizontalAlignment="center" />
@@ -242,9 +252,6 @@
 				<!-- </StackLayout> -->
 				</GridLayout>
 			</Card:CardView>
-			</StackLayout>
+			</StackLayout> -->
 
-
-		 </sd:RadSideDrawer.mainContent>
-		</sd:RadSideDrawer>
 </Page>

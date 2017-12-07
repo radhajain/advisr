@@ -137,8 +137,9 @@
 							<Label text="4/12" class="infoTitle blue"/>
 							<Label text="classes complete" class="infoSubtitle black" textWrap="true"/>
 						</StackLayout>
-					
+
 	                    <StackLayout row="2" class="panelCard">
+	                    	
 	                    </StackLayout>
 					</StackLayout>
 
@@ -151,7 +152,7 @@
 						<StackLayout row="0" col="1">
 						</StackLayout> -->
 
-						<!-- <StackLayout row="0" col="0">
+						<StackLayout row="0" col="0">
 							<Label text="PWR 1" class="GER"/>
 						</StackLayout>
 						<StackLayout row="1" col="0">
@@ -171,7 +172,7 @@
 						</StackLayout>
 						<StackLayout row="2" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
-						</StackLayout> -->
+						</StackLayout>
 
 						<!-- WAYS -->
 <!-- 						<StackLayout row="0" col="0">
