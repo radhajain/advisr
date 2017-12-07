@@ -22,7 +22,9 @@
 
 .signinButton {
 	margin-top: 10%;
-	background-color: lightblue;
+	background-color: #1C89F8;
+	/*border-width: 1px;
+	border-color: white;*/
 	color: white;
 	font-size: 25px;
 	width: 800px;

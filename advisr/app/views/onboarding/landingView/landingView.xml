@@ -1,7 +1,7 @@
 <Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="landingPage" class="page" actionBarHidden="true">
 	<StackLayout class="center">
 		<Image src="res://logo_login" class="title"/> 
-		<Button text="Get started using SUNETID" tap="goToInterestsView" class="signinButton"/>
+		<Button text="Get Started" tap="goToInterestsView" class="signinButton"/>
 	</StackLayout>
 	 
 </Page>
