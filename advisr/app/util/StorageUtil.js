@@ -2,10 +2,11 @@ var appSettings = require("application-settings");
 
 
 //MATTHEW - add classes and matched classes here
-var interests = ["Building with my hands", "Mathematical Proofs", "Current Affairs", "Coding Projects", 
-				"The economy", "Evaluating human perspectives", "Discussing Art" ,"Psychology", "Critiquing Society",
-				"Law & Justice", "Literature", "Complex Electrical Systems", "Filmmaking", "Creating Art",
-				"Clean energy", "Theatre", "Foreign Languages", "Human Computer Interaction"];
+var interests = ["Building with My Hands", "Analyzing Society", "Solving Logical Problems", "Reading Books", 
+"Reforming the Education System", "Maintaining a Healthy Lifestyle", "Investing in the Stock Market", 
+"Writing a Creative Piece", "Understanding Human Behavior", "Building an App", "Building a Robot", 
+"Reading the News", "Visiting Art Museums", "Exploring New Places", "Performing in Plays", 
+"Learning Languages", "Going to the Movies", "Performing Experiment"];
 
 
 // var matchedClasses = ["E40M", "Math 51H"... FILL IN ];
@@ -234,6 +235,18 @@ exports.setMinors = function(list) {
 
 exports.getMinors = function() {
 	return JSON.parse(appSettings.getString('minors')) || [];
+}
+
+exports.logOut = function(){
+  // appSettings.setString('minors', JSON.stringify([]));
+  // appSettings.setString('majors', JSON.stringify([]));
+  // appSettings.setString('name', '');
+  // appSettings.setString('year', '');
+  // appSettings.remove('minors');
+  // appSettings.remove('majors');
+  // appSettings.remove('name');
+  // appSettings.remove('year');
+  // appSettings.clear();
 }
 
 

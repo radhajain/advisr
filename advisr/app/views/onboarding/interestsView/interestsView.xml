@@ -5,7 +5,7 @@
 			<Slides:SlideContainer id="slides-container" height="60%" pageIndicators="true">
 				<Slides:Slide class="slide" swipe="changeSlide">
 					<StackLayout>
-						<Label text="Tell us a bit about you to get started" class="question"/>
+						<Label text="Sign up to get started!" class="question"/>
 						<StackLayout class="center">
 							<Label text="What is your name?" class="topMargin yearQ"/>
 							<TextField hint="Enter your name" text="{{ name }}" autocorrect="false" autocapitalization="none" id="name" class="topMargin" returnPress="addName"/>
@@ -16,7 +16,7 @@
 								<Button id="jun" class="yearButton" text="Junior" tap="addJunior"/>
 								<Button id="sen" class="yearButton" text="Senior" tap="addSenior"/>
 							</StackLayout>
-							<Button text="Sync with Axess" tap="axessSync" id="axessSync"/>
+							<Button text="Sync with Axess" tap="axessSync" class="axessSync"/>
 						</StackLayout>
 					</StackLayout>
 				</Slides:Slide>
@@ -34,8 +34,8 @@
 				<Slides:Slide class="slide" disablePan="true" tap="disablePickers">
 					<StackLayout>
 						<Label text="Add up to 3 majors and minors that you are considering." class="question"/>
-						<StackLayout orientation="horizontal" class="wholeSlide">
-							<Button text="<" tap="goToDescription" class="prevButton"/>
+						<StackLayout orientation="vertical" class="wholeSlide">
+							<!-- <Button text="<" class="prevButton"/> -->
 							<StackLayout orientation="horizontal" class="centerDiv">
 								<StackLayout class="majors">
 									<Label text="Majors" class="listHeader"/>
@@ -76,8 +76,9 @@
 									<Button text="+" tap="addMinorField" id="addMinor" visibility="{{ showMinor3 ? 'collapse' : 'visible'}}"/>
 								</StackLayout>
 							</StackLayout>
-							<Button text=">" tap="goToInterests" class="nextButton"/>
+							<!-- <Button text=">" class="nextButton"/> -->
 						</StackLayout>
+						<Button text="Next" tap="goToInterests" class="mSelectNext"/>
 					</StackLayout>
 				</Slides:Slide>
 				<Slides:Slide class="slide" swipe="goToDashboard" disablePan="true">
@@ -99,7 +100,7 @@
 							</GridLayout>
 						 </ListView.itemTemplate>
           				</ListView>
-          				<Button text="View my results" class="finishButton" tap="finish"/>
+          				<Button text="View My Results" class="finishButton" tap="finish"/>
 					</StackLayout>
 				</Slides:Slide>
 
@@ -121,7 +122,7 @@
 			<Button text="Done" tap="getMinor2SelectedIndex"  visibility="{{ showMinor2Picker ? 'visible' : 'collapse'}}" class="pickerDone"/>
 
 			<ListPicker id="minor3picker" items="{{ majorList }}" visibility="{{showMinor3Picker ? 'visible' : 'collapse'}}" class="picker"/>
-			<Button text="Done" tap="getMinor3SelectedIndex"  visibility="{{ showMinor3Picker ? 'visible' : 'collapse'}}" class="pickerDone"/>
+			<Button text="Done" tap="getMinor3SelectedIndex"  visibility="{{ showMinor3Picker ? 'visible' : 'collapse'}}" class="finishButton" id="finish"/>
 
 		</StackLayout>
 		

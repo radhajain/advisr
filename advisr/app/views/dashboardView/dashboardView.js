@@ -139,6 +139,8 @@ exports.viewRequirements = function() {
 }
 
 exports.viewLogout = function() {
+	StorageUtil.logOut();
+
 	frameModule.topmost().navigate("views/onboarding/landingView/landingView");
 }
 

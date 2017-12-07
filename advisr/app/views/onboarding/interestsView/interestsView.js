@@ -16,7 +16,7 @@ var pageData;
 var year;
 var selectedInterests;
 var container;
-var interests = ["Building with my Hands", "Analyzing Society", "Solving Logical Problems", "Reading Books", 
+var interests = ["Building with My Hands", "Analyzing Society", "Solving Logical Problems", "Reading Books", 
 "Reforming the Education System", "Maintaining a Healthy Lifestyle", "Investing in the Stock Market", 
 "Writing a Creative Piece", "Understanding Human Behavior", "Building an App", "Building a Robot", 
 "Reading the News", "Visiting Art Museums", "Exploring New Places", "Performing in Plays", 
@@ -158,16 +158,25 @@ exports.addSenior = function() {
 }
 
 exports.axessSync = function() {
-	if (!year) {
-		FancyAlert.TNSFancyAlert.showError("Almost there!", "Please enter your year first", "OK", null, 350);
+	var name = page.getViewById("name").text;
+	if(!year && (!name || name === "")){
+		FancyAlert.TNSFancyAlert.showError("Almost there!", "Please enter your name and year first.", "OK", null, 350);
 		return;
+	} else {
+		if (!year) {
+		FancyAlert.TNSFancyAlert.showError("Almost there!", "Please enter your year first.", "OK", null, 350);
+		return;
+		}
+		if(!name || name === ""){
+			FancyAlert.TNSFancyAlert.showError("Almost there!", "Please enter your name first.", "OK", null, 350);
+			return;
+		}
 	}
 	if (!StorageUtil.getName()) {
 		exports.addName();
 	}
 	StorageUtil.setYear(year);
-	FancyAlert.TNSFancyAlert.showWaiting("Getting your class history...", "You look like a smart one!", null, 3, 350);
-	FancyAlert.TNSFancyAlert.tintTopCircle("");
+	FancyAlert.TNSFancyAlert.showWaiting("Getting your class history...", "You look like a smart one!", null, 2, 350);
 	container.nextSlide();
 };
 
@@ -285,7 +294,6 @@ exports.getMinor3SelectedIndex = function(args) {
 }
 
 
-
 exports.addMajorField = function() {
 	pageData.set("showMajor3", true);
 }
@@ -295,6 +303,10 @@ exports.addMinorField = function() {
 }
 
 exports.goToInterests = function () {
+	if(chosenMajors.length === 0){
+		FancyAlert.TNSFancyAlert.showError("Hold on!", "Please select at least one major.", "OK", null, 350);
+		return;
+	}
 	StorageUtil.setMajors(chosenMajors);
 	StorageUtil.setMinors(chosenMinors);
 	exports.disablePickers();
