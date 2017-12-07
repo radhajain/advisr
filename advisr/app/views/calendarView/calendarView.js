@@ -53,13 +53,13 @@ exports.showCalendar = function () {
     pageData.set("showFourYearCal", false);
     pageData.set("title", "Quarter Plan");
     var button = page.getViewById("quarterButton");
-    button.class="selectPlan";
+    button.class="selectorButton";
     var otherButton1 = page.getViewById("yearButton");
-    otherButton1.class="selectPlan";
+    otherButton1.class="selectorButton";
     var otherButton2 = page.getViewById("fourButton");
-    otherButton2.class="selectPlan";
+    otherButton2.class="selectorButton";
     var otherButton3 = page.getViewById("calendarButton");
-    button.class="selectPlanSelected";
+    otherButton3.class="selectPlanSelected";
 
 }
 
@@ -72,11 +72,11 @@ exports.showWeek = function () {
     var button = page.getViewById("quarterButton");
     button.class="selectPlanSelected";
     var otherButton1 = page.getViewById("yearButton");
-    otherButton1.class="selectPlan";
+    otherButton1.class="selectorButton";
     var otherButton2 = page.getViewById("fourButton");
-    otherButton2.class="selectPlan";
+    otherButton2.class="selectorButton";
     var otherButton3 = page.getViewById("calendarButton");
-    button.class="selectPlan";
+    otherButton3.class="selectorButton";
 
 }
 
@@ -89,11 +89,11 @@ exports.showOneYear = function () {
     var button = page.getViewById("yearButton");
     button.class="selectPlanSelected";
     var otherButton1 = page.getViewById("quarterButton");
-    otherButton1.class="selectPlan";
+    otherButton1.class="selectorButton";
     var otherButton2 = page.getViewById("fourButton");
-    otherButton2.class="selectPlan";
+    otherButton2.class="selectorButton";
     var otherButton3 = page.getViewById("calendarButton");
-    button.class="selectPlan";
+    otherButton3.class="selectorButton";
 }
 
 exports.showFourYear = function () {
@@ -105,11 +105,11 @@ exports.showFourYear = function () {
     var button = page.getViewById("fourButton");
     button.class="selectPlanSelected";
     var otherButton1 = page.getViewById("quarterButton");
-    otherButton1.class="selectPlan";
+    otherButton1.class="selectorButton";
     var otherButton2 = page.getViewById("yearButton");
-    otherButton2.class="selectPlan";
+    otherButton2.class="selectorButton";
     var otherButton3 = page.getViewById("calendarButton");
-    button.class="selectPlan";
+    otherButton3.class="selectorButton";
 }
 
 exports.sync = function() {

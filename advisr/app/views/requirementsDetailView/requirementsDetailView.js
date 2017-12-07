@@ -30,41 +30,41 @@ exports.pageLoaded = function(args) {
 }
 
 
-var setGrid = function(classes, id, core) {
-  var classToPush = [];
-  var temp;
+// var setGrid = function(classes, id, core) {
+//   var classToPush = [];
+//   var temp;
 
-  var classArr = [];
-  if(core){
-    classArr = classes[0].core;
-  } else {
-    classArr = classes[1].electives;
-  }
+//   var classArr = [];
+//   if(core){
+//     classArr = classes[0].core;
+//   } else {
+//     classArr = classes[1].electives;
+//   }
 
-  // if (core) {
-    var remaining = classArr.length%3;
-    for (var i = 0; i < classArr.length; i++) {
-      if (i % 3 == 0) {
-        temp = {one: classArr[i][0]};
-      } else if (i % 3 == 1) {
-        temp.two = classArr[i][0];
-      } else {
-        temp.three = classArr[i][0];
-        classToPush.push(temp);
-      }
-    } 
-    if (remaining == 1) {
-      temp = {one: classArr[classArr.length - 1][0]};
-      temp.two= "";
-      temp.three = "";
-      classToPush.push(temp);
-    } else if (remaining == 2) {
-      temp = {one: classArr[classArr.length - 2][0]};
-      temp.two = classArr[classArr.length - 1][0];
-      temp.three = "";
-      classToPush.push(temp);
-    }
-    pageData.set(id, classToPush);
+//   // if (core) {
+//     var remaining = classArr.length%3;
+//     for (var i = 0; i < classArr.length; i++) {
+//       if (i % 3 == 0) {
+//         temp = {one: classArr[i][0]};
+//       } else if (i % 3 == 1) {
+//         temp.two = classArr[i][0];
+//       } else {
+//         temp.three = classArr[i][0];
+//         classToPush.push(temp);
+//       }
+//     } 
+//     if (remaining == 1) {
+//       temp = {one: classArr[classArr.length - 1][0]};
+//       temp.two= "";
+//       temp.three = "";
+//       classToPush.push(temp);
+//     } else if (remaining == 2) {
+//       temp = {one: classArr[classArr.length - 2][0]};
+//       temp.two = classArr[classArr.length - 1][0];
+//       temp.three = "";
+//       classToPush.push(temp);
+//     }
+//     pageData.set(id, classToPush);
   // } 
 
 
