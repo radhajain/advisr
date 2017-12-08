@@ -8,9 +8,9 @@
 	  <ActionBar class="action-bar" title="Dashboard">
 		    <ActionBar.titleView>
 				<StackLayout orientation="horizontal" >
-					<Button text="&#xf015;    Home" tap="viewSchedule" class="fa"/>
+					<Button text="&#xf015;    Home" tap="" class="fa"/>
 		         	<Button text="&#xf073;    Schedule" tap="viewSchedule" class="fa"/>
-		         	<Button text="&#xf14a;    Classes" tap="viewRequirements" class="fa"/>
+		         	<Button text="&#xf14a;    Classes" tap="viewMoreMajor1" class="fa"/>
 					<Button text="&#xf08b;    Logout" tap="viewLogout" class="fa"/>
 	            </StackLayout>
 		    </ActionBar.titleView>
@@ -169,7 +169,8 @@
 				</StackLayout> -->
 
 				<!-- GER -->
-				<StackLayout class="card" id="sixthCard" row="0" col="1" colSpan= "1" tap="viewMoreGER">
+
+				<StackLayout class="card" id="sixthCard" row="0" col="1" colSpan= "1" >
 					<StackLayout orientation="vertical">
 						<Label text="General Education Requirements (GER):" textWrap="true" class="cardTitle"/>
 					</StackLayout>

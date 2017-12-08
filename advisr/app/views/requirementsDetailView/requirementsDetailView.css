@@ -5,11 +5,98 @@
 	background-size: cover;
 }*/
 
+.fa {
+   font-family: 'FontAwesome', 'fontawesome-webfont';
+   font-size: 20px;
+}
 
-.dashboardTitle {
+.menuButton {
+	margin: 100px;
+}
+
+/*.title {
+	font-size: 40px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}*/
+
+.pageTitle {
+	font-size: 36px;
+	color: white;
+/*	display: inline-block;
+*/	margin-left: 162px;
+	margin-top: 100px;
+	margin-bottom: 0px;
+	padding: 0;
+
+}
+
+/*.contentTitle {
+	font-size: 25px;
+	color: white;
+	text-align: right;
+
+}*/
+
+.sideBarText {
+	padding: 30px;
+	color: white;
+
+}
+/*.selectorButton {
+	margin: 30px;
+	margin-left: 0px;
+	padding: 20px;
+	background-color: white;
+	
+	font-size: 18px;
+	color: #1c89f8;
+
+	border-width: 3px;
+	border-color:  #1c89f8;
+	border-radius: 30%;
+	
+	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
+
+}*/
+
+.selectorButton {
+	margin: 30px;
+	margin-left: 0px;
+	padding: 20px;
+	color: white;
+	background-color: black;
+	
+	font-size: 18px;
+
+	border-width: 3px;
+	border-color:  black;
+	border-radius: 30%;
+	
+	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
+}
+
+.sideBar {
+	margin-left: 162px;
+}
+
+/*.dashboardTitle {
 	font-size: 40px;
 	display: inline-block;
 	margin-top: 10%;
+}*/
+
+.dashboardTitle {
+	font-size: 36px;
+	color: white;
+/*	display: inline-block;
+*/	margin-left: 162px;
+	margin-top: 100px;
+	margin-bottom: 0px;
+	padding: 0;
+
 }
 
 .cell{
@@ -75,4 +162,159 @@
 
 .purple {
 	color: purple;
+}
+
+
+
+
+
+
+
+
+
+.contentTitle {
+	font-size: 36px;
+	color: white;
+/*	display: inline-block;
+*/	margin-left: 162px;
+	margin-top: 100px;
+	margin-bottom: 0px;
+	padding: 0;
+
+}
+
+
+button {
+	margin: 100px;
+}
+
+.card {
+    margin: 25px;
+    background-color: white;
+}
+
+.cardTitle {
+	margin-top: 5%;
+	margin-left: 45px;
+	font-size: 25px;
+	color: #003535;
+}
+
+.cardSubtitle {
+	margin-left: 45px;
+	font-size: 20px;
+}
+
+.inlineTitle {
+	margin-top: 5%;
+/*	margin-bottom: 0%;
+	margin-right: 0px;*/
+	font-size: 25px;
+	color: #003535;
+	margin-left: 10px;
+}
+
+.center {
+	text-align: center;
+}
+
+
+
+#grid {
+	margin: 5%;
+	margin-top: 5%;
+}
+
+#GERgrid {
+	margin: 5%;
+}
+
+/*#panels {
+	margin: 5%;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 5%;
+}*/
+
+.panelCard {
+	padding: 20px;
+	margin-top: 60px;
+/*	border-right-color: gray;
+	border-right-width: 2px;*/
+	text-align: center;
+}
+
+.noLeftBorder {
+	border-left-color: white;
+	border-left-width: 0px;
+}
+
+.noRightBorder {
+	border-right-color: white;
+	border-right-width: 0px;
+}
+
+.infoLabel {
+	font-size: 20px;
+	margin: 2%;
+}
+
+.small-infoLabel {
+	font-size: 15px;
+/*	margin: 2%;
+	margin-top: 0%;*/
+	color: gray;
+}
+
+
+.infoTitle {
+	font-size: 35px;
+	text-align: center;
+}
+
+.infoSubtitle {
+	font-size: 20px;
+	text-align: center;
+}
+
+.progressNumber {
+	margin-top: 10px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.GER {
+    margin-top: 10px;
+    font-size: 20px;
+    margin: 5%;
+}
+
+.progressbar {
+	margin: 0;
+	padding:0;
+    height: 65%;
+    width: 65%;
+}
+
+
+
+.doneButton {
+	height: 30px;
+	width: 30px;
+	background-color: lightblue;
+	margin-left: 0px;
+}
+
+.blue {
+    color: #338241
+}
+
+.black {
+    color: #4B3B47
+}
+
+
+.fa {
+   font-family: 'FontAwesome', 'fontawesome-webfont';
+   font-size: 20px;
 }
