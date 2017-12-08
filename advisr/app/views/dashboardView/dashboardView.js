@@ -91,7 +91,7 @@ var init = function() {
 			thirdMajor = true;
 			GERspan = 1;
 		}
-	} else {
+	} else if(majors.length === 1){
 		minorCol = 1;
 	}
 
@@ -153,6 +153,17 @@ exports.viewLogout = function() {
 	StorageUtil.logOut();
 
 	frameModule.topmost().navigate("views/onboarding/landingView/landingView");
+}
+
+exports.viewMoreMajor1 = function() {
+    var options = {
+        moduleName: 'views/requirementsDetailView/requirementsDetailView',
+        context: {
+          requirement: "Major 1",
+          major: majors[0]
+        }
+    } 
+    frameModule.topmost().navigate(options);
 }
 
 // exports.viewMoreGER = function() {

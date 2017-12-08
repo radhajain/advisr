@@ -18,78 +18,6 @@
 		</ActionBar>
 	</Page.actionBar>
 
-		
- 	<!-- <StackLayout>
-		<StackLayout orientation="vertical" class="dashboardTitle">
-			<Label text="Your Requirements" horizontalAlignment="center" />
-		</StackLayout>
-
-		<StackLayout orientation="horizontal">
-
-			<StackLayout col="0" class="sideBar">
-			 	 	<StackLayout orientation="vertical">
-	 	 				<Label text="View plans for: " class="sideBarText"/>
-			 	 		<Button text="{{major1}}"  tap="viewMoreMajor1" class="selectorButton"/>
-				 	 	<Button text="{{major2}}" tap="viewMoreMajor2" class="selectorButton"/>
-				 	 	<Button text="{{minor1}}"  tap="viewMoreMinor1" class="selectorButton"/>
-				 	 	<Button text="{{minor}}" tap="viewMoreMinor2" class="selectorButton"/>
-				 	</StackLayout>
-		 	</StackLayout>
-			
-			<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
-				<GridLayout columns="*" rows="*" id="grid">
-					<StackLayout>
-
-					<StackLayout class="card" id="firstCard">
-						<StackLayout orientation="horizontal">
-						<Label text="{{major}}" textWrap="true" class="cardTitle"/>
-					</StackLayout>
-					<Label text="Core: " class="classesLabel"/>
-						<ListView items="{{coreMajor1}}" separatorColor="#FFFFFF" id="coreMajor1" visibility="{{coreMajor1.length ? 'visible' : 'collapse'}}">
-							<ListView.itemTemplate>
-								<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
-									<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
-								 	<Label text="{{one}}" class="cell"/>
-								 </StackLayout>
-								 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
-								 	<Label text="{{two}}" class="cell"/>
-								 </StackLayout>
-								 <StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
-								 	<Label text="{{three}}" class="cell"/>
-								 </StackLayout>
-								</GridLayout>
-							</ListView.itemTemplate>
-						</ListView>
-						<Label text="Electives: " class="classesLabel"/>
-						<ListView items="{{electivesMajor1}}" separatorColor="#FFFFFF" id="electivesMajor1" visibility="{{electivesMajor1.length ? 'visible' : 'collapse'}}">
-							<ListView.itemTemplate>
-								<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
-									<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
-								 	<Label col="0" row="0" text="{{one}}" class="cell"/>
-								 </StackLayout>
-								 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
-								 	<Label text="{{two}}" class="cell"/>
-								 </StackLayout>
-								 <StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
-								 	<Label text="{{three}}" class="cell"/>
-								 </StackLayout>
-								</GridLayout>
-							</ListView.itemTemplate>
-						</ListView>
-					</StackLayout>
-					</StackLayout>
-				</GridLayout>
-			</Card:CardView>
-		</StackLayout>
-	</StackLayout> -->
-
-
-
-
-
-
-
-
 	<!-- CALENDAR PAGE -->
 	<StackLayout orientation="vertical">
 		<StackLayout>
@@ -101,12 +29,13 @@
 		 	<StackLayout class="topMargin">
 		 	 	<!-- <Label text="Select view: " class="center"/> -->
 		 	 	<StackLayout orientation="vertical">
-		 	 		<Label text="View plans for: " class="sideBarText"/>
+		 	 		<!-- <Label text="View plans for: " class="sideBarText"/> -->
 			 	 	<Button text="{{major1}}"  tap="viewMoreMajor1" class="selectorButton"/>
 				 	 <Button text="{{major2}}" tap="viewMoreMajor2" class="selectorButton"/>
 				 	 <!-- <Button text="Major 3" tap="viewMoreMajor3" class="selectorButton"/> -->
 				 	 <Button text="{{minor1}}"  tap="viewMoreMinor1" class="selectorButton"/>
 				 	 <Button text="{{minor2}}" tap="viewMoreMinor2" class="selectorButton"/>
+				 	 <Button text="GERs" tap="viewMoreMinor2" class="selectorButton"/>
 				 	 <!-- <Button text="Minor 3" tap="viewMoreMinor3" class="selectorButton"/> -->
 				 	 <!-- <Button text="GERs" tap="viewMoreGER" class="selectorButton"/> -->
 			 	</StackLayout>
