@@ -24,23 +24,24 @@
 		<StackLayout orientation="horizontal">
 		 		<!-- <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5"> -->
 		 			 	<!-- Side Bar -->
-		 	<StackLayout class="topMargin">
-		 	 	<Label text="Select view: " class="center miniTitle"/>
-		 	 	<StackLayout orientation="vertical">
-		 	 		<Button text="Month" class="selectorButton" tap="showCalendar" id="calendarButton"/>
-			 	 	<!-- <Button text="Weekly View" class="selectorButton" tap="showWeek" id="quarterButton"/> -->
-			 	 	<Button text="1-Year" class="selectorButton" tap="showOneYear" id="yearButton"/>
-			 	 	<Button text="4-Year" class="selectorButton" tap="showFourYear" id="fourButton"/>
-			 	</StackLayout>
-			 	<Label text="Recommended Classes:" class="center miniTitle recommended"/>
-			 	<StackLayout>
+		 	<StackLayout class="sideBar">	 	 	
+		 	 		<StackLayout orientation="vertical">
+				 	 	<Button text="Month" class="selectorButton" tap="showCalendar" id="calendarButton"/>
+				 	 	<Button text="1-Year" class="selectorButton" tap="showOneYear" id="yearButton"/>
+					 	<Button text="4-Year" class="selectorButton" tap="showFourYear" id="fourButton"/>	
+			 	 	</StackLayout>
+
+			 	 	<!-- <Button text="&#xf045;" class="exportIcon fa" tap="syncCalendar"/> -->
+			 	 	
+			 	<!-- <Label text="Recommended Classes:" class="center miniTitle recommended"/> -->
+<!-- 			 	<StackLayout>
 			 	<StackLayout columns= "*" rows= "*,*,*" >
 			 			<Label text="Rec 1" col="0" row="0" class="rec"/>
 				 	 	<Label text="Rec 2" col="0" row="1" class="rec"/>
 				 	 	<Label text="Rec 3" col="0" row="2" class="rec"/>
 			 		</StackLayout>
-			 	</StackLayout>
-			 	<Button text="&#xf045;" class="exportIcon fa" tap="syncCalendar"/>
+			 	</StackLayout> -->
+			 	
 		 	</StackLayout>
 
 		 	<StackLayout id="grids">
@@ -103,104 +104,94 @@
 			 	 	<Label text="Fall Summary" col="0" row="5" class="summary"/>
 			 	 	<Label text="Winter Summary" col="1" row="5" class="summary"/>
 			 	 	<Label text="Spring Summary" col="2" row="5" class="summary"/> 
-			 	 	
-			 	 	<!-- <StackLayout col="0" row="5" class="class" >
-			 	 		<Label text="Fall Summary" class="summary_title" /> 
-			 	 	</StackLayout>
-			 	 	<StackLayout col="1" row="5" class="class" >
-			 	 		<Label text="Winter Summary" class="summary_title" /> 
-			 	 	</StackLayout>
-			 	 	<StackLayout col="2" row="5" class="class" >
-			 	 		<Label text="Spring Summary" class="summary_title" /> 
-			 	 	</StackLayout> -->
 
 			 	 </GridLayout>
 
-			 	 <GridLayout columns="auto,*,*,*" rows="*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*" class="calendar" visibility="{{ showFourYearCal ? 'visible' : 'collapsed' }}">
+			 	 <GridLayout columns="auto,*,*,*" rows="*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*,*" class="calendar" visibility="{{ showFourYearCal ? 'visible' : 'collapsed' }}">
 
-			 	 	<Label text="Fall" col="1" row="0" class="center header"/>
-			 	 	<Label text="Winter" col="2" row="0" class="center header"/>
-			 	 	<Label text="Spring" col="3" row="0" class="center header"/>
+			 	 	<Label text="Fall" col="1" row="0" class="center header2"/>
+			 	 	<Label text="Winter" col="2" row="0" class="center header2"/>
+			 	 	<Label text="Spring" col="3" row="0" class="center header2"/>
 
-			 	 	<Label text="Freshman" col="0" row="1" rowSpan="5" class="rightBorder"/>
-			 	 	<Label text="Sophomore" col="0" row="6" rowSpan="5" class="rightBorder"/>
-			 	 	<Label text="Junior" col="0" row="11" rowSpan="5" class="rightBorder"/>
-			 	 	<Label text="Senior" col="0" row="16" rowSpan="5" class="rightBorder"/>
+			 	 	<Label text="Yr 1" col="0" row="2" rowSpan="5" class="rightTitle"/>
+			 	 	<Label text="Yr 2" col="0" row="7" rowSpan="5" class="rightTitle"/>
+			 	 	<Label text="Yr 3" col="0" row="12" rowSpan="5" class="rightTitle"/>
+			 	 	<Label text="Yr 4" col="0" row="17" rowSpan="5" class="rightTitle"/>
 
 
 			 	 	<!-- Freshman Fall -->
-			 	 	<Label text="Class 1" col="1" row="1" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="2" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="3" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="4" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="1" row="2" class="fyclass"/> 
+			 	 	<Label text="Class 2" col="1" row="3" class="fyclass"/> 
+			 	 	<Label text="Class 3" col="1" row="4" class="fyclass"/> 
+			 	 	<Label text="Class 4" col="1" row="5" class="fyclass"/> 
 
 			 	 	<!-- Freshman Winter -->
-			 	 	<Label text="Class 1" col="2" row="1" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="2" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="3" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="4" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="2" row="2" class="fyclass"/> 
+			 	 	<Label text="Class 2" col="2" row="3" class="fyclass"/> 
+			 	 	<Label text="Class 3" col="2" row="4" class="fyclass"/> 
+			 	 	<Label text="Class 4" col="2" row="5" class="fyclass"/> 
 
 			 	 	<!-- Freshman Spring -->
-			 	 	<Label text="Class 1" col="3" row="1" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="3" row="2" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="3" row="3" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="3" row="4" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="3" row="2" class="fyclass side"/> 
+			 	 	<Label text="Class 2" col="3" row="3" class="fyclass side"/> 
+			 	 	<Label text="Class 3" col="3" row="4" class="fyclass side"/> 
+			 	 	<Label text="Class 4" col="3" row="5" class="fyclass side"/> 
 
 
 			 	 	<!-- Sophomore Fall -->
-			 	 	<Label text="Class 1" col="1" row="6" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="7" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="8" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="9" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="1" row="7" class="fyclass"/> 
+			 	 	<Label text="Class 2" col="1" row="8" class="fyclass"/> 
+			 	 	<Label text="Class 3" col="1" row="9" class="fyclass"/> 
+			 	 	<Label text="Class 4" col="1" row="10" class="fyclass"/> 
 
 			 	 	<!-- Sophomore Winter -->
-			 	 	<Label text="Class 1" col="2" row="6" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="7" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="8" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="9" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="2" row="7" class="fyclass"/> 
+			 	 	<Label text="Class 2" col="2" row="8" class="fyclass"/> 
+			 	 	<Label text="Class 3" col="2" row="9" class="fyclass"/> 
+			 	 	<Label text="Class 4" col="2" row="10" class="fyclass"/> 
 
 			 	 	<!-- Sophomore Spring -->
-			 	 	<Label text="Class 1" col="3" row="6" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="3" row="7" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="3" row="8" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="3" row="9" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="3" row="7" class="fyclass side"/> 
+			 	 	<Label text="Class 2" col="3" row="8" class="fyclass side"/> 
+			 	 	<Label text="Class 3" col="3" row="9" class="fyclass side"/> 
+			 	 	<Label text="Class 4" col="3" row="10" class="fyclass side"/> 
 
 			 	 	<!-- Junior Fall -->
-			 	 	<Label text="Class 1" col="1" row="11" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="12" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="13" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="14" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="1" row="12" class="fyclass"/> 
+			 	 	<Label text="Class 2" col="1" row="13" class="fyclass"/> 
+			 	 	<Label text="Class 3" col="1" row="14" class="fyclass"/> 
+			 	 	<Label text="Class 4" col="1" row="15" class="fyclass"/> 
 
 			 	 	<!-- Junior Winter -->
-			 	 	<Label text="Class 1" col="2" row="11" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="12" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="13" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="14" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="2" row="12" class="fyclass"/> 
+			 	 	<Label text="Class 2" col="2" row="13" class="fyclass"/> 
+			 	 	<Label text="Class 3" col="2" row="14" class="fyclass"/> 
+			 	 	<Label text="Class 4" col="2" row="15" class="fyclass"/> 
 
 			 	 	<!-- Junior Spring -->
-			 	 	<Label text="Class 1" col="3" row="11" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="3" row="12" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="3" row="13" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="3" row="14" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="3" row="12" class="fyclass side"/> 
+			 	 	<Label text="Class 2" col="3" row="13" class="fyclass side"/> 
+			 	 	<Label text="Class 3" col="3" row="14" class="fyclass side"/> 
+			 	 	<Label text="Class 4" col="3" row="15" class="fyclass side"/> 
 
 
 			 	 	 <!-- Senior Fall -->
-			 	 	<Label text="Class 1" col="1" row="16" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="17" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="18" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="19" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="1" row="17" class="fyclass"/> 
+			 	 	<Label text="Class 2" col="1" row="18" class="fyclass"/> 
+			 	 	<Label text="Class 3" col="1" row="19" class="fyclass"/> 
+			 	 	<Label text="Class 4" col="1" row="20" class="fyclass"/> 
 
 			 	 	<!-- Senior Winter -->
-			 	 	<Label text="Class 1" col="2" row="16" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="17" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="18" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="19" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="2" row="17" class="fyclass"/> 
+			 	 	<Label text="Class 2" col="2" row="18" class="fyclass"/> 
+			 	 	<Label text="Class 3" col="2" row="19" class="fyclass"/> 
+			 	 	<Label text="Class 4" col="2" row="20" class="fyclass"/> 
 
 			 	 	<!-- Senior Spring -->
-			 	 	<Label text="Class 1" col="3" row="16" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="3" row="17" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="3" row="18" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="3" row="19" class="fyclass"/> 
+			 	 	<Label text="Class 1" col="3" row="17" class="fyclass side"/> 
+			 	 	<Label text="Class 2" col="3" row="18" class="fyclass side"/> 
+			 	 	<Label text="Class 3" col="3" row="19" class="fyclass side"/> 
+			 	 	<Label text="Class 4" col="3" row="20" class="fyclass side"/> 
 
 
 
