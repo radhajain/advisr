@@ -9,7 +9,7 @@ var frameModule = require("ui/frame");
 
 var page;
 var majors = StorageUtil.getMajors();
-var majors = StorageUtil.getMinors();
+var minors = StorageUtil.getMinors();
 
 
 
@@ -23,6 +23,10 @@ exports.pageNavigating = function(args) {
     page.bindingContext = pageData;
     pageData.set("title", title);
     pageData.set("major", major);
+    pageData.set("major1", majors[0]);
+    pageData.set("major2", majors[1]);
+    pageData.set("minor1", minors[0]);
+    pageData.set("minor2", minors[1]);
     setGrid(StorageUtil.getClasses(major), "coreMajor1", true);
     setGrid(StorageUtil.getClasses(major), "electivesMajor1", false);
 
@@ -97,16 +101,16 @@ exports.viewLogout = function() {
 }
 
 
-exports.viewMoreGER = function() {
-  var options = {
-      moduleName: 'views/requirementsDetailView/requirementsDetailView',
-      context: {
-        requirement: "GER",
-        major: "General Education Requirements"
-      }
-  } 
-  frameModule.topmost().navigate(options);
-}
+// exports.viewMoreGER = function() {
+//   var options = {
+//       moduleName: 'views/requirementsDetailView/requirementsDetailView',
+//       context: {
+//         requirement: "GER",
+//         major: "General Education Requirements"
+//       }
+//   } 
+//   frameModule.topmost().navigate(options);
+// }
 
 exports.viewMoreMajor1 = function() {
   var options = {
@@ -114,6 +118,12 @@ exports.viewMoreMajor1 = function() {
       context: {
         requirement: "Major 1",
         major: majors[0]
+      },
+      animated: true,
+      transition: {
+          name: "fade",
+          duration: 50,
+          curve: "easeIn"
       }
   } 
   frameModule.topmost().navigate(options);
@@ -125,21 +135,33 @@ exports.viewMoreMajor2 = function() {
       context: {
         requirement: "Major 2",
         major: majors[1]
+      },
+      animated: true,
+      transition: {
+          name: "fade",
+          duration: 50,
+          curve: "easeIn"
       }
   } 
   frameModule.topmost().navigate(options);
 }
 
-exports.viewMoreMajor3 = function() {
-  var options = {
-      moduleName: 'views/requirementsDetailView/requirementsDetailView',
-      context: {
-        requirement: "Major 3",
-        major: majors[2]
-      }
-  } 
-  frameModule.topmost().navigate(options);
-}
+// exports.viewMoreMajor3 = function() {
+//   var options = {
+//       moduleName: 'views/requirementsDetailView/requirementsDetailView',
+//       context: {
+//         requirement: "Major 3",
+//         major: majors[2]
+//       },
+//       animated: true,
+//       transition: {
+//           name: "fade",
+//           duration: 50,
+//           curve: "easeIn"
+//       }
+//   } 
+//   frameModule.topmost().navigate(options);
+// }
 
 exports.viewMoreMinor1 = function() {
   var options = {
@@ -147,6 +169,12 @@ exports.viewMoreMinor1 = function() {
       context: {
         requirement: "Minor 1",
         major: minors[0]
+      },
+      animated: true,
+      transition: {
+          name: "fade",
+          duration: 50,
+          curve: "easeIn"
       }
   } 
   frameModule.topmost().navigate(options);
@@ -158,21 +186,33 @@ exports.viewMoreMinor2 = function() {
       context: {
         requirement: "Minor 2",
         major: minors[1]
+      },
+      animated: true,
+      transition: {
+          name: "fade",
+          duration: 50,
+          curve: "easeIn"
       }
   } 
   frameModule.topmost().navigate(options);
 }
 
-exports.viewMoreMinor3 = function() {
-  var options = {
-      moduleName: 'views/requirementsDetailView/requirementsDetailView',
-      context: {
-        requirement: "Minor 3",
-        major: minors[2]
-      }
-  } 
-  frameModule.topmost().navigate(options);
-}
+// exports.viewMoreMinor3 = function() {
+//   var options = {
+//       moduleName: 'views/requirementsDetailView/requirementsDetailView',
+//       context: {
+//         requirement: "Minor 3",
+//         major: minors[2]
+//       },
+//       animated: true,
+//       transition: {
+//           name: "fade",
+//           duration: 50,
+//           curve: "easeIn"
+//       }
+//   } 
+//   frameModule.topmost().navigate(options);
+// }
 
 
 

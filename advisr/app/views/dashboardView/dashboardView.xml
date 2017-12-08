@@ -128,7 +128,7 @@
 				</StackLayout> -->
 
 				<!-- GER -->
-				<StackLayout class="card" id="sixthCard" row="{{GERrow}}" col="{{GERcol}}" colSpan= "2" tap="viewMoreGER">
+				<StackLayout class="card" id="sixthCard" row="{{GERrow}}" col="{{GERcol}}" colSpan= "2">
 					<StackLayout orientation="vertical">
 						<Label text="General Education Requirements:" textWrap="true" class="cardTitle"/>
 					</StackLayout>

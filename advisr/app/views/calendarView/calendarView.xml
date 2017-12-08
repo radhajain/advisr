@@ -27,12 +27,12 @@
 		 	<StackLayout class="topMargin">
 		 	 	<Label text="Select view: " class="center"/>
 		 	 	<StackLayout orientation="vertical">
-		 	 		<Button text="Calendar View" class="selectorButton" tap="showCalendar" id="calendarButton"/>
-			 	 	<Button text="Weekly View" class="selectorButton" tap="showWeek" id="quarterButton"/>
-			 	 	<Button text="1-Year Plan" class="selectorButton" tap="showOneYear" id="yearButton"/>
-			 	 	<Button text="4-Year Plan" class="selectorButton" tap="showFourYear" id="fourButton"/>
+		 	 		<Button text="Month" class="selectorButton" tap="showCalendar" id="calendarButton"/>
+			 	 	<!-- <Button text="Weekly View" class="selectorButton" tap="showWeek" id="quarterButton"/> -->
+			 	 	<Button text="1-Year" class="selectorButton" tap="showOneYear" id="yearButton"/>
+			 	 	<Button text="4-Year" class="selectorButton" tap="showFourYear" id="fourButton"/>
 			 	</StackLayout>
-			 	<Label text="Recommended Classes:" class="center topMargin"/>
+			 	<Label text="Recommended Classes:" class="center"/>
 			 	<StackLayout>
 			 	<StackLayout columns= "*" rows= "*,*,*" >
 			 			<Label text="Rec 1" col="0" row="0" class="rec"/>
@@ -40,7 +40,7 @@
 				 	 	<Label text="Rec 3" col="0" row="2" class="rec"/>
 			 		</StackLayout>
 			 	</StackLayout>
-			 	<Button text="Sync with GCal" class="syncButton" tap="sync"/>
+			 	<Button text="&#xf045;" class="exportIcon fa" tap="sync" visibility="{{showMonthCal ? 'visible' : 'collapsed' }}"/>
 		 	</StackLayout>
 
 		 	<StackLayout id="grids">
@@ -49,7 +49,7 @@
 	  	 			<calendar:RadCalendar id="myCalendar" eventSource="{{ events }}" eventsViewMode="Inline" visibility="{{showMonthCal ? 'visible' : 'collapsed' }}" />
 	  	 		</StackLayout>
 
-				<StackLayout class="card">
+				<!-- <StackLayout class="card">
 				 	<GridLayout columns="auto,*,*,*,*,*" rows="*,*,*,*,*,*,*,*,*,*,*,*,*,*,*"  class="calendar" visibility="{{showWeekCal ? 'visible' : 'collapsed' }}">
 
 				 	 	<Label text="8 AM" col="0" row="1" class="bordered"/>
@@ -74,13 +74,13 @@
 				 	 	<Label text="Th" col="4" row="0" class="center bordered"/>	
 				 	 	<Label text="F" col="5" row="0" class="center bordered"/>	
 
-				 	</GridLayout>
-			    </StackLayout>
+				 	</GridLayout> -->
+			    <!-- </StackLayout> -->
 		    	<GridLayout columns="*,*,*" rows="*,*,*,*,*,*,*" class="calendar" visibility="{{ showOneYearCal ? 'visible' : 'collapsed' }}">
 
-			 	 	<Label text="Fall" col="0" row="0" class="center header bordered"/>
-			 	 	<Label text="Winter" col="1" row="0" class="center header bordered"/>
-			 	 	<Label text="Spring" col="2" row="0" class="center header bordered"/>
+			 	 	<Label text="Fall" col="0" row="0" class="center header"/>
+			 	 	<Label text="Winter" col="1" row="0" class="center header"/>
+			 	 	<Label text="Spring" col="2" row="0" class="center header"/>
 
 			 	 	<!-- FALL -->
 			 	 	<Label text="Class 1" col="0" row="1" class="class"/> 
@@ -114,9 +114,9 @@
 
 			 	 <GridLayout columns="auto,*,*,*" rows="*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*, *,*,*,*,*" class="calendar" visibility="{{ showFourYearCal ? 'visible' : 'collapsed' }}">
 
-			 	 	<Label text="Fall" col="1" row="0" class="center header bordered"/>
-			 	 	<Label text="Winter" col="2" row="0" class="center header bordered"/>
-			 	 	<Label text="Spring" col="3" row="0" class="center header bordered"/>
+			 	 	<Label text="Fall" col="1" row="0" class="center header"/>
+			 	 	<Label text="Winter" col="2" row="0" class="center header"/>
+			 	 	<Label text="Spring" col="3" row="0" class="center header"/>
 
 			 	 	<Label text="Freshman" col="0" row="1" rowSpan="5" class="rightBorder"/>
 			 	 	<Label text="Sophomore" col="0" row="6" rowSpan="5" class="rightBorder"/>

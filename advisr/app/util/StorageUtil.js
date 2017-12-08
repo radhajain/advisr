@@ -63,13 +63,14 @@ var Anthropology_Array = [
 var Comparative_Literature_Array = [
   {core: [["COMPLIT 121", 5, "Poems, Poetry, Worlds"],
   ["COMPLIT 122", 5, "Literature as Performance"],
-  ["COMPLIT 123", 5, "The Novel and the World"]]}, 
-
+  ["COMPLIT 123", 5, "The Novel and the World"]
+  ]}, 
   {electives: [["COMPLIT 101", 5, "What Is Comparative Literature?"],
   ["COMPLIT 121", 5, "Poems, Poetry, Worlds"],
   ["COMPLIT 122", 5, "Literature as Performance"],
-  ["COMPLIT 123", 5, "The Novel and the World"]
-  ["COMPLIT 199", 5, "Senior Seminar"]]}
+  ["COMPLIT 123", 5, "The Novel and the World"],
+  ["COMPLIT 199", 5, "Senior Seminar"]
+  ]}
 ];
 
 var Economics_Array = [

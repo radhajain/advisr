@@ -54,7 +54,7 @@
 										<Button text="{{major3}}" tap="showMajor3Picker" class="select" id="major3button"/>
 										<Image src="res://ic_highlight_off" class="cancelButton" id="major3" tap="clearVal" visibility="{{major3data ? 'visible' : 'collapse'}}"/>
 									</StackLayout>
-									<Button text="+" tap="addMajorField" id="addMajor" visibility="{{ showMajor3 ? 'collapse' : 'visible'}}"/>
+									<!-- <Button text="+" tap="addMajorField" id="addMajor" visibility="{{ showMajor3 ? 'collapse' : 'visible'}}"/> -->
 								</StackLayout>
 								<StackLayout class="minors">
 									<Label text="Minors" class="listHeader"/>
@@ -73,7 +73,7 @@
 										<Button text="{{minor3}}" tap="showMinor3Picker" class="select" id="minor3button"/>
 										<Image src="res://ic_highlight_off" class="cancelButton" id="minor3" tap="clearVal" visibility="{{minor3data ? 'visible' : 'collapse'}}"/>
 									</StackLayout>
-									<Button text="+" tap="addMinorField" id="addMinor" visibility="{{ showMinor3 ? 'collapse' : 'visible'}}"/>
+									<!-- <Button text="+" tap="addMinorField" id="addMinor" visibility="{{ showMinor3 ? 'collapse' : 'visible'}}"/> -->
 								</StackLayout>
 							</StackLayout>
 							<!-- <Button text=">" class="nextButton"/> -->

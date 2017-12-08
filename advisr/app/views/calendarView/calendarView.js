@@ -13,6 +13,8 @@ var majors = StorageUtil.getMajors();
 
 var page;
 
+
+
 exports.pageNavigating = function(args) {
     page = args.object;
     orientationModule.orientationCleanup();
@@ -22,7 +24,7 @@ exports.pageNavigating = function(args) {
     pageData.set("showOneYearCal", false);
     pageData.set("showFourYearCal", false);
     pageData.set("title", "Quarter Plan");
-    var button = page.getViewById("quarterButton");
+    var button = page.getViewById("calendarButton");
     button.class="selectPlanSelected";
 }
 
@@ -54,8 +56,8 @@ exports.showCalendar = function () {
     pageData.set("showOneYearCal", false);
     pageData.set("showFourYearCal", false);
     pageData.set("title", "Quarter Plan");
-    var button = page.getViewById("quarterButton");
-    button.class="selectorButton";
+    // var button = page.getViewById("quarterButton");
+    // button.class="selectorButton";
     var otherButton1 = page.getViewById("yearButton");
     otherButton1.class="selectorButton";
     var otherButton2 = page.getViewById("fourButton");
@@ -65,22 +67,22 @@ exports.showCalendar = function () {
 
 }
 
-exports.showWeek = function () {
-    pageData.set("showMonthCal", false);
-    pageData.set("showWeekCal", true);
-    pageData.set("showOneYearCal", false);
-    pageData.set("showFourYearCal", false);
-    pageData.set("title", "Quarter Plan");
-    var button = page.getViewById("quarterButton");
-    button.class="selectPlanSelected";
-    var otherButton1 = page.getViewById("yearButton");
-    otherButton1.class="selectorButton";
-    var otherButton2 = page.getViewById("fourButton");
-    otherButton2.class="selectorButton";
-    var otherButton3 = page.getViewById("calendarButton");
-    otherButton3.class="selectorButton";
+// exports.showWeek = function () {
+//     pageData.set("showMonthCal", false);
+//     pageData.set("showWeekCal", true);
+//     pageData.set("showOneYearCal", false);
+//     pageData.set("showFourYearCal", false);
+//     pageData.set("title", "Quarter Plan");
+//     // var button = page.getViewById("quarterButton");
+//     // button.class="selectPlanSelected";
+//     var otherButton1 = page.getViewById("yearButton");
+//     otherButton1.class="selectorButton";
+//     var otherButton2 = page.getViewById("fourButton");
+//     otherButton2.class="selectorButton";
+//     var otherButton3 = page.getViewById("calendarButton");
+//     otherButton3.class="selectorButton";
 
-}
+// }
 
 exports.showOneYear = function () {
     pageData.set("showMonthCal", false);
@@ -90,8 +92,8 @@ exports.showOneYear = function () {
     pageData.set("title", "1-Year Plan");
     var button = page.getViewById("yearButton");
     button.class="selectPlanSelected";
-    var otherButton1 = page.getViewById("quarterButton");
-    otherButton1.class="selectorButton";
+    // var otherButton1 = page.getViewById("quarterButton");
+    // otherButton1.class="selectorButton";
     var otherButton2 = page.getViewById("fourButton");
     otherButton2.class="selectorButton";
     var otherButton3 = page.getViewById("calendarButton");
@@ -106,8 +108,8 @@ exports.showFourYear = function () {
     pageData.set("title", "4-Year Plan");
     var button = page.getViewById("fourButton");
     button.class="selectPlanSelected";
-    var otherButton1 = page.getViewById("quarterButton");
-    otherButton1.class="selectorButton";
+    // var otherButton1 = page.getViewById("quarterButton");
+    // otherButton1.class="selectorButton";
     var otherButton2 = page.getViewById("yearButton");
     otherButton2.class="selectorButton";
     var otherButton3 = page.getViewById("calendarButton");
@@ -115,7 +117,7 @@ exports.showFourYear = function () {
 }
 
 exports.sync = function() {
-    FancyAlert.TNSFancyAlert.showWaiting("Syncing with your calendar...", "Doing magic and playing with grasshoppers", null, 3, 350);
+    FancyAlert.TNSFancyAlert.showWaiting("Syncing with your calendar...", " ", null, 3, 350);
 }
 
 // Navigation
