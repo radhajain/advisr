@@ -127,7 +127,6 @@
 			 	 	<Label text="" col="1" row="5" class="fyclass"/> 
 
 			 	 	<!-- Freshman Winter -->
-
 			 	 	<Label text="{{m20}}" col="2" row="2" class="fyclass"/> 
 			 	 	<Label text="" col="2" row="3" class="fyclass"/> 
 			 	 	<Label text="" col="2" row="4" class="fyclass"/> 
