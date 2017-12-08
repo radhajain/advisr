@@ -25,14 +25,14 @@
 		 		<!-- <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5"> -->
 		 			 	<!-- Side Bar -->
 		 	<StackLayout class="topMargin">
-		 	 	<Label text="Select view: " class="center"/>
+		 	 	<Label text="Select view: " class="center miniTitle"/>
 		 	 	<StackLayout orientation="vertical">
 		 	 		<Button text="Month" class="selectorButton" tap="showCalendar" id="calendarButton"/>
 			 	 	<!-- <Button text="Weekly View" class="selectorButton" tap="showWeek" id="quarterButton"/> -->
 			 	 	<Button text="1-Year" class="selectorButton" tap="showOneYear" id="yearButton"/>
 			 	 	<Button text="4-Year" class="selectorButton" tap="showFourYear" id="fourButton"/>
 			 	</StackLayout>
-			 	<Label text="Recommended Classes:" class="center"/>
+			 	<Label text="Recommended Classes:" class="center miniTitle recommended"/>
 			 	<StackLayout>
 			 	<StackLayout columns= "*" rows= "*,*,*" >
 			 			<Label text="Rec 1" col="0" row="0" class="rec"/>
@@ -40,7 +40,7 @@
 				 	 	<Label text="Rec 3" col="0" row="2" class="rec"/>
 			 		</StackLayout>
 			 	</StackLayout>
-			 	<Button text="&#xf045;" class="exportIcon fa" tap="sync" visibility="{{showMonthCal ? 'visible' : 'collapsed' }}"/>
+			 	<Button text="&#xf045;" class="exportIcon fa" tap="syncCalendar"/>
 		 	</StackLayout>
 
 		 	<StackLayout id="grids">
@@ -98,17 +98,21 @@
 			 	 	<!-- SPRING -->
 			 	 	<Label text="Class 1" col="2" row="1" class="class"/> 
 			 	 	<Label text="Class 2" col="2" row="2" class="class"/> 
-			 	 	<Label text="Class 3" col="2" row="3" class="class"/> 
+			 	 	<Label text="Class 3" col="2" row="3" class="class"/>
+
+			 	 	<Label text="Fall Summary" col="0" row="5" class="summary"/>
+			 	 	<Label text="Winter Summary" col="1" row="5" class="summary"/>
+			 	 	<Label text="Spring Summary" col="2" row="5" class="summary"/> 
 			 	 	
-			 	 	<StackLayout col="0" row="5" class="summary" >
+			 	 	<!-- <StackLayout col="0" row="5" class="class" >
 			 	 		<Label text="Fall Summary" class="summary_title" /> 
 			 	 	</StackLayout>
-			 	 	<StackLayout col="1" row="5" class="summary" >
+			 	 	<StackLayout col="1" row="5" class="class" >
 			 	 		<Label text="Winter Summary" class="summary_title" /> 
 			 	 	</StackLayout>
-			 	 	<StackLayout col="2" row="5" class="summary" >
+			 	 	<StackLayout col="2" row="5" class="class" >
 			 	 		<Label text="Spring Summary" class="summary_title" /> 
-			 	 	</StackLayout>
+			 	 	</StackLayout> -->
 
 			 	 </GridLayout>
 
