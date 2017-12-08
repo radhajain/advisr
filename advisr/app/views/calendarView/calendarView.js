@@ -113,22 +113,23 @@ exports.showFourYear = function () {
     var otherButton3 = page.getViewById("calendarButton");
     otherButton3.class="selectorButton";
 
-    // var majList = StorageUtil.getMajors();
-    // // var minList = StorageUtil.getMinors();
-    // // var mList = majList.concat(minList);
+    var majList = StorageUtil.getMajors();
+    var minList = StorageUtil.getMinors();
+    var mList = majList.concat(minList);
 
-    // for (var i = 0; i < mList.length; i++) {
-    //     var classes = StorageUtil.getClasses(mList[i]);
-    //     var currCore = classes[0].core;
-    //     var currElec = classes[1].electives;
-    //     var totalClasses = currCore.concat(currElec);
+    for (var i = 0; i < mList.length; i++) {
+        var classes = StorageUtil.getClasses(mList[i]);
+        var currCore = classes[0].core;
+        var currElec = classes[1].electives;
+        var totalClasses = currCore.concat(currElec);
         
-    //     for (var x = 0; x < totalClasses.length; x++){
-    //         //i = major number, x = class number
-    //         var makeString = "m" + i + "" + x;
-    //         pageData.set(String(makeString), totalClasses[x][0]);
-    //     }
-    // }
+        for (var x = 0; x < totalClasses.length; x++){
+            //i = major number, x = class number
+            var makeString = "m" + i + "" + x;
+            pageData.set(String(makeString), totalClasses[x][0]);
+        }
+    }
+
 }
 
 exports.syncCalendar = function() {
