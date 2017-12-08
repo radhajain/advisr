@@ -61,15 +61,18 @@ var Anthropology_Array = [
 ];
 
 var Comparative_Literature_Array = [
-  {core: [["COMPLIT 121", 5, "Poems, Poetry, Worlds"],
-  ["COMPLIT 122", 5, "Literature as Performance"],
-  ["COMPLIT 123", 5, "The Novel and the World"]]}, 
-
-  {electives: [["COMPLIT 101", 5, "What Is Comparative Literature?"],
-  ["COMPLIT 121", 5, "Poems, Poetry, Worlds"],
-  ["COMPLIT 122", 5, "Literature as Performance"],
-  ["COMPLIT 123", 5, "The Novel and the World"]
-  ["COMPLIT 199", 5, "Senior Seminar"]]}
+  {core: [["COMPLIT 121", 5, "Poems, Poetry, Worlds"],
+  ["COMPLIT 122", 5, "Literature as Performance"],
+  ["COMPLIT 123", 5, "The Novel and the World"]]}, 
+  {electives: [["COMPLIT 101", 5, "What Is Comparative Literature?"],
+  ["COMPLIT 121", 5, "Poems, Poetry, Worlds"],
+  ["COMPLIT 122", 5, "Literature as Performance"],
+  ["COMPLIT 123", 5, "The Novel and the World"],
+  ["COMPLIT 125A", 5, "The Gothic Novel"],
+  ["COMPLIT 133", 5, "Gender and Modernism"],
+  ["COMPLIT 138A", 3, "Intro to Modern Japanese Literature and Culture"],
+  ["COMPLIT 199", 5, "Senior Seminar"]
+  ]}
 ];
 
 var Economics_Array = [
