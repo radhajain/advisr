@@ -40,6 +40,7 @@
 	border-bottom-color: lightgray;
 	color: gray;
 	font-size: 20px;
+
 }
 
 .selectOnClick {
@@ -255,12 +256,12 @@
 
 .minors {
 	margin-left: 15%;
-	width: 30%;
+	width: 33%;
 	
 }
 
 .majors {
-	width: 30%;	
+	width: 33%;	
 }
 
 

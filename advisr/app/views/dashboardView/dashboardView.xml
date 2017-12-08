@@ -184,7 +184,7 @@
 						<StackLayout orientation="horizontal" >
 		                    <StackLayout row="2" >
 			                    <StackLayout row="0" col="0">
-									<Label text="PWR 1 &#xf00c;" class="fa GER"/>
+									<Label text=" &#xf00c; PWR 1" class="fa GER"/>
 								</StackLayout>
 			                    <StackLayout row="1" col="0">
 									<Label text="PWR 2" class="GER"/>
