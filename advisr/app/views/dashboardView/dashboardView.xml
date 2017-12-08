@@ -100,7 +100,7 @@
 
 	           	<!-- Minor 1-->
 
-	           	<StackLayout class="card" row="1" col="2" visibility="{{showMinor1 ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
+	           	<StackLayout class="card" row="1" col="{{minorCol}}" visibility="{{showMinor1 ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
 					<StackLayout orientation="vertical">
 						<Label text="Minor 1:" class="cardTitle" />
 						<Label text="{{minor1}}" class="cardSubtitle" textWrap="true"/>
@@ -120,7 +120,7 @@
 
 	           		           	<!-- Minor 2-->
 
-	           	<StackLayout class="card" row="1" col="3" visibility="{{showMinor2 ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
+	           	<StackLayout class="card" row="1" col="{{minorCol}} + 1" visibility="{{showMinor2 ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
 					<StackLayout orientation="vertical">
 						<Label text="Minor 2:" class="cardTitle" />
 						<Label text="{{minor1}}" class="cardSubtitle" textWrap="true"/>
@@ -172,13 +172,14 @@
 
 				<StackLayout class="card" id="sixthCard" row="0" col="1" colSpan= "1" >
 					<StackLayout orientation="vertical">
-						<Label text="General Education Requirements (GER):" textWrap="true" class="cardTitle"/>
+						<Label text="GERs: " textWrap="true" class="cardTitle"/>
+						<Label text="General Education Reqs" class="cardSubtitle" textWrap="true"/>
 					</StackLayout>
 					<StackLayout orientation="vertical" >
-						<StackLayout row="0" class="panelCard" verticalAlightment="bottom">
+<!-- 						<StackLayout row="0" class="panelCard" verticalAlightment="bottom">
 							<Label text="3/4" class="infoTitle blue"/>
 							<Label text="classes complete" class="infoSubtitle black" textWrap="true"/>
-						</StackLayout>
+						</StackLayout> -->
 
 						<StackLayout orientation="horizontal" >
 		                    <StackLayout row="2" >
@@ -200,7 +201,54 @@
 				</StackLayout> 
 
 
+				<!-- WAYS -->
 
+				<StackLayout class="card" id="sixthCard" row="0" col="2" colSpan= "2" >
+					<StackLayout orientation="vertical">
+						<Label text="GERs: " textWrap="true" class="cardTitle"/>
+						<Label text="WAYS of Thinking / WAYS of Doing" class="cardSubtitle" textWrap="true"/>
+					</StackLayout>
+					<StackLayout orientation="horizontal" >
+		            	<GridLayout columns="*,*,*,*" rows="*,*,*,*" id="GERgrid">
+		            		<StackLayout row="0" col="0">
+								<Label text="PWR 1" class="GER"/>
+							</StackLayout>
+
+		                    <StackLayout row="1" col="0">
+								<Label text="PWR 2" class="GER"/>
+							</StackLayout>
+
+							<StackLayout row="2" col="0">
+								<Label text="THINK" class="GER"/>
+							</StackLayout>
+
+							<StackLayout row="3" col="0" colSpan="2">
+								<Label text="LANGUAGE" class="GER"/>
+							</StackLayout>
+
+							<StackLayout row="0" col="3">
+								<Label text="PWR 1" class="GER"/>
+							</StackLayout>
+							
+		                    <StackLayout row="1" col="3">
+								<Label text="PWR 2" class="GER"/>
+							</StackLayout>
+							<StackLayout row="2" col="3">
+								<Label text="THINK" class="GER"/>
+							</StackLayout>
+							<StackLayout row="3" col="3" colSpan="2">
+								<Label text="LANGUAGE" class="GER"/>
+							</StackLayout>		
+		                </GridLayout>
+		            </StackLayout>
+				</StackLayout> 
+
+
+			</GridLayout>
+		</Card:CardView>
+	</StackLayout>
+
+</Page>
 					<!-- <GridLayout columns="*,*" rows="*,*,*,*,*" id="GERgrid">
 						<StackLayout row="0" col="0">
 						</StackLayout>
@@ -279,8 +327,3 @@
 			            </StackLayout>
 	              	</GridLayout>  -->
 				
-			</GridLayout>
-		</Card:CardView>
-	</StackLayout>
-
-</Page>
