@@ -173,7 +173,7 @@
 				<StackLayout class="card" id="sixthCard" row="0" col="1" colSpan= "1" >
 					<StackLayout orientation="vertical">
 						<Label text="GERs: " textWrap="true" class="cardTitle"/>
-						<Label text="General Education Reqs" class="cardSubtitle" textWrap="true"/>
+						<Label text="General Education Reqs" class="cardSubtitle marginBottom" textWrap="true"/>
 					</StackLayout>
 					<StackLayout orientation="vertical" >
 <!-- 						<StackLayout row="0" class="panelCard" verticalAlightment="bottom">
@@ -184,16 +184,16 @@
 						<StackLayout orientation="horizontal" >
 		                    <StackLayout row="2" >
 			                    <StackLayout row="0" col="0">
-									<Label text=" &#xf00c; PWR 1" class="fa GER"/>
+									<Label text=" &#xf00c; PWR 1" class="fa GER marginSpace"/>
 								</StackLayout>
 			                    <StackLayout row="1" col="0">
-									<Label text="PWR 2" class="GER"/>
+									<Label text="&#xf00c; PWR 2" class="fa GER marginSpace"/>
 								</StackLayout>
 								<StackLayout row="2" col="0">
-									<Label text="THINK &#xf00c;" class="fa GER"/>
+									<Label text="&#xf00c; THINK " class="fa GER marginSpace"/>
 								</StackLayout>
 								<StackLayout row="3" col="0" colSpan="2">
-									<Label text="LANGUAGE &#xf00c;" class="fa GER"/>
+									<Label text="&#xf00c; LANGUAGE " class="fa GER marginSpace"/>
 								</StackLayout>	
 		                    </StackLayout>
 		                </StackLayout>
@@ -211,33 +211,33 @@
 					<StackLayout orientation="horizontal" >
 		            	<GridLayout columns="*,*,*,*" rows="*,*,*,*" id="GERgrid">
 		            		<StackLayout row="0" col="0">
-								<Label text="AII  &#xf00c;" class="fa GER"/>
+								<Label text="&#xf00c; AII  " class="fa GER"/>
 							</StackLayout>
 
 		                    <StackLayout row="1" col="0">
-								<Label text="AQR  &#xf00c;" class="fa GER"/>
+								<Label text="&#xf00c; AQR" class="fa GER"/>
 							</StackLayout>
 
 							<StackLayout row="2" col="0">
-								<Label text="CE" class="GER"/>
+								<Label text="CE" class="GER marginLeft"/>
 							</StackLayout>
 
 							<StackLayout row="3" col="0" colSpan="2">
-								<Label text="ED  &#xf00c;" class="fa GER"/>
+								<Label text=" &#xf00c; ED" class="fa GER"/>
 							</StackLayout>
 
 							<StackLayout row="0" col="2">
-								<Label text="ER  &#xf00c;" class="fa GER"/>
+								<Label text="&#xf00c; ER" class="fa GER"/>
 							</StackLayout>
 							
 		                    <StackLayout row="1" col="2">
-								<Label text="FR" class="GER"/>
+								<Label text="FR" class="GER marginLeft"/>
 							</StackLayout>
 							<StackLayout row="2" col="2">
-								<Label text="SMA  &#xf00c;" class="fa GER"/>
+								<Label text=" &#xf00c; SMA" class="fa GER"/>
 							</StackLayout>
 							<StackLayout row="3" col="2" colSpan="2">
-								<Label text="SI" class="GER"/>
+								<Label text="SI" class="GER marginLeft"/>
 							</StackLayout>		
 		                </GridLayout>
 		            </StackLayout>

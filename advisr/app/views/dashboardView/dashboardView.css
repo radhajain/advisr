@@ -23,6 +23,10 @@
 
 }
 
+.marginBottom {
+	padding-bottom: 40px;
+}
+
 
 button {
 	margin: 100px;
@@ -41,9 +45,22 @@ button {
 }
 
 .cardSubtitle {
+	margin-top: 5px;
 	margin-left: 45px;
-	font-size: 20px;
+	font-size: 15px;
+	color: gray;
+	margin-bottom: 20px;
 }
+
+.marginLeft {
+	padding-left: 60px; 
+}
+
+.marginSpace {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
 
 .inlineTitle {
 	margin-top: 5%;

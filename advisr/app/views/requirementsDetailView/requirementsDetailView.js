@@ -8,8 +8,13 @@ var frameModule = require("ui/frame");
 
 
 var page;
-var majors = StorageUtil.getMajors();
-var minors = StorageUtil.getMinors();
+var majors;
+var minors;
+var secondMajor = false;
+var thirdMajor = false;
+var firstMinor = false;
+var secondMinor = false;
+var thirdMinor = false;
 
 
 
@@ -23,14 +28,68 @@ exports.pageNavigating = function(args) {
     page.bindingContext = pageData;
     pageData.set("title", title);
     pageData.set("major", major);
-    pageData.set("major1", majors[0]);
-    pageData.set("major2", majors[1]);
-    pageData.set("minor1", minors[0]);
-    pageData.set("minor2", minors[1]);
-    setGrid(StorageUtil.getClasses(major), "coreMajor1", true);
-    setGrid(StorageUtil.getClasses(major), "electivesMajor1", false);
+    // pageData.set("major1", majors[0]);
+    // pageData.set("major2", majors[1]);
+    // pageData.set("minor1", minors[0]);
+    // pageData.set("minor2", minors[1]);
+    // setGrid(StorageUtil.getClasses(major), "coreMajor1", true);
+    // setGrid(StorageUtil.getClasses(major), "electivesMajor1", false);
+    init();
 
 }
+
+
+var init = function() {
+  majors = StorageUtil.getMajors();
+  minors = StorageUtil.getMinors();
+  year = StorageUtil.getYear();
+  var numMajors = majors.length;
+  var numMinors = minors.length;
+  pageData.set("major1", majors[0]);
+  setGrid(StorageUtil.getClasses(majors[0]), "coreMajor1", true);
+  setGrid(StorageUtil.getClasses(majors[0]), "electivesMajor1", false);
+  // setClassPicture("firstMajorCard", majors[0]);
+  if (numMajors >= 2) {
+   pageData.set("major2", majors[1]);
+   setGrid(StorageUtil.getClasses(majors[1]), "coreMajor2", true);
+   setGrid(StorageUtil.getClasses(majors[1]), "electivesMajor2", false);
+   secondMajor = true;
+   // setClassPicture("secondMajorCard", majors[1]);
+   if (numMajors === 3) {
+     pageData.set("major3", majors[2]);
+     setGrid(StorageUtil.getClasses(majors[2]), "coreMajor3", true);
+     setGrid(StorageUtil.getClasses(majors[2]), "electivesMajor3", false);
+     thirdMajor = true;
+     // setClassPicture("thirdMajorCard", majors[2]);
+   }
+  }
+  pageData.set("secondMajor", secondMajor);
+  pageData.set("thirdMajor", thirdMajor);
+  if (numMinors >= 1) {
+   pageData.set("minor1", minors[0]);
+   firstMinor = true;
+   // setClassPicture("firstMinorCard", minors[0]);
+   if (numMinors >= 2) {
+     pageData.set("minor2", minors[1]);
+     secondMinor = true;
+     // setClassPicture("secondMinorCard", minors[1]);
+     if (numMinors === 3) {
+       pageData.set("minor3", minors[2]);
+       thirdMinor = true;
+       // setClassPicture("thirdMinorCard", minors[2]);
+     }
+   }
+  }
+  pageData.set("firstMinor", firstMinor);
+  pageData.set("secondMinor", secondMinor);
+  pageData.set("thirdMinor", thirdMinor);
+  exports.loadMajorData();
+}
+
+
+
+
+
 
 exports.pageLoaded = function(args) {
 	orientationModule.setCurrentOrientation("landscape");
@@ -81,6 +140,66 @@ var setGrid = function(classes, id, core) {
     pageData.set(id, classToPush);
   // } 
   };
+
+var loadPerMajor = function(classes, id, perc) {
+ var numCore = classes[0].core.length;
+ var numElectives = classes[1].electives.length;
+ var totalClasses = classes[0].core.length + classes[1].electives.length;
+ var completedElectives = (Math.round(perc*(totalClasses)) - numCore);
+ var completedCore;
+ if (completedElectives < 0) {
+   completedCore = Math.round(perc*(totalClasses));
+   completedElectives = 0;
+   pageData.set(id + "coreComplete", completedCore.toString() + "/" + numCore.toString());
+   pageData.set(id + "electivesComplete", completedElectives.toString() + "/" + numElectives.toString());
+ } else {
+   pageData.set(id + "coreComplete", numCore.toString() + "/" + numCore.toString());
+   pageData.set( id + "electivesComplete", completedElectives.toString() + "/" + numElectives.toString());
+ }
+ pageData.set( id + "Complete", (perc*100).toString() + "%");
+
+}
+
+
+exports.loadMajorData = function() {
+  if (year === "Freshman" || year === "Sophomore"){
+    loadPerMajor(StorageUtil.getClasses(majors[0]), "major1", 0.3);
+    if (secondMajor) {
+      loadPerMajor(StorageUtil.getClasses(majors[1]), "major2", 0.1);
+    } 
+    if (thirdMajor) {
+      loadPerMajor(StorageUtil.getClasses(majors[2]), "major3", 0.1);
+    }
+    if (firstMinor) {
+      loadPerMajor(StorageUtil.getClasses(minors[0]), "minor1", 0.3);
+    }
+    if (secondMinor) {
+      loadPerMajor(StorageUtil.getClasses(minors[1]), "minor2", 0.1);
+    }
+    if (thirdMinor) {
+      loadPerMajor(StorageUtil.getClasses(minors[2]), "minor2", 0.1);
+    }
+    
+  } else {
+    loadPerMajor(StorageUtil.getClasses(majors[0]), "major1", 0.7);
+    if (secondMajor) {
+      loadPerMajor(StorageUtil.getClasses(majors[1]), "major2", 0.5);
+    } 
+    if (thirdMajor) {
+      loadPerMajor(StorageUtil.getClasses(majors[2]), "major3", 0.3);
+    }
+    if (firstMinor) {
+      loadPerMajor(StorageUtil.getClasses(minors[0]), "minor1", 0.5);
+    }
+    if (secondMinor) {
+      loadPerMajor(StorageUtil.getClasses(minors[1]), "minor2", 0.3);
+    }
+    if (thirdMinor) {
+      loadPerMajor(StorageUtil.getClasses(minors[2]), "minor2", 0.1);
+    }
+    
+  }
+}
 
 exports.viewDashboard = function() {
   frameModule.topmost().navigate("views/dashboardView/dashboardView");
