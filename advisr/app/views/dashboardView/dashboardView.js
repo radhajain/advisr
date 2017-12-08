@@ -17,7 +17,6 @@ var secondMinor = false;
 var GERrow = 1;
 var GERcol = 0;
 var GERspan = 3;
-var minorCol = 2;
 
 var majors;
 var minors;
@@ -91,8 +90,6 @@ var init = function() {
 			thirdMajor = true;
 			GERspan = 1;
 		}
-	} else {
-		minorCol = 1;
 	}
 
 	if (minors.length >= 1) {
@@ -104,7 +101,7 @@ var init = function() {
 		}
 	} 
 	
-	pageData.set("minorCol", minorCol);
+
 	pageData.set("showSecond", secondMajor);
 	pageData.set("showThird", thirdMajor);
 	pageData.set("showMinor1", firstMinor);
