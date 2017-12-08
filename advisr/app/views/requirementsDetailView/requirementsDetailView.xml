@@ -62,7 +62,13 @@
 							<Label text="{{major}}" textWrap="true" class="cardTitle"/>
 							<Label text="{{title}}" class="cardSubtitle"/>
 						</StackLayout>
+						<StackLayout orientation="horizontal">
 						<Label text="Core: " class="classesLabel"/>
+						<Label text="{{numCore}}"/>
+						<Label text=" completed"/>
+						</StackLayout>
+
+
 							<ListView items="{{coreMajor1}}" separatorColor="#FFFFFF" id="coreMajor1" visibility="{{coreMajor1.length ? 'visible' : 'collapse'}}">
 								<ListView.itemTemplate>
 									<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
@@ -78,7 +84,11 @@
 									</GridLayout>
 								</ListView.itemTemplate>
 							</ListView>
+							<StackLayout orientation="horizontal">
 							<Label text="Electives: " class="classesLabel"/>
+							<Label text="{{numElectives}}"/>
+							<Label text=" completed"/>
+							</StackLayout>
 							<ListView items="{{electivesMajor1}}" separatorColor="#FFFFFF" id="electivesMajor1" visibility="{{electivesMajor1.length ? 'visible' : 'collapse'}}">
 								<ListView.itemTemplate>
 									<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">

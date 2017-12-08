@@ -18,6 +18,7 @@ var thirdMinor = false;
 
 
 
+
 exports.pageNavigating = function(args) {
     page = args.object;
     if (page.navigationContext) {
@@ -51,8 +52,21 @@ exports.pageNavigating = function(args) {
     pageData.set("secondMajor", secondMajor);
     pageData.set("firstMinor", firstMinor);
     pageData.set("secondMinor", secondMinor);
-    setGrid(StorageUtil.getClasses(major, "coreMajor1", true), "coreMajor1");
-    setGrid(StorageUtil.getClasses(major, "electivesMajor1", false), "electivesMajor1");   
+
+    var major = StorageUtil.getClasses(major);
+
+    var totalCore = major[0].core.length;
+    var totalElectives = major[1].electives.length;
+    
+
+    var completedElectives = Math.round(0.6*(totalElectives));
+    var numCore = totalCore.toString() + "/" + totalCore.toString();
+    var numElectives = completedElectives.toString() + "/" + totalElectives.toString();
+    pageData.set("numCore", numCore);
+    pageData.set("numElectives", numElectives);
+
+    setGrid(major, "coreMajor1", true);
+    setGrid(major, "electivesMajor1", false);   
 
 }
 
