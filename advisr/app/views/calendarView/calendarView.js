@@ -114,6 +114,47 @@ exports.showFourYear = function () {
     otherButton2.class="selectorButton";
     var otherButton3 = page.getViewById("calendarButton");
     otherButton3.class="selectorButton";
+
+    var majList = StorageUtil.getMajors();
+    var minList = StorageUtil.getMinors();
+    var mList = majList.concat(minList);
+    console.log("MAJLIST");
+    console.log(majList);
+    console.log("MINLIST");
+    console.log(minList);
+    console.log("MLIST (TOTAL)");
+    console.log(mList);
+
+    // var m = [[["KITTIES"], ["HELLO"]], [["YOOO"], ["WASSUP"]]];
+    // m[0][0] = ["BOOTY"];
+    // pageData.set("hello", m[0][0]);
+
+
+    for (var i = 0; i < mList.length; i++) {
+        var classes = StorageUtil.getClasses(mList[i]);
+        console.log("CLASSES");
+        console.log(classes);
+        var currCore = classes[0].core;
+        var currElec = classes[1].electives;
+        console.log("CORE");
+        console.log(classes.core);
+        console.log("ELECTIVES");
+        console.log(classes.electives);
+
+        var totalClasses = currCore.concat(currElec);
+        console.log("CONCAT CLASSES");
+        console.log(totalClasses);
+
+        
+        for (var x = 0; x < 10; x++){
+            //i = major number
+            //x = class number
+            var makeString = "m[" + i + "][" + x + "][0]";
+            pageData.set(makeString, totalClasses[x]);
+            console.log("TOTALCLASSES[X]");
+            console.log(totalClasses[x]);
+        }
+    }
 }
 
 exports.syncCalendar = function() {
