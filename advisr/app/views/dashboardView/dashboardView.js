@@ -10,6 +10,8 @@ var page;
 var year;
 var secondMajor = false;
 var thirdMajor = false;
+var firstMinor = false;
+var secondMinor = false;
 
 //GER card tile positioning
 var GERrow = 1;
@@ -68,25 +70,15 @@ var init = function() {
 	majors = StorageUtil.getMajors();
 	minors = StorageUtil.getMinors();
 
-	tile_sum = majors.length + minors.length;
+	// tile_sum = majors.length + minors.length;
 
-	// if (tile_sum === 1) {
+
+	// if(tile_sum === 1){
+	// 	GERrow = 0;
 	// 	GERcol = 2;
-	// } else {
-	// 	GERrow = 1;
-	// 	if (tile_sum === 2) {
-	// 		GERcol = 0;
-	// 	} else if (tile_sum >== 3) {
-	// 		GERcol = tile_sum - 3;
-	// 	}
+	// } else if (tile_sum > 3){
+	// 	GERcol = tile_sum - 3;
 	// }
-
-	if(tile_sum === 1){
-		GERrow = 0;
-		GERcol = 2;
-	} else if (tile_sum > 3){
-		GERcol = tile_sum - 3;
-	}
 
 	pageData.set("major1", majors[0]);
 	if (majors.length >= 2) {
@@ -100,14 +92,20 @@ var init = function() {
 		}
 	}
 
-
-
-
-
-
+	if (minors.length >= 1) {
+		pageData.set("minor1", minors[0]);
+		firstMinor = true;
+		if (minors.length ===2) {
+			secondMinor = true;
+			pageData.set("minor2", minors[1]);
+		}
+	} 
+	
 
 	pageData.set("showSecond", secondMajor);
 	pageData.set("showThird", thirdMajor);
+	pageData.set("showMinor1", firstMinor);
+	pageData.set("showMinor2", secondMinor);
 	pageData.set("GERspan", GERspan);
 	pageData.set("GERcol", GERcol);
 	pageData.set("GERrow", GERrow);
@@ -118,11 +116,13 @@ var init = function() {
 		pageData.set("progress1", "30%");
 		pageData.set("progress2", "10%");
 		pageData.set("progress3", "10%");
+		pageData.set("progress4", "0%");
 	} else {
 		pageData.set("freshSoph", false);
 		pageData.set("progress1", "70%");
 		pageData.set("progress2", "50%");
 		pageData.set("progress3", "30%");
+		pageData.set("progress4", "10%");
 	}
 }
 
@@ -152,46 +152,46 @@ exports.viewLogout = function() {
 	frameModule.topmost().navigate("views/onboarding/landingView/landingView");
 }
 
-exports.viewMoreGER = function() {
-	var options = {
-	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
-	    context: {
-	      requirement: "GER",
-	      major: "General Education Requirements"
-	    }
-	} 
-	frameModule.topmost().navigate(options);
-}
+// exports.viewMoreGER = function() {
+// 	var options = {
+// 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
+// 	    context: {
+// 	      requirement: "GER",
+// 	      major: "General Education Requirements"
+// 	    }
+// 	} 
+// 	frameModule.topmost().navigate(options);
+// }
 
-exports.viewMoreMajor1 = function() {
-	var options = {
-	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
-	    context: {
-	      requirement: "Major 1",
-	      major: majors[0]
-	    }
-	} 
-	frameModule.topmost().navigate(options);
-}
+// exports.viewMoreMajor1 = function() {
+// 	var options = {
+// 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
+// 	    context: {
+// 	      requirement: "Major 1",
+// 	      major: majors[0]
+// 	    }
+// 	} 
+// 	frameModule.topmost().navigate(options);
+// }
 
-exports.viewMoreMajor2 = function() {
-	var options = {
-	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
-	    context: {
-	      requirement: "Major 2",
-	      major: majors[1]
-	    }
-	} 
-	frameModule.topmost().navigate(options);
-}
+// exports.viewMoreMajor2 = function() {
+// 	var options = {
+// 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
+// 	    context: {
+// 	      requirement: "Major 2",
+// 	      major: majors[1]
+// 	    }
+// 	} 
+// 	frameModule.topmost().navigate(options);
+// }
 
-exports.viewMoreMajor3 = function() {
-	var options = {
-	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
-	    context: {
-	      requirement: "Major 3",
-	      major: majors[2]
-	    }
-	} 
-	frameModule.topmost().navigate(options);
-}
+// exports.viewMoreMajor3 = function() {
+// 	var options = {
+// 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
+// 	    context: {
+// 	      requirement: "Major 3",
+// 	      major: majors[2]
+// 	    }
+// 	} 
+// 	frameModule.topmost().navigate(options);
+// }

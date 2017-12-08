@@ -67,6 +67,7 @@ button {
 
 #GERgrid {
 	margin: 5%;
+	text-align: left;
 }
 
 /*#panels {
@@ -125,6 +126,7 @@ button {
 
 .GER {
     margin-top: 10px;
+    margin-left: 45px;
     font-size: 20px;
     margin: 5%;
 }
