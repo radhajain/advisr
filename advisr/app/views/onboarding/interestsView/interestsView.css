@@ -78,6 +78,8 @@
 	/*border-radius: 20%;*/
 
 	background-color: white;
+		border-top-width: 5px;
+	border-top-color: gray;
 	opacity: 0.75;
 }
 
