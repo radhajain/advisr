@@ -16,6 +16,7 @@
 .miniTitle{
 	font-size: 20px;
 	margin-bottom: 25px;
+	color: white;
 }
 
 .contentTitle {
@@ -29,12 +30,12 @@
 
 }
 
-.topMargin {
-	margin-top: 3%;
+.sideBar {
 	padding: 20%;
 	height: 1500px;
-	margin-left: 2%;
-	background-color:  rgba(255, 255, 255, 0.75);
+	margin-left: 5%;
+	/*background-color:  rgba(255, 255, 255, 0.75);*/
+	background-color:  transparent;
 	/*border-top-width: 2px;
 	border-top-color: gray;*/
 }
@@ -45,7 +46,8 @@
 	height: 1500px;
 	margin: 50px;
 	margin-top: 100px;
-	background-color: transparent;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 5%;
 	/*background-color:  rgba(255, 255, 255, 0.75);*/
 /*	border-color: gray;
 */}
@@ -70,7 +72,7 @@
 }
 
 .exportIcon {
-	margin-top: 300px;
+	/*margin-top: 300px;*/
 	color: #1c89f8;
 	background-color: transparent;
 }
@@ -120,7 +122,7 @@
 	border-color:  black;
 	border-radius: 15%;
 
-	opacity: 75%;
+	opacity: .75;
 	
 	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
 }
@@ -141,7 +143,7 @@
 	border-color:  #1c89f8;
 	border-radius: 15%;
 
-	opacity: 75%;
+	opacity: .75;
 	
 	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
 }
@@ -170,6 +172,8 @@
 	width: 500px;
 	border-radius: 25px;
 	box-shadow: 10px;
+	border-color: lightgray;
+	border-width: 2px;
 }
 
 .fyclass {
@@ -179,6 +183,8 @@
 	margin: 5px;
 	box-shadow: 10px;
 	text-align: center;
+	border-color: lightgray;
+	border-width: 2px;
 }
 
 .summary {
@@ -190,6 +196,8 @@
 	margin-bottom: 40px;
 	width: 500px;
 	border-radius: 25px;
+	border-color: lightgray;
+	border-width: 3px;
 	box-shadow: 10px;
 
 	
@@ -199,7 +207,18 @@
 
 .header {
 	font-size: 25px;
-	color: white;
+	color: black;
+}
+
+.header2{
+/*	margin-bottom: 40px;
+*/	color: black;
+	vertical-align: bottom;
+	font-size: 25px;
+}
+
+.side{
+	margin-right: 25px;
 }
 
 .summary_title {
@@ -207,9 +226,10 @@
 	color: green;
 }
 
-.rightBorder {
-	margin: 10px;
-	color: white;
+.rightTitle {
+	margin: 40px;
+	color: black;
+	font-size: 20px;
 }
 
 .syncButton {
