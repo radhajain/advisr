@@ -113,6 +113,7 @@ exports.showFourYear = function () {
     var otherButton3 = page.getViewById("calendarButton");
     otherButton3.class="selectorButton";
 
+
     var majList = StorageUtil.getMajors();
     // var minList = StorageUtil.getMinors();
     // var mList = majList.concat(minList);

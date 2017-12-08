@@ -127,6 +127,7 @@
 			 	 	<Label text="" col="1" row="5" class="fyclass"/> 
 
 			 	 	<!-- Freshman Winter -->
+
 			 	 	<Label text="{{m20}}" col="2" row="2" class="fyclass"/> 
 			 	 	<Label text="" col="2" row="3" class="fyclass"/> 
 			 	 	<Label text="" col="2" row="4" class="fyclass"/> 
@@ -193,76 +194,6 @@
 			 	 	<Label text="{{m39}}" col="3" row="18" class="fyclass side"/> 
 			 	 	<Label text="{{m29}}" col="3" row="19" class="fyclass side"/> 
 			 	 	<Label text="{{m19}}" col="3" row="20" class="fyclass side"/> 
-
-			 	 	<Label text="Class 1" col="2" row="2" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="3" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="4" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="5" class="fyclass"/> 
-
-			 	 	<!-- Freshman Spring -->
-			 	 	<Label text="Class 1" col="3" row="2" class="fyclass side"/> 
-			 	 	<Label text="Class 2" col="3" row="3" class="fyclass side"/> 
-			 	 	<Label text="Class 3" col="3" row="4" class="fyclass side"/> 
-			 	 	<Label text="Class 4" col="3" row="5" class="fyclass side"/> 
-
-
-			 	 	<!-- Sophomore Fall -->
-			 	 	<Label text="Class 1" col="1" row="7" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="8" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="9" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="10" class="fyclass"/> 
-
-			 	 	<!-- Sophomore Winter -->
-			 	 	<Label text="Class 1" col="2" row="7" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="8" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="9" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="10" class="fyclass"/> 
-
-			 	 	<!-- Sophomore Spring -->
-			 	 	<Label text="Class 1" col="3" row="7" class="fyclass side"/> 
-			 	 	<Label text="Class 2" col="3" row="8" class="fyclass side"/> 
-			 	 	<Label text="Class 3" col="3" row="9" class="fyclass side"/> 
-			 	 	<Label text="Class 4" col="3" row="10" class="fyclass side"/> 
-
-			 	 	<!-- Junior Fall -->
-			 	 	<Label text="Class 1" col="1" row="12" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="13" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="14" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="15" class="fyclass"/> 
-
-			 	 	<!-- Junior Winter -->
-			 	 	<Label text="Class 1" col="2" row="12" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="13" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="14" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="15" class="fyclass"/> 
-
-			 	 	<!-- Junior Spring -->
-			 	 	<Label text="Class 1" col="3" row="12" class="fyclass side"/> 
-			 	 	<Label text="Class 2" col="3" row="13" class="fyclass side"/> 
-			 	 	<Label text="Class 3" col="3" row="14" class="fyclass side"/> 
-			 	 	<Label text="Class 4" col="3" row="15" class="fyclass side"/> 
-
-
-			 	 	 <!-- Senior Fall -->
-			 	 	<Label text="Class 1" col="1" row="17" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="1" row="18" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="1" row="19" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="1" row="20" class="fyclass"/> 
-
-			 	 	<!-- Senior Winter -->
-			 	 	<Label text="Class 1" col="2" row="17" class="fyclass"/> 
-			 	 	<Label text="Class 2" col="2" row="18" class="fyclass"/> 
-			 	 	<Label text="Class 3" col="2" row="19" class="fyclass"/> 
-			 	 	<Label text="Class 4" col="2" row="20" class="fyclass"/> 
-
-			 	 	<!-- Senior Spring -->
-			 	 	<Label text="Class 1" col="3" row="17" class="fyclass side"/> 
-			 	 	<Label text="Class 2" col="3" row="18" class="fyclass side"/> 
-			 	 	<Label text="Class 3" col="3" row="19" class="fyclass side"/> 
-			 	 	<Label text="Class 4" col="3" row="20" class="fyclass side"/> 
->>>>>>> parent of ed0b040... working on calendar view etc
-
-
 
 			 	 </GridLayout>
 			</StackLayout>
