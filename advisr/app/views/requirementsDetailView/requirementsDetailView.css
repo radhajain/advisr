@@ -63,23 +63,69 @@
 }*/
 
 .selectorButton {
-	margin: 30px;
+	margin: 15px;
 	margin-left: 0px;
 	padding: 20px;
 	color: white;
 	background-color: black;
+
+	width: 250px;
 	
 	font-size: 18px;
 
 	border-width: 3px;
 	border-color:  black;
-	border-radius: 30%;
+	border-radius: 15%;
+
+	opacity: .75;
 	
 	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
 }
 
-.sideBar {
+.selectPlanSelected {
+	margin: 15px;
+	margin-left: 0px;
+	padding: 20px;
+	background-color: gray;
+
+	width: 250px;
+	
+	font-size: 18px;
+	background-color: #1c89f8;
+	color: white;
+
+	border-width: 3px;
+	border-color:  #1c89f8;
+	border-radius: 15%;
+
+	opacity: .75;
+	
+	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
+}
+
+/*.sideBar {
 	margin-left: 162px;
+}*/
+
+#grids {
+	width: 75%;
+	height: 1500px;
+	margin: 50px;
+	margin-top: 100px;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 5%;
+	/*background-color:  rgba(255, 255, 255, 0.75);*/
+/*	border-color: gray;
+*/}
+
+.sideBar {
+	padding: 20%;
+	height: 1500px;
+	margin-left: 5%;
+	/*background-color:  rgba(255, 255, 255, 0.75);*/
+	background-color:  transparent;
+	/*border-top-width: 2px;
+	border-top-color: gray;*/
 }
 
 /*.dashboardTitle {
