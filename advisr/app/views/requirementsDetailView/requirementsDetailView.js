@@ -28,65 +28,33 @@ exports.pageNavigating = function(args) {
     page.bindingContext = pageData;
     pageData.set("title", title);
     pageData.set("major", major);
-    // pageData.set("major1", majors[0]);
-    // pageData.set("major2", majors[1]);
-    // pageData.set("minor1", minors[0]);
-    // pageData.set("minor2", minors[1]);
-    // setGrid(StorageUtil.getClasses(major), "coreMajor1", true);
-    // setGrid(StorageUtil.getClasses(major), "electivesMajor1", false);
-    init();
+    majors = StorageUtil.getMajors();
+    minors = StorageUtil.getMinors();
+    year = StorageUtil.getYear();
+    var numMajors = majors.length;
+    var numMinors = minors.length;
+
+    pageData.set("major1", majors[0]);
+    if (numMajors >= 2) {
+      pageData.set("major2", majors[1]);
+      secondMajor = true;
+    }
+
+    if (numMinors >= 1) {
+        pageData.set("minor1", minors[0]);
+       firstMinor = true;
+       if (numMinors == 2) {
+         pageData.set("minor2", minors[1]);
+         secondMinor = true;
+       }
+    }
+    pageData.set("secondMajor", secondMajor);
+    pageData.set("firstMinor", firstMinor);
+    pageData.set("secondMinor", secondMinor);
+    setGrid(StorageUtil.getClasses(major, "coreMajor1", true), "coreMajor1");
+    setGrid(StorageUtil.getClasses(major, "electivesMajor1", false), "electivesMajor1");   
 
 }
-
-
-var init = function() {
-  majors = StorageUtil.getMajors();
-  minors = StorageUtil.getMinors();
-  year = StorageUtil.getYear();
-  var numMajors = majors.length;
-  var numMinors = minors.length;
-  pageData.set("major1", majors[0]);
-  setGrid(StorageUtil.getClasses(majors[0]), "coreMajor1", true);
-  setGrid(StorageUtil.getClasses(majors[0]), "electivesMajor1", false);
-  // setClassPicture("firstMajorCard", majors[0]);
-  if (numMajors >= 2) {
-   pageData.set("major2", majors[1]);
-   setGrid(StorageUtil.getClasses(majors[1]), "coreMajor2", true);
-   setGrid(StorageUtil.getClasses(majors[1]), "electivesMajor2", false);
-   secondMajor = true;
-   // setClassPicture("secondMajorCard", majors[1]);
-   if (numMajors === 3) {
-     pageData.set("major3", majors[2]);
-     setGrid(StorageUtil.getClasses(majors[2]), "coreMajor3", true);
-     setGrid(StorageUtil.getClasses(majors[2]), "electivesMajor3", false);
-     thirdMajor = true;
-     // setClassPicture("thirdMajorCard", majors[2]);
-   }
-  }
-  pageData.set("secondMajor", secondMajor);
-  pageData.set("thirdMajor", thirdMajor);
-  if (numMinors >= 1) {
-   pageData.set("minor1", minors[0]);
-   firstMinor = true;
-   // setClassPicture("firstMinorCard", minors[0]);
-   if (numMinors >= 2) {
-     pageData.set("minor2", minors[1]);
-     secondMinor = true;
-     // setClassPicture("secondMinorCard", minors[1]);
-     if (numMinors === 3) {
-       pageData.set("minor3", minors[2]);
-       thirdMinor = true;
-       // setClassPicture("thirdMinorCard", minors[2]);
-     }
-   }
-  }
-  pageData.set("firstMinor", firstMinor);
-  pageData.set("secondMinor", secondMinor);
-  pageData.set("thirdMinor", thirdMinor);
-  exports.loadMajorData();
-}
-
-
 
 
 
@@ -167,17 +135,11 @@ exports.loadMajorData = function() {
     if (secondMajor) {
       loadPerMajor(StorageUtil.getClasses(majors[1]), "major2", 0.1);
     } 
-    if (thirdMajor) {
-      loadPerMajor(StorageUtil.getClasses(majors[2]), "major3", 0.1);
-    }
     if (firstMinor) {
       loadPerMajor(StorageUtil.getClasses(minors[0]), "minor1", 0.3);
     }
     if (secondMinor) {
       loadPerMajor(StorageUtil.getClasses(minors[1]), "minor2", 0.1);
-    }
-    if (thirdMinor) {
-      loadPerMajor(StorageUtil.getClasses(minors[2]), "minor2", 0.1);
     }
     
   } else {
@@ -185,17 +147,11 @@ exports.loadMajorData = function() {
     if (secondMajor) {
       loadPerMajor(StorageUtil.getClasses(majors[1]), "major2", 0.5);
     } 
-    if (thirdMajor) {
-      loadPerMajor(StorageUtil.getClasses(majors[2]), "major3", 0.3);
-    }
     if (firstMinor) {
       loadPerMajor(StorageUtil.getClasses(minors[0]), "minor1", 0.5);
     }
     if (secondMinor) {
       loadPerMajor(StorageUtil.getClasses(minors[1]), "minor2", 0.3);
-    }
-    if (thirdMinor) {
-      loadPerMajor(StorageUtil.getClasses(minors[2]), "minor2", 0.1);
     }
     
   }
@@ -220,16 +176,6 @@ exports.viewLogout = function() {
 }
 
 
-// exports.viewMoreGER = function() {
-//   var options = {
-//       moduleName: 'views/requirementsDetailView/requirementsDetailView',
-//       context: {
-//         requirement: "GER",
-//         major: "General Education Requirements"
-//       }
-//   } 
-//   frameModule.topmost().navigate(options);
-// }
 
 exports.viewMoreMajor1 = function() {
   var options = {
@@ -246,7 +192,7 @@ exports.viewMoreMajor1 = function() {
       }
   } 
   frameModule.topmost().navigate(options);
-}
+};
 
 exports.viewMoreMajor2 = function() {
   var options = {
@@ -263,7 +209,7 @@ exports.viewMoreMajor2 = function() {
       }
   } 
   frameModule.topmost().navigate(options);
-}
+};
 
 // exports.viewMoreMajor3 = function() {
 //   var options = {
@@ -297,7 +243,7 @@ exports.viewMoreMinor1 = function() {
       }
   } 
   frameModule.topmost().navigate(options);
-}
+};
 
 exports.viewMoreMinor2 = function() {
   var options = {
@@ -314,7 +260,7 @@ exports.viewMoreMinor2 = function() {
       }
   } 
   frameModule.topmost().navigate(options);
-}
+};
 
 // exports.viewMoreMinor3 = function() {
 //   var options = {

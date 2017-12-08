@@ -264,24 +264,24 @@ exports.loadMajorData = function() {
 	}
 }
 
-// var loadPerMajor = function(classes, id, perc) {
-// 	var numCore = classes[0].core.length;
-// 	var numElectives = classes[1].electives.length;
-// 	var totalClasses = classes[0].core.length + classes[1].electives.length;
-// 	var completedElectives = (Math.round(perc*(totalClasses)) - numCore);
-// 	var completedCore;
-// 	if (completedElectives < 0) {
-// 		completedCore = Math.round(perc*(totalClasses));
-// 		completedElectives = 0;
-// 		pageData.set(id + "coreComplete", completedCore.toString() + "/" + numCore.toString());
-// 		pageData.set(id + "electivesComplete", completedElectives.toString() + "/" + numElectives.toString());
-// 	} else {
-// 		pageData.set(id + "coreComplete", numCore.toString() + "/" + numCore.toString());
-// 		pageData.set( id + "electivesComplete", completedElectives.toString() + "/" + numElectives.toString());
-// 	}
-// 	pageData.set( id + "Complete", (perc*100).toString() + "%");
+var loadPerMajor = function(classes, id, perc) {
+	var numCore = classes[0].core.length;
+	var numElectives = classes[1].electives.length;
+	var totalClasses = classes[0].core.length + classes[1].electives.length;
+	var completedElectives = (Math.round(perc*(totalClasses)) - numCore);
+	var completedCore;
+	if (completedElectives < 0) {
+		completedCore = Math.round(perc*(totalClasses));
+		completedElectives = 0;
+		pageData.set(id + "coreComplete", completedCore.toString() + "/" + numCore.toString());
+		pageData.set(id + "electivesComplete", completedElectives.toString() + "/" + numElectives.toString());
+	} else {
+		pageData.set(id + "coreComplete", numCore.toString() + "/" + numCore.toString());
+		pageData.set( id + "electivesComplete", completedElectives.toString() + "/" + numElectives.toString());
+	}
+	pageData.set( id + "Complete", (perc*100).toString() + "%");
 
-// }
+}
 
 
 

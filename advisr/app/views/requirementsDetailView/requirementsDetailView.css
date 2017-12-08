@@ -78,9 +78,11 @@
 	border-radius: 15%;
 
 	opacity: .75;
-	
+	text-align: center;
 	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
 }
+
+
 
 .selectPlanSelected {
 	margin: 15px;
@@ -172,7 +174,10 @@
 }
 
 .cardSubtitle {
+	color: gray;
+	font-size: 10px;
 	margin: 2%;
+	margin-top: 0px;
 }
 
 #grid {

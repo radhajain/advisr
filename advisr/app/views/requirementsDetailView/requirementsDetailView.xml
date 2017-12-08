@@ -30,11 +30,11 @@
 		 	 	<!-- <Label text="Select view: " class="center"/> -->
 		 	 	<StackLayout orientation="vertical">
 		 	 		<!-- <Label text="View plans for: " class="sideBarText"/> -->
-			 	 	<Button text="{{major1}}"  tap="viewMoreMajor1" class="selectPlanSelected"/>
-				 	 <Button text="{{major2}}" tap="viewMoreMajor2" class="selectorButton"/>
+			 	 	<Button text="{{major1}}"  tap="viewMoreMajor1" class="selectPlanSelected" textWrap="true"/>
+				 	 <Button text="{{major2}}" visibility="{{ secondMajor ? 'visible' : 'collapse'}}"  tap="viewMoreMajor2" class="selectorButton" textWrap="true"/>
 				 	 <!-- <Button text="Major 3" tap="viewMoreMajor3" class="selectorButton"/> -->
-				 	 <Button text="{{minor1}}"  tap="viewMoreMinor1" class="selectorButton"/>
-				 	 <!-- <Button text="{{minor2}}" tap="viewMoreMinor2" class="selectorButton"/> -->
+				 	 <Button text="{{minor1}}" visibility="{{ firstMinor ? 'visible' : 'collapse'}}"  tap="viewMoreMinor1" class="selectorButton" textWrap="true"/>
+				 	 <Button text="{{minor2}}" visibility="{{ secondMinor ? 'visible' : 'collapse'}}"  tap="viewMoreMinor2" class="selectorButton" textWrap="true"/>
 				 	 <!-- <Button text="GERs" tap="viewMoreMinor2" class="selectorButton"/> -->
 				 	 <!-- <Button text="Minor 3" tap="viewMoreMinor3" class="selectorButton"/> -->
 				 	 <!-- <Button text="GERs" tap="viewMoreGER" class="selectorButton"/> -->
@@ -58,9 +58,9 @@
 
 						<!-- Card1 -->
 						<StackLayout class="card" id="firstCard">
-							<StackLayout orientation="horizontal">
+							<StackLayout>
 							<Label text="{{major}}" textWrap="true" class="cardTitle"/>
-							<!-- <Label text="{{major}}" class="cardSubtitle"/> -->
+							<Label text="{{title}}" class="cardSubtitle"/>
 						</StackLayout>
 						<Label text="Core: " class="classesLabel"/>
 							<ListView items="{{coreMajor1}}" separatorColor="#FFFFFF" id="coreMajor1" visibility="{{coreMajor1.length ? 'visible' : 'collapse'}}">
