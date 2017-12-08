@@ -13,6 +13,11 @@
 	text-align: center;
 }
 
+.miniTitle{
+	font-size: 20px;
+	margin-bottom: 25px;
+}
+
 .contentTitle {
 	font-size: 36px;
 	color: white;
@@ -25,8 +30,9 @@
 }
 
 .topMargin {
-	margin-top: 5%;
+	margin-top: 3%;
 	padding: 20%;
+	height: 1500px;
 	margin-left: 2%;
 	background-color:  rgba(255, 255, 255, 0.75);
 	/*border-top-width: 2px;
@@ -35,10 +41,11 @@
 
 
 #grids {
-	width: 70%;
-	height: 80%;
+	width: 75%;
+	height: 1500px;
 	margin: 50px;
-	margin-top: 90px;
+	margin-top: 100px;
+	background-color: transparent;
 	/*background-color:  rgba(255, 255, 255, 0.75);*/
 /*	border-color: gray;
 */}
@@ -63,8 +70,13 @@
 }
 
 .exportIcon {
+	margin-top: 300px;
 	color: #1c89f8;
 	background-color: transparent;
+}
+
+.recommended{
+	margin-top: 120px;
 }
 
 /*.yearButton {
@@ -94,26 +106,32 @@
 
 
 .selectorButton {
-	margin: 30px;
+	margin: 15px;
 	margin-left: 0px;
 	padding: 20px;
 	color: white;
 	background-color: black;
+
+	width: 250px;
 	
 	font-size: 18px;
 
 	border-width: 3px;
 	border-color:  black;
-	border-radius: 30%;
+	border-radius: 15%;
+
+	opacity: 75%;
 	
 	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
 }
 
 .selectPlanSelected {
-	margin: 30px;
+	margin: 15px;
 	margin-left: 0px;
 	padding: 20px;
 	background-color: gray;
+
+	width: 250px;
 	
 	font-size: 18px;
 	background-color: #1c89f8;
@@ -121,7 +139,9 @@
 
 	border-width: 3px;
 	border-color:  #1c89f8;
-	border-radius: 30%;
+	border-radius: 15%;
+
+	opacity: 75%;
 	
 	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
 }
@@ -133,38 +153,23 @@
 .rec {
 	background-color: white;
 	font-size: 25px;
-
 	text-align: center;
+
 	margin: 20px;
-	height: 150px;
-	width: 400px;
+	height: 100px;
+	width: 350px;
 	border-radius: 25px;
-}
-.header {
-	font-size: 25px;
-	color: white;
-}
-
-.summary {
-	background-color: white;
-	border-radius: 25px;
-	/*border-width: 10px;*/
-	width: 500px;
-	height: 500px;
-	margin-bottom: 40px;
-	text-align: center;
-	color: #338241;
-	margin-top: 40px;
 }
 
 .class {
 	background-color: white;
-	border-radius: 25px;
-/*	border-color: blue;
-*/	width: 500px;
-	margin-bottom: 40px;
-	box-shadow: 10px;
+	font-size: 25px;
+
 	text-align: center;
+	margin-bottom: 40px;
+	width: 500px;
+	border-radius: 25px;
+	box-shadow: 10px;
 }
 
 .fyclass {
@@ -174,6 +179,27 @@
 	margin: 5px;
 	box-shadow: 10px;
 	text-align: center;
+}
+
+.summary {
+	background-color: white;
+	font-size: 25px;
+	color: #1c89f8;
+
+	text-align: center;
+	margin-bottom: 40px;
+	width: 500px;
+	border-radius: 25px;
+	box-shadow: 10px;
+
+	
+	height: 500px;
+	margin-top: 40px;
+}
+
+.header {
+	font-size: 25px;
+	color: white;
 }
 
 .summary_title {

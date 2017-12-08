@@ -116,8 +116,8 @@ exports.showFourYear = function () {
     otherButton3.class="selectorButton";
 }
 
-exports.sync = function() {
-    FancyAlert.TNSFancyAlert.showWaiting("Syncing with your calendar...", " ", null, 3, 350);
+exports.syncCalendar = function() {
+    FancyAlert.TNSFancyAlert.showWaiting("Syncing with your calendar...", "hello ", null, 3, 350);
 }
 
 // Navigation
