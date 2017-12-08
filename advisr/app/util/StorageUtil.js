@@ -8,6 +8,10 @@ var interests = ["Building with My Hands", "Analyzing Society", "Solving Logical
 "Reading the News", "Visiting Art Museums", "Exploring New Places", "Performing in Plays", 
 "Learning Languages", "Going to the Movies", "Performing Experiment"];
 
+var interestClasses = ["ME 101", "STS 1", "PHIL 150", "COMPLIT 101", "EDUC 136", "WELLNESS 160", 
+"ECON 183", "ENGLISH 90", "PSYCH 1", "CS 108", "ENGR 40A", "SOC 326", "ARTHIST 1A", "ITALIAN 101", 
+"TAPS 1", "SPANLANG 1", "FILMSTUD 4", "BIO 60"];
+
 
 // var matchedClasses = ["E40M", "Math 51H"... FILL IN ];
 
