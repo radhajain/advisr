@@ -26,16 +26,16 @@
 		<StackLayout orientation="horizontal">
 		 		<!-- <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5"> -->
 		 			 	<!-- Side Bar -->
-		 	<StackLayout class="topMargin">
+		 	<StackLayout class="sideBar">
 		 	 	<!-- <Label text="Select view: " class="center"/> -->
 		 	 	<StackLayout orientation="vertical">
 		 	 		<!-- <Label text="View plans for: " class="sideBarText"/> -->
-			 	 	<Button text="{{major1}}"  tap="viewMoreMajor1" class="selectorButton"/>
+			 	 	<Button text="{{major1}}"  tap="viewMoreMajor1" class="selectPlanSelected"/>
 				 	 <Button text="{{major2}}" tap="viewMoreMajor2" class="selectorButton"/>
 				 	 <!-- <Button text="Major 3" tap="viewMoreMajor3" class="selectorButton"/> -->
 				 	 <Button text="{{minor1}}"  tap="viewMoreMinor1" class="selectorButton"/>
-				 	 <Button text="{{minor2}}" tap="viewMoreMinor2" class="selectorButton"/>
-				 	 <Button text="GERs" tap="viewMoreMinor2" class="selectorButton"/>
+				 	 <!-- <Button text="{{minor2}}" tap="viewMoreMinor2" class="selectorButton"/> -->
+				 	 <!-- <Button text="GERs" tap="viewMoreMinor2" class="selectorButton"/> -->
 				 	 <!-- <Button text="Minor 3" tap="viewMoreMinor3" class="selectorButton"/> -->
 				 	 <!-- <Button text="GERs" tap="viewMoreGER" class="selectorButton"/> -->
 			 	</StackLayout>

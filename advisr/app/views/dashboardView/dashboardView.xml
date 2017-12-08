@@ -184,16 +184,16 @@
 						<StackLayout orientation="horizontal" >
 		                    <StackLayout row="2" >
 			                    <StackLayout row="0" col="0">
-									<Label text="PWR 1" class="GER"/>
+									<Label text="PWR 1 &#xf00c;" class="fa GER"/>
 								</StackLayout>
 			                    <StackLayout row="1" col="0">
 									<Label text="PWR 2" class="GER"/>
 								</StackLayout>
 								<StackLayout row="2" col="0">
-									<Label text="THINK" class="GER"/>
+									<Label text="THINK &#xf00c;" class="fa GER"/>
 								</StackLayout>
 								<StackLayout row="3" col="0" colSpan="2">
-									<Label text="LANGUAGE" class="GER"/>
+									<Label text="LANGUAGE &#xf00c;" class="fa GER"/>
 								</StackLayout>	
 		                    </StackLayout>
 		                </StackLayout>
@@ -211,33 +211,33 @@
 					<StackLayout orientation="horizontal" >
 		            	<GridLayout columns="*,*,*,*" rows="*,*,*,*" id="GERgrid">
 		            		<StackLayout row="0" col="0">
-								<Label text="PWR 1" class="GER"/>
+								<Label text="AII  &#xf00c;" class="fa GER"/>
 							</StackLayout>
 
 		                    <StackLayout row="1" col="0">
-								<Label text="PWR 2" class="GER"/>
+								<Label text="AQR  &#xf00c;" class="fa GER"/>
 							</StackLayout>
 
 							<StackLayout row="2" col="0">
-								<Label text="THINK" class="GER"/>
+								<Label text="CE" class="GER"/>
 							</StackLayout>
 
 							<StackLayout row="3" col="0" colSpan="2">
-								<Label text="LANGUAGE" class="GER"/>
+								<Label text="ED  &#xf00c;" class="fa GER"/>
 							</StackLayout>
 
-							<StackLayout row="0" col="3">
-								<Label text="PWR 1" class="GER"/>
+							<StackLayout row="0" col="2">
+								<Label text="ER  &#xf00c;" class="fa GER"/>
 							</StackLayout>
 							
-		                    <StackLayout row="1" col="3">
-								<Label text="PWR 2" class="GER"/>
+		                    <StackLayout row="1" col="2">
+								<Label text="FR" class="GER"/>
 							</StackLayout>
-							<StackLayout row="2" col="3">
-								<Label text="THINK" class="GER"/>
+							<StackLayout row="2" col="2">
+								<Label text="SMA  &#xf00c;" class="fa GER"/>
 							</StackLayout>
-							<StackLayout row="3" col="3" colSpan="2">
-								<Label text="LANGUAGE" class="GER"/>
+							<StackLayout row="3" col="2" colSpan="2">
+								<Label text="SI" class="GER"/>
 							</StackLayout>		
 		                </GridLayout>
 		            </StackLayout>
