@@ -31,8 +31,12 @@
 			 	 	<Button text="Major 2" tap="" class="selectorButton"/>
 			 	 	<Button text="Major 3" tap="" class="selectorButton"/>
 			 	 	<Button text="GERs" tap="" class="selectorButton"/>
+			 	 	<Button text="REQUIREMENTS DETAIL" tap="viewMoreMajor1" class="selectorButton"/>
 			 	</StackLayout>
 	 		</StackLayout>
+
+
+
 
 	 		<StackLayout >
 	 			<Label text="XYZ Requirements" class="contentTitle"/>

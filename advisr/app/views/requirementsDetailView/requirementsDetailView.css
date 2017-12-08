@@ -5,6 +5,66 @@
 	background-size: cover;
 }*/
 
+.fa {
+   font-family: 'FontAwesome', 'fontawesome-webfont';
+   font-size: 20px;
+}
+
+.menuButton {
+	margin: 100px;
+}
+
+/*.title {
+	font-size: 40px;
+	display: inline-block;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}*/
+
+.pageTitle {
+	font-size: 36px;
+	color: white;
+/*	display: inline-block;
+*/	margin-left: 162px;
+	margin-top: 100px;
+	margin-bottom: 0px;
+	padding: 0;
+
+}
+
+.contentTitle {
+	font-size: 25px;
+	color: white;
+	text-align: right;
+
+}
+
+.sideBarText {
+	padding: 30px;
+	color: white;
+
+}
+.selectorButton {
+	margin: 30px;
+	margin-left: 0px;
+	padding: 20px;
+	background-color: white;
+	
+	font-size: 18px;
+	color: #1c89f8;
+
+	border-width: 3px;
+	border-color:  #1c89f8;
+	border-radius: 30%;
+	
+	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
+
+}
+
+.sideBar {
+	margin-left: 162px;
+}
 
 .dashboardTitle {
 	font-size: 40px;

@@ -6,8 +6,10 @@ var pageData = new observable.Observable();
 var FancyAlert = require("nativescript-fancyalert");
 var calendarModule = require("nativescript-pro-ui/calendar");
 var frameModule = require("ui/frame");
+var StorageUtil = require("~/util/StorageUtil");
 
 
+var majors = StorageUtil.getMajors();
 
 var page;
 
@@ -132,5 +134,16 @@ exports.viewRequirements = function() {
 
 exports.viewLogout = function() {
     frameModule.topmost().navigate("views/onboarding/landingView/landingView");
+}
+
+exports.viewMoreMajor1 = function() {
+    var options = {
+        moduleName: 'views/requirementsDetailView/requirementsDetailView',
+        context: {
+          requirement: "Major 1",
+          major: majors[0]
+        }
+    } 
+    frameModule.topmost().navigate(options);
 }
 

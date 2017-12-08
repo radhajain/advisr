@@ -8,9 +8,9 @@
 	  <ActionBar class="action-bar" title="Dashboard">
 		    <ActionBar.titleView>
 				<StackLayout orientation="horizontal" >
-					<Button text="&#xf015;    Home" tap="viewSchedule" class="fa"/>
+					<Button text="&#xf015;    Home" tap="" class="fa"/>
 		         	<Button text="&#xf073;    Schedule" tap="viewSchedule" class="fa"/>
-		         	<Button text="&#xf14a;    Classes" tap="viewRequirements" class="fa"/>
+		         	<Button text="&#xf14a;    Classes" tap="viewMoreMajor1" class="fa"/>
 					<Button text="&#xf08b;    Logout" tap="viewLogout" class="fa"/>
 	            </StackLayout>
 		    </ActionBar.titleView>
