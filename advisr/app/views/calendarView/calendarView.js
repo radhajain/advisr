@@ -114,8 +114,8 @@ exports.showFourYear = function () {
     otherButton3.class="selectorButton";
 
     var majList = StorageUtil.getMajors();
-    var minList = StorageUtil.getMinors();
-    var mList = majList.concat(minList);
+    // var minList = StorageUtil.getMinors();
+    // var mList = majList.concat(minList);
 
     for (var i = 0; i < mList.length; i++) {
         var classes = StorageUtil.getClasses(mList[i]);
