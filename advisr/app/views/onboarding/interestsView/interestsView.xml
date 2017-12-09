@@ -33,7 +33,7 @@
 				</Slides:Slide> -->
 				<Slides:Slide class="slide" disablePan="true" tap="disablePickers">
 					<StackLayout>
-						<Label text="Add up to 3 majors and minors that you are considering." class="question"/>
+						<Label text="Add up to 2 majors and minors that you are considering." class="question"/>
 						<StackLayout orientation="vertical" class="wholeSlide">
 							<!-- <Button text="<" class="prevButton"/> -->
 							<StackLayout orientation="horizontal" class="centerDiv">
