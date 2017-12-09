@@ -22,7 +22,7 @@ var interests = ["Building with My Hands", "Analyzing Society", "Solving Logical
 "Reading the News", "Visiting Art Museums", "Exploring New Places", "Performing in Plays", 
 "Learning Languages", "Going to the Movies", "Performing Experiment"];
 var majors = [ "Art", "Anthropology", "Comparative Literature", "Computer Science", "Economics", "History",
-				"MS&E", "Polical Science",  "Psychology"];
+				"MS&E", "Political Science",  "Psychology"];
 
 
 				

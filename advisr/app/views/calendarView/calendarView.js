@@ -54,7 +54,9 @@ exports.pageLoaded = function(args) {
     var mList = majList.concat(minList);
 
     for (var i = 0; i < mList.length; i++) {
+        console.log(mList);
         var classes = StorageUtil.getClasses(mList[i]);
+        console.log(classes);
         var currCore = classes[0].core;
         var currElec = classes[1].electives;
         var totalClasses = currCore.concat(currElec);
@@ -63,7 +65,7 @@ exports.pageLoaded = function(args) {
             //i = major number, x = class number
             var makeString = "m" + i + "" + x;
             pageData.set(String(makeString), totalClasses[x][0]);
-            // page.getElementById(String(makeString)).visibility = "visible";
+            page.getElementById(String(makeString)).visibility = "visible";
         }
     } 
     var fallSummary = "Total Units: 18" + '\n' + "PSets: 7" +  '\n' + "Papers: 2" +  '\n' +  "3 Midterms, 2 Finals";

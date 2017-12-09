@@ -36,13 +36,11 @@
 			 	 	
 			 	<!-- <Label text="Recommended Classes:" class="center miniTitle recommended"/> -->
 			 	<StackLayout>
-			 		<StackLayout class="recs" columns= "*" rows= "*,*,*,*,*" >
+			 		<StackLayout class="recs" columns= "*" rows= "*,*,*,*,*,*" >
 			 			<Label text="Suggested Classes:" class="sideText" col="0" row="0"/>
-			 			<Label text="Rec 1" col="0" row="0" class="rec"/>
-				 	 	<Label text="Rec 2" col="0" row="1" class="rec"/>
-				 	 	<Label text="Rec 3" col="0" row="2" class="rec"/>
-				 	 	<Label text="Rec 4" col="0" row="2" class="rec"/>
-				 	 	<Label text="Rec 5" col="0" row="2" class="rec"/>
+			 			<Label text="Rec 1" col="0" row="0" class="rec" rowSpan="2"/>
+				 	 	<Label text="Rec 2" col="0" row="2" class="rec" rowSpan="2"/>
+				 	 	<Label text="Rec 3" col="0" row="4" class="rec" rowSpan="2"/>
 			 		</StackLayout>
 			 	</StackLayout>
 			 	
@@ -90,7 +88,7 @@
 			 	 	<!-- FALL -->
 			 	 	<StackLayout col="0" row="1" orientation="horizontal" class="class" id="m01Box">
 				 		<Label text="{{m01}}"  class="fa classHeader" text-wrap="true"/>
-				 		<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m01"/>
+				 		<Image src="res://ic_clear" class="clear_button" visibility="hidden" tap="showClassChange" id="m01"/>
 				 	</StackLayout>
 
 				 	<StackLayout  col="0" row="2" orientation="horizontal" class="class" id="m11Box">

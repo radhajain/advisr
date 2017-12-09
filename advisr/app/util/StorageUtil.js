@@ -245,15 +245,15 @@ exports.getMinors = function() {
 }
 
 exports.logOut = function(){
-  // appSettings.setString('minors', JSON.stringify([]));
-  // appSettings.setString('majors', JSON.stringify([]));
+  appSettings.setString('minors', JSON.stringify([]));
+  appSettings.setString('majors', JSON.stringify([]));
   // appSettings.setString('name', '');
   // appSettings.setString('year', '');
   // appSettings.remove('minors');
   // appSettings.remove('majors');
   // appSettings.remove('name');
   // appSettings.remove('year');
-  // appSettings.clear();
+  appSettings.clear();
 }
 
 

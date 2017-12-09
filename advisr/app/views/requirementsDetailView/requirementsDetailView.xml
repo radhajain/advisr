@@ -30,10 +30,10 @@ xmlns:CheckBox="nativescript-checkbox">
 			 	<StackLayout class="sideBar">
 			 	 	<!-- <Label text="Select view: " class="center"/> -->
 			 	 	<StackLayout orientation="vertical">
-			 	 		<!-- <Label text="View plans for: " class="sideBarText"/> -->
+			 	 		<Label text="Majors: " class="sideBarText"/>
 				 	 	<Button text="{{major1}}"  tap="viewMoreMajor1" class="selectPlanSelected" textWrap="true"/>
 					 	 <Button text="{{major2}}" visibility="{{ secondMajor ? 'visible' : 'collapse'}}"  tap="viewMoreMajor2" class="selectorButton" textWrap="true"/>
-					 	 <!-- <Button text="Major 3" tap="viewMoreMajor3" class="selectorButton"/> -->
+					 	<Label text="Minors: " class="sideBarText" visibility="{{ firstMinor ? 'visible' : 'collapse'}}" />
 					 	 <Button text="{{minor1}}" visibility="{{ firstMinor ? 'visible' : 'collapse'}}"  tap="viewMoreMinor1" class="selectorButton" textWrap="true"/>
 					 	 <Button text="{{minor2}}" visibility="{{ secondMinor ? 'visible' : 'collapse'}}"  tap="viewMoreMinor2" class="selectorButton" textWrap="true"/>
 					 	 <!-- <Button text="GERs" tap="viewMoreMinor2" class="selectorButton"/> -->
@@ -64,44 +64,44 @@ xmlns:CheckBox="nativescript-checkbox">
 										<Label text="{{title}}" class="cardSubtitle"/>
 									</StackLayout>
 
-									<StackLayout orientation="horizontal">
+									<StackLayout orientation="horizontal" class="leftClassMargin coreMargin">
 										<Label text="Core: " class="classesLabel"/>
 										<Label text="{{numCore}}" class="classesLabel"/>
-										<Label text=" completed" class="classesLabel"/>
+										<Label text=" completed" class="smolGray"/>
 									</StackLayout>
 
 									<ListView items="{{coreMajor1}}" separatorColor="#FFFFFF" id="coreMajor1" visibility="{{coreMajor1.length ? 'visible' : 'collapse'}}">
-										<ListView.itemTemplate>
+										<ListView.itemTemplate id="list">
 											<GridLayout columns="*,*,*" rows="auto">
-												<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
+												<StackLayout orientation="vertical" col="0" row="0" class="coreClass" id="{{one}}" visibility="{{ one ? 'visible' : 'collapse'}}">
 											 	<Label text="{{one}}" class="cell"/>
 											 </StackLayout>
-											 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
+											 <StackLayout orientation="vertical" col="1" row="0" class="coreClass" id="{{two}}" visibility="{{ two ? 'visible' : 'collapse'}}">
 											 	<Label text="{{two}}" class="cell"/>
 											</StackLayout>
-											<StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
+											<StackLayout orientation="vertical" col="2" row="0" class="coreClass" id="{{three}}" visibility="{{ three ? 'visible' : 'collapse'}}">
 											 	<Label text="{{three}}" class="cell"/>
 											 </StackLayout>
 											</GridLayout>
 										</ListView.itemTemplate>
 									</ListView>
 
-									<StackLayout orientation="horizontal">
+									<StackLayout orientation="horizontal" class="electiveMargin leftClassMargin">
 										<Label text="Electives: " class="classesLabel"/>
 										<Label text="{{numElectives}}" class="classesLabel"/>
-										<Label text=" completed" class="classesLabel"/>
+										<Label text=" completed" class="smolGray"/>
 									</StackLayout>
 
 									<ListView items="{{electivesMajor1}}" separatorColor="#FFFFFF" id="electivesMajor1" visibility="{{electivesMajor1.length ? 'visible' : 'collapse'}}">
 										<ListView.itemTemplate>
 											<GridLayout columns="*,*,*" rows="auto" >
-												<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
+												<StackLayout orientation="vertical" col="0" row="0" class="coreClass" id="{{one}}" visibility="{{ one ? 'visible' : 'collapse'}}">
 											 	<Label col="0" row="0" text="{{one}}" class="cell"/>
 											 </StackLayout>
-											 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
+											 <StackLayout orientation="vertical" col="1" row="0" class="coreClass" id="{{two}}" visibility="{{ two ? 'visible' : 'collapse'}}">
 											 	<Label text="{{two}}" class="cell"/>
 											</StackLayout>
-											<StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
+											<StackLayout orientation="vertical" col="2" row="0" class="coreClass" id="{{three}}" visibility="{{ three ? 'visible' : 'collapse'}}">
 											 	<Label text="{{three}}" class="cell"/>
 											 </StackLayout>
 											</GridLayout>
