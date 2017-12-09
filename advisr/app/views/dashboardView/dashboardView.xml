@@ -14,6 +14,7 @@
 					<Button text="&#xf08b;    Logout" tap="viewLogout" class="fa"/>
 	            </StackLayout>
 		    </ActionBar.titleView>
+		    <NavigationButton visibility="collapsed"/>
 	    	<!-- <NavigationButton tap=ome"toggleDrawer" text="Menu" ios.position="left" /> -->
 		</ActionBar>
 	</Page.actionBar>
