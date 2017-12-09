@@ -80,6 +80,18 @@
 	margin-top: 120px;
 }
 
+.clear_button {
+	width: 20px;
+	height: 20px;
+	margin-left: 10%;
+	/*border-width: 1px;*/
+	border-radius: 60%;
+	padding: 20px;
+
+}
+
+
+
 /*.yearButton {
 	
 	
@@ -177,6 +189,7 @@
 
 .class {
 	background-color: white;
+	opacity: 0.75;
 	font-size: 25px;
 
 	text-align: center;
@@ -256,6 +269,13 @@
 
 button {
 	margin: 100px;
+}
+
+.classHeader {
+	text-align: center;
+	margin-left: 30%;
+	font-size: 20px;
+	/*color: darkgray;*/
 }
 
 .fa {

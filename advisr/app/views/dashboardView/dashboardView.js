@@ -211,26 +211,26 @@ exports.viewMoreMajor2 = function() {
 	frameModule.topmost().navigate(options);
 }
 
-// exports.viewMoreMajor3 = function() {
-// 	var options = {
-// 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
-// 	    context: {
-// 	      requirement: "Major 3",
-// 	      major: minors[0]
-// 	    }
-// 	} 
-// 	frameModule.topmost().navigate(options);
-// }
+exports.viewMoreMinor1 = function() {
+	var options = {
+	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
+	    context: {
+	      requirement: "Minor 1",
+	      major: minors[0]
+	    }
+	} 
+	frameModule.topmost().navigate(options);
+}
 
-// exports.viewMoreMajor4 = function() {
-// 	var options = {
-// 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
-// 	    context: {
-// 	      requirement: "Major 4",
-// 	      major: minors[1]
-// 	    }
-// 	} 
-// 	frameModule.topmost().navigate(options);
-// }
+exports.viewMoreMinor2= function() {
+	var options = {
+	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
+	    context: {
+	      requirement: "Minor 2",
+	      major: minors[1]
+	    }
+	} 
+	frameModule.topmost().navigate(options);
+}
 
 

@@ -63,9 +63,20 @@ exports.pageLoaded = function(args) {
             //i = major number, x = class number
             var makeString = "m" + i + "" + x;
             pageData.set(String(makeString), totalClasses[x][0]);
+            // page.getElementById(String(makeString)).visibility = "visible";
         }
     } 
 }
+
+exports.showClassChange = function(args) {
+    console.log("chaing class");
+    var button = args.object;
+    button.visibility = "collapse";
+    var boxId = args.object.id + "Box";
+    page.getViewById(boxId).visibility = "collapse";
+}
+
+
 
 exports.showCalendar = function () {
     pageData.set("showMonthCal", true);

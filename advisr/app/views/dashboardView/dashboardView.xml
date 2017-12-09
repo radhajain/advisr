@@ -103,7 +103,7 @@
 
 	           	<!-- Minor 1-->
 
-	           	<StackLayout class="card" row="0" col="{{minorCol}}" visibility="{{showMinor1 ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
+	           	<StackLayout class="card" row="0" col="{{minorCol}}" visibility="{{showMinor1 ? 'visible' : 'collapse'}}" tap="viewMoreMinor1">
 					<StackLayout orientation="vertical">
 						<Label text="Minor 1:" class="cardTitle" />
 						<Label text="{{minor1}}" class="cardSubtitle" textWrap="true"/>
@@ -123,7 +123,7 @@
 
 	           		           	<!-- Minor 2-->
 
-	           	<StackLayout class="card" row="0" col="{{minorCol2}}" visibility="{{showMinor2 ? 'visible' : 'collapse'}}" tap="viewMoreMajor4">
+	           	<StackLayout class="card" row="0" col="{{minorCol2}}" visibility="{{showMinor2 ? 'visible' : 'collapse'}}" tap="viewMoreMinor2">
 					<StackLayout orientation="vertical">
 						<Label text="Minor 2:" class="cardTitle" />
 						<Label text="{{minor1}}" class="cardSubtitle" textWrap="true"/>

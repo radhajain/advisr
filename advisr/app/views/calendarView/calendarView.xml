@@ -88,22 +88,75 @@
 			 	 	<Label text="Spring" col="2" row="0" class="center header"/>
 
 			 	 	<!-- FALL -->
-			 	 	<!-- <StackLayout  alignment="horizontal"> -->
-				 	<Label text="{{m01}}" col="0" row="1" class="fa class" text-wrap="true" visibility="{{ showClass ? 'visible' : 'collapsed' }}" tap="showClassChange"/>
-			 	 	<Label text="{{m11}}" col="0" row="2" class="class"/> 
-			 	 	<Label text="{{m21}}" col="0" row="3" class="class"/>
-			 	 	<Label text="{{m31}}" col="0" row="4" class="class"/> 
+			 	 	<StackLayout col="0" row="1" orientation="horizontal" class="class" id="m01Box">
+				 		<Label text="{{m01}}"  class="fa classHeader" text-wrap="true"/>
+				 		<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m01"/>
+				 	</StackLayout>
+
+				 	<StackLayout  col="0" row="2" orientation="horizontal" class="class" id="m11Box">
+
+			 	 	<Label text="{{m11}}" class="fa classHeader" text-wrap="true"/> 
+			 	 	<Image src="res://ic_clear" class="clear_button" tap="showClassChange"  id="m11"/>
+
+			 	 	</StackLayout>
+
+
+			 		<StackLayout  col="0" row="3" orientation="horizontal" class="class" id="m21Box">
+			 			<Label text="{{m21}}"  class="fa classHeader" text-wrap="true"/>
+			 			<Image src="res://ic_clear" class="clear_button" tap="showClassChange"  id="m21"/>
+				 	</StackLayout>
+
+				 	<StackLayout  col="0" row="4" orientation="horizontal" class="class" id="m31Box">
+			 			<Label text="{{m31}}"  class="fa classHeader" text-wrap="true"/> 
+			 			<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m31"/>
+				 	</StackLayout>
+
+
+			 	 	
+			 	 	
 
 			 	 	<!-- WINTER -->
-			 	 	<Label text="{{m02}}" col="1" row="1" class="class"/> 
-			 	 	<Label text="{{m12}}" col="1" row="2" class="class"/> 
-			 	 	<Label text="{{m22}}" col="1" row="3" class="class"/> 
-			 	 	<Label text="{{m32}}" col="1" row="4" class="class"/> 
+			 	 	<StackLayout  col="1" row="1" orientation="horizontal" class="class" id="m02Box">
+
+			 	 	<Label text="{{m02}}"  class="fa classHeader" text-wrap="true"/> 
+			 	 	<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m02"/>
+				 	</StackLayout>
+
+
+				 	<StackLayout  col="1" row="2" orientation="horizontal" class="class" id="m12Box">
+			 	 	<Label text="{{m12}}"  class="fa classHeader" text-wrap="true"/> 
+			 	 	<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m12"/>
+			 	 </StackLayout>
+
+			 	 	<StackLayout  col="1" row="3" orientation="horizontal" class="class" id="m22Box">
+
+			 	 	<Label text="{{m22}}"  class="fa classHeader" text-wrap="true"/> 
+			 	 	<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m22"/>
+
+			 	 </StackLayout>
+
+			 	 <StackLayout  col="1" row="4" orientation="horizontal" class="class" id="m32Box">
+			 	 	<Label text="{{m32}}"  class="fa classHeader" text-wrap="true"/> 
+			 	 	<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m32"/>
+			 	 </StackLayout>
 
 			 	 	<!-- SPRING -->
-			 	 	<Label text="{{m03}}" col="2" row="1" class="class"/> 
-			 	 	<Label text="{{m13}}" col="2" row="2" class="class"/> 
-			 	 	<Label text="{{m23}}" col="2" row="3" class="class"/>
+
+			 	 <StackLayout col="2" row="1" orientation="horizontal" class="class" id="m03Box">
+			 	 	<Label text="{{m03}}"  class="fa classHeader" text-wrap="true"/> 
+			 	 	<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m03"/>
+			 	 </StackLayout>
+
+			 	 <StackLayout  col="2" row="2" orientation="horizontal" class="class" id="m13Box">
+			 	 	<Label text="{{m13}}"  class="fa classHeader" text-wrap="true"/> 
+			 	 	<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m13"/>
+
+			 	 </StackLayout>
+
+			 	 <StackLayout  col="2" row="3" orientation="horizontal" class="class" id="m23Box">
+			 	 	<Label text="{{m23}}"  class="fa classHeader" text-wrap="true"/>
+			 	 	<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m23"/>
+			 	 </StackLayout>
 
 
 			 	 	<Label text="Total Units: 15" col="0" row="5" class="summary"/>
