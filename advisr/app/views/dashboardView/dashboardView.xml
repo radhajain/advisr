@@ -126,7 +126,7 @@
 	           	<StackLayout class="card" row="0" col="{{minorCol2}}" visibility="{{showMinor2 ? 'visible' : 'collapse'}}" tap="viewMoreMinor2">
 					<StackLayout orientation="vertical">
 						<Label text="Minor 2:" class="cardTitle" />
-						<Label text="{{minor1}}" class="cardSubtitle" textWrap="true"/>
+						<Label text="{{minor2}}" class="cardSubtitle" textWrap="true"/>
 					</StackLayout>
 
 					<StackLayout orientation="vertical" id="panels">
