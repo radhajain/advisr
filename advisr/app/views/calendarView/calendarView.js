@@ -66,6 +66,14 @@ exports.pageLoaded = function(args) {
             // page.getElementById(String(makeString)).visibility = "visible";
         }
     } 
+    var fallSummary = "Total Units: 18" + '\n' + "PSets: 7" +  '\n' + "Papers: 2" +  '\n' +  "3 Midterms, 2 Finals";
+    pageData.set("fallSummary", fallSummary);
+    var winterSummary = "Total Units: 20" + '\n' + "PSets: 12" +  '\n' + "Papers: 1" +  '\n' +  "4 Midterms, 4 Finals";
+    pageData.set("winterSummary", winterSummary);
+    var springSummary = "Total Units: 13" + '\n' + "PSets: 5" +  '\n' + "Papers: 3" +  '\n' +  "1 Midterm, 1 Final";
+    pageData.set("springSummary", springSummary);
+
+
 }
 
 exports.showClassChange = function(args) {

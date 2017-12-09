@@ -158,10 +158,15 @@
 			 	 	<Image src="res://ic_clear" class="clear_button" tap="showClassChange" id="m23"/>
 			 	 </StackLayout>
 
-
-			 	 	<Label text="Total Units: 15" col="0" row="5" class="summary"/>
-			 	 	<Label text="Total Units: 18" col="1" row="5" class="summary"/>
-			 	 	<Label text="Total Units: 12" col="2" row="5" class="summary"/> 
+			 	 <StackLayout col="0" row="5" class="summary">
+			 	 	<Label text="{{fallSummary}}" class="textSummary" textWrap="true"/>
+			 	 </StackLayout>
+			 	 <StackLayout col="1" row="5" class="summary">
+			 	 	<Label text="{{winterSummary}}" class="textSummary" textWrap="true"/>
+			 	 </StackLayout>
+			 	 <StackLayout col="2" row="5" class="summary">
+			 	 	<Label text="{{springSummary}}" class="textSummary" textWrap="true"/>
+			 	 </StackLayout> 
 
 			 	 </GridLayout>
 
