@@ -1,119 +1,118 @@
 <Page loaded="pageLoaded" xmlns="http://schemas.nativescript.org/tns.xsd"  navigatingTo="pageNavigating" id="requirementDetailView" class="page"
-	xmlns:sd="nativescript-pro-ui/sidedrawer"
-	xmlns:sidedrawer="shared/sd"
-	xmlns:pb="nativescript-progressbar"
-	xmlns:Card="nativescript-cardview"
-	xmlns:CheckBox="nativescript-checkbox">
+xmlns:sd="nativescript-pro-ui/sidedrawer"
+xmlns:sidedrawer="shared/sd"
+xmlns:pb="nativescript-progressbar"
+xmlns:Card="nativescript-cardview"
+xmlns:CheckBox="nativescript-checkbox">
 
-<Page.actionBar>
-	  <ActionBar class="action-bar" title="Dashboard">
-		    <ActionBar.titleView>
-				<StackLayout orientation="horizontal" >
-					<Button text="&#xf015;    Home" tap="viewDashboard" class="fa menuButton"/>
-		         	<Button text="&#xf073;    Schedule" tap="viewSchedule" class="fa menuButton"/>
-		         	<Button text="&#xf14a;    Classes" tap="viewMoreMajor1" class="fa menuButton"/>
-					<Button text="&#xf08b;    Logout" tap="viewLogout" class="fa menuButton"/>
-	            </StackLayout>
-		    </ActionBar.titleView>
-		</ActionBar>
-	</Page.actionBar>
+	<Page.actionBar>
+		  <ActionBar class="action-bar" title="Dashboard">
+			    <ActionBar.titleView>
+					<StackLayout orientation="horizontal" >
+						<Button text="&#xf015;    Home" tap="viewDashboard" class="fa menuButton"/>
+			         	<Button text="&#xf073;    Schedule" tap="viewSchedule" class="fa menuButton"/>
+			         	<Button text="&#xf14a;    Classes" tap="viewMoreMajor1" class="fa menuButton"/>
+						<Button text="&#xf08b;    Logout" tap="viewLogout" class="fa menuButton"/>
+		            </StackLayout>
+			    </ActionBar.titleView>
+			</ActionBar>
+		</Page.actionBar>
 
-	<!-- CALENDAR PAGE -->
-	<StackLayout orientation="vertical">
-		<StackLayout>
-			<Label text="Your Requirements" class="contentTitle"/>
-		</StackLayout>
-		<StackLayout orientation="horizontal">
-		 		<!-- <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5"> -->
-		 			 	<!-- Side Bar -->
-		 	<StackLayout class="sideBar">
-		 	 	<!-- <Label text="Select view: " class="center"/> -->
-		 	 	<StackLayout orientation="vertical">
-		 	 		<!-- <Label text="View plans for: " class="sideBarText"/> -->
-			 	 	<Button text="{{major1}}"  tap="viewMoreMajor1" class="selectPlanSelected" textWrap="true"/>
-				 	 <Button text="{{major2}}" visibility="{{ secondMajor ? 'visible' : 'collapse'}}"  tap="viewMoreMajor2" class="selectorButton" textWrap="true"/>
-				 	 <!-- <Button text="Major 3" tap="viewMoreMajor3" class="selectorButton"/> -->
-				 	 <Button text="{{minor1}}" visibility="{{ firstMinor ? 'visible' : 'collapse'}}"  tap="viewMoreMinor1" class="selectorButton" textWrap="true"/>
-				 	 <Button text="{{minor2}}" visibility="{{ secondMinor ? 'visible' : 'collapse'}}"  tap="viewMoreMinor2" class="selectorButton" textWrap="true"/>
-				 	 <!-- <Button text="GERs" tap="viewMoreMinor2" class="selectorButton"/> -->
-				 	 <!-- <Button text="Minor 3" tap="viewMoreMinor3" class="selectorButton"/> -->
-				 	 <!-- <Button text="GERs" tap="viewMoreGER" class="selectorButton"/> -->
-			 	</StackLayout>
-<!-- 			 	<Label text="Recommended Classes:" class="center topMargin"/>
-			 	<StackLayout>
-				 	<StackLayout columns= "*" rows= "*,*,*" >
-				 			<Label text="Rec 1" col="0" row="0" class="rec"/>
-					 	 	<Label text="Rec 2" col="0" row="1" class="rec"/>
-					 	 	<Label text="Rec 3" col="0" row="2" class="rec"/>
+		<!-- CALENDAR PAGE -->
+		<StackLayout orientation="vertical">
+			<StackLayout>
+				<Label text="Course Requirements" class="contentTitle"/>
+			</StackLayout>
+
+			<StackLayout orientation="horizontal">
+			 		<!-- <Card:CardView class="cardStyle" margin="10" elevation="40" radius="5"> -->
+			 			 	<!-- Side Bar -->
+			 	<StackLayout class="sideBar">
+			 	 	<!-- <Label text="Select view: " class="center"/> -->
+			 	 	<StackLayout orientation="vertical">
+			 	 		<!-- <Label text="View plans for: " class="sideBarText"/> -->
+				 	 	<Button text="{{major1}}"  tap="viewMoreMajor1" class="selectPlanSelected" textWrap="true"/>
+					 	 <Button text="{{major2}}" visibility="{{ secondMajor ? 'visible' : 'collapse'}}"  tap="viewMoreMajor2" class="selectorButton" textWrap="true"/>
+					 	 <!-- <Button text="Major 3" tap="viewMoreMajor3" class="selectorButton"/> -->
+					 	 <Button text="{{minor1}}" visibility="{{ firstMinor ? 'visible' : 'collapse'}}"  tap="viewMoreMinor1" class="selectorButton" textWrap="true"/>
+					 	 <Button text="{{minor2}}" visibility="{{ secondMinor ? 'visible' : 'collapse'}}"  tap="viewMoreMinor2" class="selectorButton" textWrap="true"/>
+					 	 <!-- <Button text="GERs" tap="viewMoreMinor2" class="selectorButton"/> -->
+					 	 <!-- <Button text="Minor 3" tap="viewMoreMinor3" class="selectorButton"/> -->
+					 	 <!-- <Button text="GERs" tap="viewMoreGER" class="selectorButton"/> -->
 				 	</StackLayout>
+	<!-- 			 	<Label text="Recommended Classes:" class="center topMargin"/>
+				 	<StackLayout>
+					 	<StackLayout columns= "*" rows= "*,*,*" >
+					 			<Label text="Rec 1" col="0" row="0" class="rec"/>
+						 	 	<Label text="Rec 2" col="0" row="1" class="rec"/>
+						 	 	<Label text="Rec 3" col="0" row="2" class="rec"/>
+					 	</StackLayout>
+				 	</StackLayout>
+				 	<Button text="Sync with GCal" class="syncButton" tap="sync"/> -->
 			 	</StackLayout>
-			 	<Button text="Sync with GCal" class="syncButton" tap="sync"/> -->
-		 	</StackLayout>
 
-		 	<StackLayout id="grids">
+			 	<!-- <StackLayout id="grids"> -->
 
-		 		<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
-					<GridLayout columns="*" rows="*" id="grid">
-						<StackLayout>
+			 		<Card:CardView class="cardStyle" margin="10" elevation="40" radius="5">
+<!-- 						<GridLayout columns="*" rows="*" id="grid">
+ --><!-- 							<StackLayout>
+ -->
+								<!-- Card1 -->
+								<StackLayout class="card">
+									<StackLayout>
+										<Label text="{{major}}" textWrap="true" class="cardTitle"/>
+										<Label text="{{title}}" class="cardSubtitle"/>
+									</StackLayout>
 
-						<!-- Card1 -->
-						<StackLayout class="card" id="firstCard">
-							<StackLayout>
-							<Label text="{{major}}" textWrap="true" class="cardTitle"/>
-							<Label text="{{title}}" class="cardSubtitle"/>
-						</StackLayout>
-						<StackLayout orientation="horizontal">
-						<Label text="Core: " class="classesLabel"/>
-						<Label text="{{numCore}}"/>
-						<Label text=" completed"/>
-						</StackLayout>
+									<StackLayout orientation="horizontal">
+										<Label text="Core: " class="classesLabel"/>
+										<Label text="{{numCore}}" class="classesLabel"/>
+										<Label text=" completed" class="classesLabel"/>
+									</StackLayout>
 
+									<ListView items="{{coreMajor1}}" separatorColor="#FFFFFF" id="coreMajor1" visibility="{{coreMajor1.length ? 'visible' : 'collapse'}}">
+										<ListView.itemTemplate>
+											<GridLayout columns="*,*,*" rows="auto">
+												<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
+											 	<Label text="{{one}}" class="cell"/>
+											 </StackLayout>
+											 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
+											 	<Label text="{{two}}" class="cell"/>
+											</StackLayout>
+											<StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
+											 	<Label text="{{three}}" class="cell"/>
+											 </StackLayout>
+											</GridLayout>
+										</ListView.itemTemplate>
+									</ListView>
 
-							<ListView items="{{coreMajor1}}" separatorColor="#FFFFFF" id="coreMajor1" visibility="{{coreMajor1.length ? 'visible' : 'collapse'}}">
-								<ListView.itemTemplate>
-									<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
-										<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
-									 	<Label text="{{one}}" class="cell"/>
-									 </StackLayout>
-									 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
-									 	<Label text="{{two}}" class="cell"/>
-									 </StackLayout>
-									 <StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
-									 	<Label text="{{three}}" class="cell"/>
-									 </StackLayout>
-									</GridLayout>
-								</ListView.itemTemplate>
-							</ListView>
-							<StackLayout orientation="horizontal">
-							<Label text="Electives: " class="classesLabel"/>
-							<Label text="{{numElectives}}"/>
-							<Label text=" completed"/>
-							</StackLayout>
-							<ListView items="{{electivesMajor1}}" separatorColor="#FFFFFF" id="electivesMajor1" visibility="{{electivesMajor1.length ? 'visible' : 'collapse'}}">
-								<ListView.itemTemplate>
-									<GridLayout columns="*,*,*" rows="auto" backgroundColor="#FFFFFF">
-										<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
-									 	<Label col="0" row="0" text="{{one}}" class="cell"/>
-									 </StackLayout>
-									 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
-									 	<Label text="{{two}}" class="cell"/>
-									 </StackLayout>
-									 <StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
-									 	<Label text="{{three}}" class="cell"/>
-									 </StackLayout>
-									</GridLayout>
-								</ListView.itemTemplate>
-							</ListView>
-						</StackLayout>
-						</StackLayout>
-					</GridLayout>
-				</Card:CardView>
-			</StackLayout> 
+									<StackLayout orientation="horizontal">
+										<Label text="Electives: " class="classesLabel"/>
+										<Label text="{{numElectives}}" class="classesLabel"/>
+										<Label text=" completed" class="classesLabel"/>
+									</StackLayout>
 
-		
+									<ListView items="{{electivesMajor1}}" separatorColor="#FFFFFF" id="electivesMajor1" visibility="{{electivesMajor1.length ? 'visible' : 'collapse'}}">
+										<ListView.itemTemplate>
+											<GridLayout columns="*,*,*" rows="auto" >
+												<StackLayout orientation="vertical" class="grid-cell-layout" col="0" row="0" class="coreClass" id="{{one}}">
+											 	<Label col="0" row="0" text="{{one}}" class="cell"/>
+											 </StackLayout>
+											 <StackLayout orientation="vertical" class="grid-cell-layout" col="1" row="0" class="coreClass" id="{{two}}">
+											 	<Label text="{{two}}" class="cell"/>
+											</StackLayout>
+											<StackLayout orientation="vertical" class="grid-cell-layout" col="2" row="0" class="coreClass" id="{{three}}">
+											 	<Label text="{{three}}" class="cell"/>
+											 </StackLayout>
+											</GridLayout>
+										</ListView.itemTemplate>
+									</ListView>
+
+								</StackLayout>
+<!-- 							</StackLayout>
+ -->						<!-- </GridLayout> -->
+					</Card:CardView>
+				<!-- </StackLayout>  -->
 		 	</StackLayout> 
 	</StackLayout>
-
-
-
 </Page>

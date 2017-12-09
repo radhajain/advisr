@@ -69,7 +69,7 @@
 	color: white;
 	background-color: black;
 
-	width: 250px;
+	width: 300px;
 	
 	font-size: 18px;
 
@@ -77,7 +77,7 @@
 	border-color:  black;
 	border-radius: 15%;
 
-	opacity: .75;
+	opacity: .53;
 	text-align: center;
 	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
 }
@@ -90,7 +90,7 @@
 	padding: 20px;
 	background-color: gray;
 
-	width: 250px;
+	width: 300px;
 	
 	font-size: 18px;
 	background-color: #1c89f8;
@@ -112,16 +112,28 @@
 #grids {
 	width: 75%;
 	height: 1500px;
-	margin: 50px;
-	margin-top: 100px;
-	background-color: rgba(255, 255, 255, 0.95);
+/*	margin: 50px;
+	margin-top: 100px;*/
+	/*background-color: rgba(255, 255, 255, 0.95);*/
 	border-radius: 5%;
 	/*background-color:  rgba(255, 255, 255, 0.75);*/
 /*	border-color: gray;
 */}
 
+.cardStyle{
+	width: 75%;
+	height: 1500px;
+	/*margin: 50px;*/
+	margin-top: 100px;
+	background-color: rgba(255, 255, 255, 0.95);
+	border-radius: 5%;
+
+}
+
 .sideBar {
-	padding: 20%;
+	/*padding: 20%;*/
+	padding-left: 20%;
+	padding-right: 20%;
 	height: 1500px;
 	margin-left: 5%;
 	/*background-color:  rgba(255, 255, 255, 0.75);*/
@@ -147,35 +159,67 @@
 
 }
 
-.cell{
+/*.cell{
 	margin:8px;
+	background-color: red;
+	text-align: center;
+	padding: 20px;
+
+}*/
+
+.cell {
+	background-color: white;
+	font-size: 25px;
+
+	text-align: center;
+	margin-bottom: 40px;
+	width: 500px;
+	border-radius: 25px;
+	box-shadow: 10px;
+	border-color: lightgray;
+	border-width: 2px;
 }
 
 .classesLabel{
 	margin:10px;
 	margin-right: 30px;
-	font-size: 15px;
+	font-size: 25px;
+	margin-left: 2%;
 }
 
-#coreMajor1, #electivesMajor1{
+#electivesMajor1{
 	margin:2%;
+	height: 500px;
+}
+
+#coreMajor1{
+	margin:2%;
+	height: 250px;
 }
 
 .card {
     margin: 2%;
-    background-color: white;
 }
 
 .cardTitle {
-	margin: 2%;
+	margin-top: 6%;
 	margin-right: 0px;
-	font-size: 25px;
+	margin: 2%;
+	
+	font-size: 35px;
 	color: #003535;
 }
 
+/*.cardTitle {
+	
+	
+	font-size: 25px;
+	color: #003535;
+}*/
+
 .cardSubtitle {
 	color: gray;
-	font-size: 10px;
+	font-size: 25px;
 	margin: 2%;
 	margin-top: 0px;
 }
@@ -191,8 +235,8 @@
 }
 
 .panelCard {
-	border-color: gray;
-	border-right-width: 1px;
+/*	border-color: gray;
+*/	border-right-width: 1px;
 	text-align: center;
 }
 
@@ -206,23 +250,44 @@
 }
 
 .green {
-	color: green;
+	background-color: green;
 }
 
 .red {
-	color: red;
+	background-color: red;
 }
 
-.purple {
-	color: purple;
+.black {
+	background-color: black;
+}
+
+.blue {
+	background-color:blue;
 }
 
 
 
+.container {
+	text-align: center;
+	align-content: center;
+	background-color: lightgray;
+
+}
 
 
+.reqType {
+	margin: 70px;
+	text-align: center;
+	align-content: center;
+	border-width: 5px;
+	border-color: black;
+	padding: 300px;
+}
 
-
+.requGrid{
+	background-color: green;
+	align-content: center;
+}
 
 
 .contentTitle {
@@ -231,7 +296,7 @@
 /*	display: inline-block;
 */	margin-left: 162px;
 	margin-top: 100px;
-	margin-bottom: 0px;
+	margin-bottom: 100px;
 	padding: 0;
 
 }
@@ -244,13 +309,6 @@ button {
 .card {
     margin: 25px;
     background-color: white;
-}
-
-.cardTitle {
-	margin-top: 5%;
-	margin-left: 45px;
-	font-size: 25px;
-	color: #003535;
 }
 
 .cardSubtitle {
