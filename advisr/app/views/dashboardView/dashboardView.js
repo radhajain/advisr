@@ -18,6 +18,7 @@ var GERrow = 1;
 var GERcol = 0;
 var GERspan = 3;
 var minorCol = 2;
+var minorCol2;
 
 var majors;
 var minors;
@@ -38,15 +39,16 @@ exports.pageNavigating = function(args) {
 	year = StorageUtil.getYear();
 	pageData.set("year", year);
 	var majors = StorageUtil.getMajors();
-	if (majors[1]) {
-		var info = year + ": " + majors[0] + ", " + majors[1];
-		if (majors[2]) {
-			var info = year + ": " + majors[0] + ", " + majors[1] + ", " + majors[2];
-		}
-	} else {
-		var info = year + ": " + majors[0];
-	}
-	pageData.set("userInfo", info);
+
+	// if (majors[1]) {
+	// 	var info = year + ": " + majors[0] + ", " + majors[1];
+	// 	if (majors[2]) {
+	// 		var info = year + ": " + majors[0] + ", " + majors[1] + ", " + majors[2];
+	// 	}
+	// } else {
+	// 	var info = year + ": " + majors[0];
+	// }
+	// pageData.set("userInfo", info);
 	var minors = StorageUtil.getMinors();
 	if (minors[0]) {
 		pageData.set("showMinors", true);
@@ -61,6 +63,7 @@ exports.pageNavigating = function(args) {
 	} else {
 		pageData.set("showMinors", false);
 	}
+
 	pageData.set("userMinors", userMinors);
 	
 	init();
@@ -103,8 +106,11 @@ var init = function() {
 			pageData.set("minor2", minors[1]);
 		}
 	} 
+
+	minorCol2 = minorCol + 1;
 	
 	pageData.set("minorCol", minorCol);
+	pageData.set("minorCol2", minorCol2);
 	pageData.set("showSecond", secondMajor);
 	pageData.set("showThird", thirdMajor);
 	pageData.set("showMinor1", firstMinor);
@@ -119,7 +125,7 @@ var init = function() {
 		pageData.set("progress1", "30%");
 		pageData.set("progress2", "10%");
 		pageData.set("progress3", "10%");
-		pageData.set("progress4", "0%");
+		pageData.set("progress4", "10%");
 	} else {
 		pageData.set("freshSoph", false);
 		pageData.set("progress1", "70%");
@@ -155,16 +161,7 @@ exports.viewLogout = function() {
 	frameModule.topmost().navigate("views/onboarding/landingView/landingView");
 }
 
-exports.viewMoreMajor1 = function() {
-    var options = {
-        moduleName: 'views/requirementsDetailView/requirementsDetailView',
-        context: {
-          requirement: "Major 1",
-          major: majors[0]
-        }
-    } 
-    frameModule.topmost().navigate(options);
-}
+
 
 // exports.viewMoreGER = function() {
 // 	var options = {
@@ -188,24 +185,52 @@ exports.viewMoreMajor1 = function() {
 // 	frameModule.topmost().navigate(options);
 // }
 
-// exports.viewMoreMajor2 = function() {
-// 	var options = {
-// 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
-// 	    context: {
-// 	      requirement: "Major 2",
-// 	      major: majors[1]
-// 	    }
-// 	} 
-// 	frameModule.topmost().navigate(options);
-// }
+
+//uncomment here
+
+
+exports.viewMoreMajor1 = function() {
+    var options = {
+        moduleName: 'views/requirementsDetailView/requirementsDetailView',
+        context: {
+          requirement: "Major 1",
+          major: majors[0]
+        }
+    } 
+    frameModule.topmost().navigate(options);
+}
+
+exports.viewMoreMajor2 = function() {
+	var options = {
+	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
+	    context: {
+	      requirement: "Major 2",
+	      major: majors[1]
+	    }
+	} 
+	frameModule.topmost().navigate(options);
+}
 
 // exports.viewMoreMajor3 = function() {
 // 	var options = {
 // 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
 // 	    context: {
 // 	      requirement: "Major 3",
-// 	      major: majors[2]
+// 	      major: minors[0]
 // 	    }
 // 	} 
 // 	frameModule.topmost().navigate(options);
 // }
+
+// exports.viewMoreMajor4 = function() {
+// 	var options = {
+// 	    moduleName: 'views/requirementsDetailView/requirementsDetailView',
+// 	    context: {
+// 	      requirement: "Major 4",
+// 	      major: minors[1]
+// 	    }
+// 	} 
+// 	frameModule.topmost().navigate(options);
+// }
+
+

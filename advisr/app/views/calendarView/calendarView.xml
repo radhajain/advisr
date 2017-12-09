@@ -35,13 +35,16 @@
 			 	 	<!-- <Button text="&#xf045;" class="exportIcon fa" tap="syncCalendar"/> -->
 			 	 	
 			 	<!-- <Label text="Recommended Classes:" class="center miniTitle recommended"/> -->
-<!-- 			 	<StackLayout>
-			 	<StackLayout columns= "*" rows= "*,*,*" >
+			 	<StackLayout>
+			 		<StackLayout class="recs" columns= "*" rows= "*,*,*,*,*" >
+			 			<Label text="Suggested Classes:" class="sideText" col="0" row="0"/>
 			 			<Label text="Rec 1" col="0" row="0" class="rec"/>
 				 	 	<Label text="Rec 2" col="0" row="1" class="rec"/>
 				 	 	<Label text="Rec 3" col="0" row="2" class="rec"/>
+				 	 	<Label text="Rec 4" col="0" row="2" class="rec"/>
+				 	 	<Label text="Rec 5" col="0" row="2" class="rec"/>
 			 		</StackLayout>
-			 	</StackLayout> -->
+			 	</StackLayout>
 			 	
 		 	</StackLayout>
 
@@ -85,21 +88,22 @@
 			 	 	<Label text="Spring" col="2" row="0" class="center header"/>
 
 			 	 	<!-- FALL -->
-			 	 	<Label text="{{m01}}" col="0" row="1" class="class"/> 
+			 	 	<!-- <StackLayout  alignment="horizontal"> -->
+				 	<Label text="{{m01}}" col="0" row="1" class="fa class" text-wrap="true" visibility="{{ showClass ? 'visible' : 'collapsed' }}" tap="showClassChange"/>
 			 	 	<Label text="{{m11}}" col="0" row="2" class="class"/> 
-			 	 	<Label text="{{m21}}" col="0" row="3" class="class"/> 
+			 	 	<Label text="{{m21}}" col="0" row="3" class="class"/>
 			 	 	<Label text="{{m31}}" col="0" row="4" class="class"/> 
 
 			 	 	<!-- WINTER -->
-			 	 	<Label text="{{m12}}" col="1" row="1" class="class"/> 
-			 	 	<Label text="{{m02}}" col="1" row="2" class="class"/> 
+			 	 	<Label text="{{m02}}" col="1" row="1" class="class"/> 
+			 	 	<Label text="{{m12}}" col="1" row="2" class="class"/> 
 			 	 	<Label text="{{m22}}" col="1" row="3" class="class"/> 
 			 	 	<Label text="{{m32}}" col="1" row="4" class="class"/> 
 
 			 	 	<!-- SPRING -->
 			 	 	<Label text="{{m03}}" col="2" row="1" class="class"/> 
-			 	 	<Label text="{{m23}}" col="2" row="2" class="class"/> 
-			 	 	<Label text="{{m13}}" col="2" row="3" class="class"/>
+			 	 	<Label text="{{m13}}" col="2" row="2" class="class"/> 
+			 	 	<Label text="{{m23}}" col="2" row="3" class="class"/>
 
 
 			 	 	<Label text="Total Units: 15" col="0" row="5" class="summary"/>
@@ -127,13 +131,13 @@
 			 	 	<Label text="" col="1" row="5" class="fyclass"/> 
 
 			 	 	<!-- Freshman Winter -->
-			 	 	<Label text="{{m20}}" col="2" row="2" class="fyclass"/> 
+			 	 	<Label text="{{m10}}" col="2" row="2" class="fyclass"/> 
 			 	 	<Label text="" col="2" row="3" class="fyclass"/> 
 			 	 	<Label text="" col="2" row="4" class="fyclass"/> 
 			 	 	<Label text="" col="2" row="5" class="fyclass"/> 
 
 			 	 	<!-- Freshman Spring -->
-			 	 	<Label text="{{m10}}" col="3" row="2" class="fyclass side"/> 
+			 	 	<Label text="{{m20}}" col="3" row="2" class="fyclass side"/> 
 			 	 	<Label text="{{m30}}" col="3" row="3" class="fyclass side"/> 
 			 	 	<Label text="" col="3" row="4" class="fyclass side"/> 
 			 	 	<Label text="" col="3" row="5" class="fyclass side"/> 
@@ -146,53 +150,53 @@
 			 	 	<Label text="{{m31}}" col="1" row="10" class="fyclass"/> 
 
 			 	 	<!-- Sophomore Winter -->
-			 	 	<Label text="{{m12}}" col="2" row="7" class="fyclass"/> 
-			 	 	<Label text="{{m02}}" col="2" row="8" class="fyclass"/> 
+			 	 	<Label text="{{m02}}" col="2" row="7" class="fyclass"/> 
+			 	 	<Label text="{{m12}}" col="2" row="8" class="fyclass"/> 
 			 	 	<Label text="{{m22}}" col="2" row="9" class="fyclass"/> 
 			 	 	<Label text="{{m32}}" col="2" row="10" class="fyclass"/> 
 
 			 	 	<!-- Sophomore Spring -->
-			 	 	<Label text="{{m33}}" col="3" row="7" class="fyclass side"/> 
-			 	 	<Label text="{{m03}}" col="3" row="8" class="fyclass side"/> 
+			 	 	<Label text="{{m03}}" col="3" row="7" class="fyclass side"/> 
+			 	 	<Label text="{{m13}}" col="3" row="8" class="fyclass side"/> 
 			 	 	<Label text="{{m23}}" col="3" row="9" class="fyclass side"/> 
-			 	 	<Label text="{{m13}}" col="3" row="10" class="fyclass side"/> 
+			 	 	<Label text="{{m33}}" col="3" row="10" class="fyclass side"/> 
 
 			 	 	<!-- Junior Fall -->
-			 	 	<Label text="{{m24}}" col="1" row="12" class="fyclass"/> 
+			 	 	<Label text="{{m04}}" col="1" row="12" class="fyclass"/> 
 			 	 	<Label text="{{m14}}" col="1" row="13" class="fyclass"/> 
-			 	 	<Label text="{{m04}}" col="1" row="14" class="fyclass"/> 
+			 	 	<Label text="{{m24}}" col="1" row="14" class="fyclass"/> 
 			 	 	<Label text="{{m34}}" col="1" row="15" class="fyclass"/> 
 
 			 	 	<!-- Junior Winter -->
 			 	 	<Label text="{{m05}}" col="2" row="12" class="fyclass"/> 
-			 	 	<Label text="{{m35}}" col="2" row="13" class="fyclass"/> 
+			 	 	<Label text="{{m15}}" col="2" row="13" class="fyclass"/> 
 			 	 	<Label text="{{m25}}" col="2" row="14" class="fyclass"/> 
-			 	 	<Label text="{{m15}}" col="2" row="15" class="fyclass"/> 
+			 	 	<Label text="{{m35}}" col="2" row="15" class="fyclass"/> 
 
 			 	 	<!-- Junior Spring -->
-			 	 	<Label text="{{m26}}" col="3" row="12" class="fyclass side"/> 
+			 	 	<Label text="{{m06}}" col="3" row="12" class="fyclass side"/> 
 			 	 	<Label text="{{m16}}" col="3" row="13" class="fyclass side"/> 
-			 	 	<Label text="{{m06}}" col="3" row="14" class="fyclass side"/> 
+			 	 	<Label text="{{m26}}" col="3" row="14" class="fyclass side"/> 
 			 	 	<Label text="{{m36}}" col="3" row="15" class="fyclass side"/> 
 
 
 			 	 	 <!-- Senior Fall -->
-			 	 	<Label text="{{m37}}" col="1" row="17" class="fyclass"/> 
-			 	 	<Label text="{{m27}}" col="1" row="18" class="fyclass"/> 
-			 	 	<Label text="{{m17}}" col="1" row="19" class="fyclass"/> 
-			 	 	<Label text="{{m07}}" col="1" row="20" class="fyclass"/> 
+			 	 	<Label text="{{m07}}" col="1" row="17" class="fyclass"/> 
+			 	 	<Label text="{{m17}}" col="1" row="18" class="fyclass"/> 
+			 	 	<Label text="{{m27}}" col="1" row="19" class="fyclass"/> 
+			 	 	<Label text="{{m37}}" col="1" row="20" class="fyclass"/> 
 
 			 	 	<!-- Senior Winter -->
-			 	 	<Label text="{{m38}}" col="2" row="17" class="fyclass"/> 
-			 	 	<Label text="{{m28}}" col="2" row="18" class="fyclass"/> 
-			 	 	<Label text="{{m08}}" col="2" row="19" class="fyclass"/> 
-			 	 	<Label text="{{m18}}" col="2" row="20" class="fyclass"/> 
+			 	 	<Label text="{{m08}}" col="2" row="17" class="fyclass"/> 
+			 	 	<Label text="{{m18}}" col="2" row="18" class="fyclass"/> 
+			 	 	<Label text="{{m28}}" col="2" row="19" class="fyclass"/> 
+			 	 	<Label text="{{m38}}" col="2" row="20" class="fyclass"/> 
 
 			 	 	<!-- Senior Spring -->
 			 	 	<Label text="{{m09}}" col="3" row="17" class="fyclass side"/> 
-			 	 	<Label text="{{m39}}" col="3" row="18" class="fyclass side"/> 
+			 	 	<Label text="{{m19}}" col="3" row="18" class="fyclass side"/> 
 			 	 	<Label text="{{m29}}" col="3" row="19" class="fyclass side"/> 
-			 	 	<Label text="{{m19}}" col="3" row="20" class="fyclass side"/> 
+			 	 	<Label text="{{m39}}" col="3" row="20" class="fyclass side"/> 
 			 	 </GridLayout>
 			</StackLayout>
 

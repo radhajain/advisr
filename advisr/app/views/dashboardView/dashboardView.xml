@@ -29,17 +29,22 @@
     	<Label text="Progress Report" class="contentTitle"/>
 
     	<!-- Dashboard -->
+
+
 		<Card:CardView class="cardStyle" top-margin= "0" elevation="40" radius="5">
 			<GridLayout columns="*,*,*,*" rows="*, *" id="grid">
+				
+
+
+
 				<!-- Card1 -->
 				
-				<StackLayout class="card" id="firstCard" colSpan="1">
+				<StackLayout class="card" id="firstCard" row="1" colSpan="1">
 	 				<StackLayout orientation="vertical">
 						<Label text="Summary:" class="cardTitle" textWrap="true"/>
 						<Label text="{{year}}" class="cardSubtitle"/>
 					</StackLayout>
 
-<!-- 					<GridLayout columns="*" rows="*,*" id="panels"> -->
 					<StackLayout orientation="vertical" >
 						<StackLayout row="0" class="panelCard" verticalAlightment="bottom">
 							<Label text="50 units" class="infoTitle blue"/>
@@ -50,16 +55,14 @@
 	                        <Label text="cumulative GPA" class="infoSubtitle black"/>
 	                    </StackLayout>
 					</StackLayout>
-					
-					<!-- <Label text="{{userInfo}}" textWrap="true" class="cardSubtitle"/>
-					<Label text="{{userMinors}}" class="cardSubtitle" visibility="{{ showMinors ? 'visible' : 'collapse'}}"/> -->
+				
 
 				</StackLayout>
 
 
 
 				<!-- Major 1-->
-				<StackLayout class="card" id="thirdCard" row="1" col="0" tap="viewMoreMajor1">
+				<StackLayout class="card" id="thirdCard" row="0" col="0" tap="viewMoreMajor1">
 					<StackLayout orientation="vertical">
 						<Label text="Major 1: " class="cardTitle"/>
 						<Label text="{{major1}}" class="cardSubtitle" textWrap="true"/>
@@ -80,7 +83,7 @@
 				
 				<!-- Major 2-->
 
-				<StackLayout class="card" id="fourthCard" row="1" col="1" visibility="{{showSecond ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
+				<StackLayout class="card" id="fourthCard" row="0" col="1" visibility="{{showSecond ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
 					<StackLayout orientation="vertical">
 						<Label text="Major 2:" class="cardTitle" />
 						<Label text="{{major2}}" class="cardSubtitle" textWrap="true"/>
@@ -100,7 +103,7 @@
 
 	           	<!-- Minor 1-->
 
-	           	<StackLayout class="card" row="1" col="{{minorCol}}" visibility="{{showMinor1 ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
+	           	<StackLayout class="card" row="0" col="{{minorCol}}" visibility="{{showMinor1 ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
 					<StackLayout orientation="vertical">
 						<Label text="Minor 1:" class="cardTitle" />
 						<Label text="{{minor1}}" class="cardSubtitle" textWrap="true"/>
@@ -120,7 +123,7 @@
 
 	           		           	<!-- Minor 2-->
 
-	           	<StackLayout class="card" row="1" col="{{minorCol}} + 1" visibility="{{showMinor2 ? 'visible' : 'collapse'}}" tap="viewMoreMajor2">
+	           	<StackLayout class="card" row="0" col="{{minorCol2}}" visibility="{{showMinor2 ? 'visible' : 'collapse'}}" tap="viewMoreMajor4">
 					<StackLayout orientation="vertical">
 						<Label text="Minor 2:" class="cardTitle" />
 						<Label text="{{minor1}}" class="cardSubtitle" textWrap="true"/>
@@ -138,39 +141,9 @@
 	           	    </StackLayout>
 	           	</StackLayout>
 
-				<!-- Major 3 -->
-<!-- 				<StackLayout class="card" id="fifthCard" row="2" col="2" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
-					<StackLayout orientation="vertical">
-						<Label text="Major 3:" class="cardTitle" />
-						<Label text="{{major3}}" class="cardSubtitle" textWrap="true"/>
-					</StackLayout>
 
-					<StackLayout orientation="vertical" id="panels">
-			            <StackLayout spacing="0">
-							<Image src="res://30_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar"/>
-	                		<Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
-			            </StackLayout>
-			            <StackLayout text-align="center">
-                        	<Label text="{{progress3}}" class="infoTitle blue"/>
-                        	<Label text="classes complete"  class="infoSubtitle"/>
-                        </StackLayout>
-	           	    </StackLayout>
-	           	</StackLayout> -->
-				
-				<!-- Major 3 -->
-<!-- 				<StackLayout class="card" id="fifthCard" row="0" col="3" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
-					<Label text="Major 3: " class="cardTitle" />
-					<Label text="{{major3}}" class="cardSubtitle" textWrap="true"/>
-					<Image src="res://10_progress"/>
-					<Label text="{{progress3}}" class="progressNumber blue"/>
-					<Label text="complete" class="small-infoLabel center"/>
-	                <Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
-	                <Image src="res://10_ progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
-				</StackLayout> -->
 
-				<!-- GER -->
-
-				<StackLayout class="card" id="sixthCard" row="0" col="1" colSpan= "1" >
+				<StackLayout class="card" id="sixthCard" row="1" col="1" colSpan= "1" >
 					<StackLayout orientation="vertical">
 						<Label text="GERs: " textWrap="true" class="cardTitle"/>
 						<Label text="General Education Reqs" class="cardSubtitle marginBottom" textWrap="true"/>
@@ -203,7 +176,7 @@
 
 				<!-- WAYS -->
 
-				<StackLayout class="card" id="sixthCard" row="0" col="2" colSpan= "2" >
+				<StackLayout class="card" id="sixthCard" row="1" col="2" colSpan= "2" >
 					<StackLayout orientation="vertical">
 						<Label text="GERs: " textWrap="true" class="cardTitle"/>
 						<Label text="WAYS of Thinking / WAYS of Doing" class="cardSubtitle" textWrap="true"/>
@@ -249,6 +222,39 @@
 	</StackLayout>
 
 </Page>
+
+
+				<!-- Major 3 -->
+<!-- 				<StackLayout class="card" id="fifthCard" row="2" col="2" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
+					<StackLayout orientation="vertical">
+						<Label text="Major 3:" class="cardTitle" />
+						<Label text="{{major3}}" class="cardSubtitle" textWrap="true"/>
+					</StackLayout>
+
+					<StackLayout orientation="vertical" id="panels">
+			            <StackLayout spacing="0">
+							<Image src="res://30_progress" visibility="{{ freshSoph ? 'collapse' : 'visible'}}" class="progressbar"/>
+	                		<Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
+			            </StackLayout>
+			            <StackLayout text-align="center">
+                        	<Label text="{{progress3}}" class="infoTitle blue"/>
+                        	<Label text="classes complete"  class="infoSubtitle"/>
+                        </StackLayout>
+	           	    </StackLayout>
+	           	</StackLayout> -->
+				
+				<!-- Major 3 -->
+<!-- 				<StackLayout class="card" id="fifthCard" row="0" col="3" visibility="{{showThird ? 'visible' : 'collapse'}}" tap="viewMoreMajor3">
+					<Label text="Major 3: " class="cardTitle" />
+					<Label text="{{major3}}" class="cardSubtitle" textWrap="true"/>
+					<Image src="res://10_progress"/>
+					<Label text="{{progress3}}" class="progressNumber blue"/>
+					<Label text="complete" class="small-infoLabel center"/>
+	                <Image src="res://30_progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
+	                <Image src="res://10_ progress" visibility="{{ freshSoph ? 'visible' : 'collapse'}}" class="progressbar" />
+				</StackLayout> -->
+
+				<!-- GER -->
 					<!-- <GridLayout columns="*,*" rows="*,*,*,*,*" id="GERgrid">
 						<StackLayout row="0" col="0">
 						</StackLayout>
@@ -285,7 +291,7 @@
 						</StackLayout>	
 
 
-<!-- 						Col 1 Checkboxes				--> 						
+<!					Col 1 Checkboxes				--> 						
 	<!-- 					<StackLayout row="0" col="1">
 							<Image src="res://ic_done" class="doneButton"/>
 						</StackLayout>

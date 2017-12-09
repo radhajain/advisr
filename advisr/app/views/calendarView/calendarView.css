@@ -44,7 +44,6 @@
 #grids {
 	width: 75%;
 	height: 1500px;
-	margin: 50px;
 	margin-top: 100px;
 	background-color: rgba(255, 255, 255, 0.95);
 	border-radius: 5%;
@@ -122,7 +121,7 @@
 	border-color:  black;
 	border-radius: 15%;
 
-	opacity: .75;
+	opacity: .53;
 	
 	box-shadow: 9px 10px 33px -1px rgba(0,0,0,0.75);
 }
@@ -158,9 +157,22 @@
 	text-align: center;
 
 	margin: 20px;
-	height: 100px;
-	width: 350px;
+	height: 75px;
+	width: 300px;
 	border-radius: 25px;
+
+	opacity: 0.7;
+}
+
+.recs {
+	margin-top: 300px;
+}
+
+.sideText {
+	text-align: center;
+	color: white;
+	font-size: 24px;
+
 }
 
 .class {
@@ -187,6 +199,9 @@
 	border-width: 2px;
 }
 
+.remove{
+}
+
 .summary {
 	background-color: white;
 	font-size: 25px;
@@ -200,7 +215,6 @@
 	border-width: 3px;
 	box-shadow: 10px;
 
-	
 	height: 500px;
 	margin-top: 40px;
 }
