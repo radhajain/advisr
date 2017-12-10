@@ -27,7 +27,7 @@
 		 			 	<!-- Side Bar -->
 		 	<StackLayout class="sideBar">	 	 	
 		 	 		<StackLayout orientation="vertical">
-				 	 	<Button text="Month" class="selectorButton" tap="showCalendar" id="calendarButton"/>
+				 	 	<Button text="Quarter" class="selectorButton" tap="showCalendar" id="calendarButton"/>
 				 	 	<Button text="1-Year" class="selectorButton" tap="showOneYear" id="yearButton"/>
 					 	<Button text="4-Year" class="selectorButton" tap="showFourYear" id="fourButton"/>	
 			 	 	</StackLayout>
@@ -36,11 +36,12 @@
 			 	 	
 			 	<!-- <Label text="Recommended Classes:" class="center miniTitle recommended"/> -->
 			 	<StackLayout>
-			 		<StackLayout class="recs" columns= "*" rows= "*,*,*,*,*,*" >
+			 		<StackLayout class="recs" columns= "*" rows= "*,*,*,*,*" >
 			 			<Label text="Suggested Classes:" class="sideText" col="0" row="0"/>
-			 			<Label text="Rec 1" col="0" row="0" class="rec" rowSpan="2"/>
+			 			<Label text="Rec 1" col="0" row="1" class="rec" rowSpan="2"/>
 				 	 	<Label text="Rec 2" col="0" row="2" class="rec" rowSpan="2"/>
-				 	 	<Label text="Rec 3" col="0" row="4" class="rec" rowSpan="2"/>
+				 	 	<Label text="Rec 3" col="0" row="3" class="rec" rowSpan="2"/>
+				 	 	<Button tap="syncCalendar" text="Sync with GCal" class="syncButton"/>
 			 		</StackLayout>
 			 	</StackLayout>
 			 	

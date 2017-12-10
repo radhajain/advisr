@@ -23,7 +23,7 @@ exports.pageNavigating = function(args) {
 	pageData.set("showWeekCal", false);
     pageData.set("showOneYearCal", false);
     pageData.set("showFourYearCal", false);
-    pageData.set("title", "Quarter Plan");
+    pageData.set("title", "Your Quarter Plan");
     var button = page.getViewById("calendarButton");
     button.class="selectPlanSelected";
 }
@@ -93,7 +93,7 @@ exports.showCalendar = function () {
     pageData.set("showWeekCal", false);
     pageData.set("showOneYearCal", false);
     pageData.set("showFourYearCal", false);
-    pageData.set("title", "Quarter Plan");
+    pageData.set("title", " Your Quarter Plan");
     // var button = page.getViewById("quarterButton");
     // button.class="selectorButton";
     var otherButton1 = page.getViewById("yearButton");
@@ -127,7 +127,7 @@ exports.showOneYear = function () {
     pageData.set("showWeekCal", false);
     pageData.set("showOneYearCal", true);
     pageData.set("showFourYearCal", false);
-    pageData.set("title", "1-Year Plan");
+    pageData.set("title", "Your 1-Year Plan");
     var button = page.getViewById("yearButton");
     button.class="selectPlanSelected";
 
@@ -142,7 +142,7 @@ exports.showFourYear = function () {
     pageData.set("showWeekCal", false);
     pageData.set("showOneYearCal", false);
     pageData.set("showFourYearCal", true);
-    pageData.set("title", "4-Year Plan");
+    pageData.set("title", "Your 4-Year Plan");
     var button = page.getViewById("fourButton");
     button.class="selectPlanSelected";
 
@@ -153,7 +153,7 @@ exports.showFourYear = function () {
 }
 
 exports.syncCalendar = function() {
-    FancyAlert.TNSFancyAlert.showWaiting("Syncing with your calendar...", "hello ", null, 3, 350);
+    FancyAlert.TNSFancyAlert.showWaiting("Syncing with your Google Calendar", "Just a minute...", null, 3, 350);
 }
 
 // Navigation
