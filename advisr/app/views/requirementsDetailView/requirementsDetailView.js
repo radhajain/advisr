@@ -10,6 +10,7 @@ var frameModule = require("ui/frame");
 var page;
 var majors;
 var minors;
+var title;
 var secondMajor = false;
 var thirdMajor = false;
 var firstMinor = false;
@@ -22,11 +23,12 @@ var thirdMinor = false;
 exports.pageNavigating = function(args) {
     page = args.object;
     if (page.navigationContext) {
-      var title = page.navigationContext.requirement;
+      title = page.navigationContext.requirement;
       var major = page.navigationContext.major;
     }
     orientationModule.orientationCleanup();
     page.bindingContext = pageData;
+
     pageData.set("title", title);
     pageData.set("major", major);
     majors = StorageUtil.getMajors();
@@ -75,6 +77,7 @@ exports.pageNavigating = function(args) {
 
 exports.pageLoaded = function(args) {
 	orientationModule.setCurrentOrientation("landscape");
+  // var currButton = page.getElementById(title).className = "selectPlanSelected";
 	 
 }
 
